@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Send</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/apex/dsfs__DocuSign_JavaScript&quot;)} 
+//********* Option Declarations (Do not modify )*********// 
+var RC = &apos;&apos;;var RSL=&apos;&apos;;var RSRO=&apos;&apos;;var RROS=&apos;&apos;;var CCRM=&apos;&apos;;var CCTM=&apos;&apos;;var CCNM=&apos;&apos;;var CRCL=&apos;&apos;; var CRL=&apos;&apos;;var OCO=&apos;&apos;;var DST=&apos;&apos;;var LA=&apos;&apos;;var CEM=&apos;&apos;;var CES=&apos;&apos;;var STB=&apos;&apos;;var SSB=&apos;&apos;;var SES=&apos;&apos;;var SEM=&apos;&apos;;var SRS=&apos;&apos;;var SCS =&apos;&apos;;var RES=&apos;&apos;; 
+//*************************************************// 
+// Modify individual options here: 
+// Related Content (default no related content) 
+RC = &apos;&apos;; 
+// Recipient Signer Limit (default no limit) 
+RSL = &apos;&apos;; 
+// Recipient Starting Routing Order (default 1) 
+RSRO = &apos;&apos;; 
+// Recipient Routing Order Sequential (default not sequential) 
+RROS = &apos;&apos;; 
+// Custom Contact Role Map (default config role) 
+CCRM = &apos;&apos;; 
+// Custom Contact Type Map (default Signer) 
+CCTM = &apos;&apos;; 
+// Custom Contact Note Map (default no note) 
+CCNM = &apos;&apos;; 
+// Custom Related Contact List (default object contact) 
+CRCL = &apos;Contacts__r,Email~{!Contact.Email};FirstName~{!Contact.FirstName};LastName~{!Contact.LastName};,LoadDefaultContacts~1&apos;;
+// Custom Recipient List 
+CRL = &apos;&apos;; 
+// One Click Option (default edit envelope screen) 
+OCO = &apos;Send&apos;; 
+// DocuSign Template ID (default no template) 
+DST = &apos;B261D2A7-3A3E-4795-9BC1-CDCC6A5C2978&apos;; 
+// Load Attachments (default on) 
+LA = &apos;1&apos;; //Ex: &apos;0&apos; 
+// Custom Email Message (default in config) 
+CEM = &apos;[FirstName] [LastName] ([Email]) has sent you a document using DocuSign. I am sending you this request for your electronic signature, please review and electronically sign by following the link below.&apos;; 
+// Custom Email Subject (default in config) 
+CES = &apos;Documents for your DocuSign Signature&apos;; 
+// Show Tag Button (default in config) 
+STB = &apos;&apos;; 
+// Show Send Button (default in config) 
+SSB = &apos;&apos;; 
+// Show Email Subject (default in config) 
+SES = &apos;&apos;; 
+// Show Email Message (default in config) 
+SEM = &apos;&apos;; 
+// Show Reminder/Expire (default in config) 
+SRS = &apos;1&apos;; 
+// Show Chatter (default in config) 
+SCS = &apos;0&apos;; 
+// Reminder and Expiration Settings 
+RES = &apos;1,2,3,1,120,3&apos;; //Ex: &apos;0,1,2,0,120,3&apos; 
+//********* Page Callout (Do not modify) *********// 
+window.location.href = 
+&quot;/apex/dsfs__DocuSign_CreateEnvelope?DSEID=0&amp;SourceID={!Account.Id}&amp;RC=&quot;+RC+&quot;&amp;RSL=&quot;+RSL+&quot;&amp;RSRO=&quot;+RSRO+&quot;&amp;RROS=&quot;+RROS+&quot;&amp;CCRM=&quot;+CCRM+&quot;&amp;CCTM=&quot;+CCTM+&quot;&amp;CRCL=&quot;+CRCL+&quot;&amp;CRL=&quot;+CRL+&quot;&amp;OCO=&quot;+OCO+&quot;&amp;DST=&quot;+DST+&quot;&amp;CCNM=&quot;+CCNM+&quot;&amp;LA=&quot;+LA+&quot;&amp;CEM=&quot;+CEM+&quot;&amp;CES=&quot;+CES+&quot;&amp;SRS=&quot;+SRS+&quot;&amp;STB=&quot;+STB+&quot;&amp;SSB=&quot;+SSB+&quot;&amp;SES=&quot;+SES+&quot;&amp;SEM=&quot;+SEM+&quot;&amp;SRS=&quot;+SRS+&quot;&amp;SCS=&quot;+SCS+&quot;&amp;RES=&quot;+RES;</url>
+</WebLink>

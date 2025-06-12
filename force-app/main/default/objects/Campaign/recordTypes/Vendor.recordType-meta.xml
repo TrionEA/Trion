@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor</fullName>
+    <active>true</active>
+    <description>Vendor</description>
+    <label>Vendor</label>
+    <picklistValues>
+        <picklist>Campaign_Stage__c</picklist>
+        <values>
+            <fullName>Activated %2F In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Creation</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Email Template Selection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interaction Score</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Member Identification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Template Tagging</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Aborted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planned</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Client Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminar %2F Conference</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

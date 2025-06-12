@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Agent_Commission__c</fullName>
+    <label>Total Agent Commission %</label>
+    <summarizedField>Sales_Commission__c.Commission__c</summarizedField>
+    <summaryFilterItems>
+        <field>Sales_Commission__c.Role__c</field>
+        <operation>equals</operation>
+        <value>Sales Agent</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Sales_Commission__c.Opportunity__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_of_Employees__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+ISPICKVAL( Proposal__r.Quote_Type__c , &quot;PEO&quot;),  Total_WC_Number_of_Employees__c ,
+IF(
+ISPICKVAL( Proposal__r.Quote_Type__c , &quot;PEO W/O COMP&quot;),   of_Employees__c  ,
+IF(
+ISPICKVAL( Proposal__r.Quote_Type__c , &quot;ASO&quot;),   of_Employees__c  , NULL)))</formula>
+    <label>Total # of Employees</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

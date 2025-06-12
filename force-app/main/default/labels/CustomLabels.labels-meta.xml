@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AttachmentSwitch</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Attachment Switch</shortDescription>
+        <value>True</value>
+    </labels>
+    <labels>
+        <fullName>BCSVEndDate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BCSVEndDate</shortDescription>
+        <value>2024-07-10T23:59:59Z</value>
+    </labels>
+    <labels>
+        <fullName>BCSVSharePointFolderName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BCSVSharePointFolderName</shortDescription>
+        <value>Case</value>
+    </labels>
+    <labels>
+        <fullName>BCSVStartDate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BCSVStartDate</shortDescription>
+        <value>2024-07-01T00:00:00Z</value>
+    </labels>
+    <labels>
+        <fullName>DIR_Logo</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DIR_Logo</shortDescription>
+        <value>Trion_Logo</value>
+    </labels>
+    <labels>
+        <fullName>DIR_No_Department_Leader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DIR No Department Leader</shortDescription>
+        <value>No department leader assigned.</value>
+    </labels>
+    <labels>
+        <fullName>DIR_No_Employees_Found</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DIR No Employees Found</shortDescription>
+        <value>No matching employees found. Check your search terms and try searching again.</value>
+    </labels>
+    <labels>
+        <fullName>DIR_No_Reports_To</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DIR No Reports To</shortDescription>
+        <value>No reports to assigned.</value>
+    </labels>
+    <labels>
+        <fullName>Days</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Days</shortDescription>
+        <value>190</value>
+    </labels>
+    <labels>
+        <fullName>DaysTo</fullName>
+        <categories>Test</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DaysToPurge</shortDescription>
+        <value>15</value>
+    </labels>
+    <labels>
+        <fullName>DaysTo2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DaysTo2</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>EndDate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>End Date</shortDescription>
+        <value>2024-03-31T23:59:59Z</value>
+    </labels>
+    <labels>
+        <fullName>NewCaseId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NewCaseId</shortDescription>
+        <value>500VE00000D4PRmYAN</value>
+    </labels>
+    <labels>
+        <fullName>NotSupportedMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NotSupportedMessage</shortDescription>
+        <value>Unable to access a field called</value>
+    </labels>
+    <labels>
+        <fullName>OldCaseId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OldCaseId</shortDescription>
+        <value>500VE000009NCpBYAW</value>
+    </labels>
+    <labels>
+        <fullName>PricingOverrideApprovalEmailSubject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PricingOverrideApprovalEmailSubject</shortDescription>
+        <value>Pricing Override Approval Request</value>
+    </labels>
+    <labels>
+        <fullName>PricingOverrideApprovalSiteURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PricingOverrideApprovalSiteURL</shortDescription>
+        <value>https://trion.secure.force.com/PricingOverrideApproval</value>
+    </labels>
+    <labels>
+        <fullName>PricingOverrideInboundEmailAddress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PricingOverrideInboundEmailAddress</shortDescription>
+        <value>pricingoverride@1di0h7hmewjju2phza2y33qdxn91f4j2ae2letba0n1tt64yok.g-kxazmaq.na209.apex.salesforce.com</value>
+    </labels>
+    <labels>
+        <fullName>ProposalAdminFeesTypeHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProposalAdminFeesTypeHeader</shortDescription>
+        <value>Type</value>
+    </labels>
+    <labels>
+        <fullName>ProposalAdminFeesValueHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProposalAdminFeesValueHeader</shortDescription>
+        <value>Value</value>
+    </labels>
+    <labels>
+        <fullName>SD_AccordSignatureCongaURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SD_AccordSignatureCongaURL</shortDescription>
+        <value>/apex/APXTConga4__Conga_Composer?SolMgr=1
+&amp;serverUrl={!API.Partner_Server_URL_370}
+&amp;Id=SFId
+&amp;QueryId=[accountinfo]a0H1M000014O5Fd%3Fpv0%3DProposal_Id__c,
+[location]a0H1M000011PWl4%3Fpv0%3DProposal_Id__c,
+[Contacts]a0H1M000011PWl9%3Fpv0%3DProposal_Id__c,
+[inspection]a0H1M000011PWku%3Fpv0%3DProposal_Id__c,
+[acctingrecord]a0H1M000011PWkk%3Fpv0%3DProposal_Id__c,
+[claimsinfo]a0H1M000011PWlJ%3Fpv0%3DProposal_Id__c,
+[generalinfo]a0H1M000011PWkp%3Fpv0%3DOpportunity__c,
+[comps]a0H1M000011PWkz%3Fpv0%3DProposal_Id__c
+&amp;TemplateId=a0I1M000015HTF8
+&amp;CSVisible=1
+&amp;DS7=1141
+&amp;OFN={Template.Label}+Client__c</value>
+    </labels>
+    <labels>
+        <fullName>SD_AccordSignatureRequestMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SD_AccordSignatureRequestMessage</shortDescription>
+        <value>You are not allowed to perform this operation, Please contact your system administrator</value>
+    </labels>
+    <labels>
+        <fullName>SD_GenerateACORDURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SD_GenerateACORDURL</shortDescription>
+        <value>/apex/APXTConga4__Conga_Composer?SolMgr=1&amp;serverUrl={!API.Partner_Server_URL_370}&amp;Id=SFId&amp;QueryId=[accountinfo]a0H1M000014O5Fd%3Fpv0%3DProposal_Id__c,
+[location]a0H1M000011PWl4%3Fpv0%3DProposal_Id__c,
+[Contacts]a0H1M000011PWl9%3Fpv0%3DProposal_Id__c,
+[inspection]a0H1M000011PWku%3Fpv0%3DProposal_Id__c,
+[acctingrecord]a0H1M000011PWkk%3Fpv0%3DProposal_Id__c,
+[claimsinfo]a0H1M000011PWlJ%3Fpv0%3DProposal_Id__c,
+[generalinfo]a0H1M000011PWkp%3Fpv0%3DOpportunity_Id__c,
+[comps]a0H1M000011PWkz%3Fpv0%3DProposal_Id__c&amp;TemplateId=a0I1M000015HTF8&amp;DS7=1
+&amp;UF0=1&amp;MFTS0=ACORD_Type__c&amp;MFTSValue0=Trion+ACORD+Form&amp;DefaultPDF=1&amp;LiveEditVisible=1&amp;LiveEditEnable=1&amp;OFN={Template.Label}+Client__c</value>
+    </labels>
+    <labels>
+        <fullName>SD_GenerateAccordMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SD_GenerateAccordMessage</shortDescription>
+        <value>You are not allowed to perform this operation, Please contact your system administrator</value>
+    </labels>
+    <labels>
+        <fullName>SUTAQuoteDeleteInfoMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SUTAQuoteDeleteInfoMsg</shortDescription>
+        <value>&lt;center&gt;&lt;div&gt;&lt;b&gt;Are you sure you want to delete SUTA record. It will also delete all child Client Location and WC Rate records.&lt;/b&gt;&lt;/div&gt;&lt;/center&gt;</value>
+    </labels>
+    <labels>
+        <fullName>SelectValidCompCodeErrorMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SelectValidCompCodeErrorMessage</shortDescription>
+        <value>Please select valid Comp Code.</value>
+    </labels>
+    <labels>
+        <fullName>SharePoint_Site_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SharePoint Site Id</shortDescription>
+        <value>39544cbf-c240-4582-b6b4-6ec118d81851</value>
+    </labels>
+    <labels>
+        <fullName>SharepointDriveId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sharepoint DriveId</shortDescription>
+        <value>b!v0xUOUDCgkW2tG7BGNgYUZHX-cuS1t9GgWLFfrj1TQVPDE1j7ctmS5-Zx3H-2ZkH</value>
+    </labels>
+    <labels>
+        <fullName>SharepointfolderName</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SharePointFolderNames</shortDescription>
+        <value>Case18112024</value>
+    </labels>
+    <labels>
+        <fullName>StartDate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Start Date</shortDescription>
+        <value>2014-01-01T00:00:00Z</value>
+    </labels>
+    <labels>
+        <fullName>SurveySiteURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>site URL</shortDescription>
+        <value>https://trion--uat.sandbox.my.site.com</value>
+    </labels>
+    <labels>
+        <fullName>Switch</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Switch</shortDescription>
+        <value>True</value>
+    </labels>
+    <labels>
+        <fullName>Workflow_Switch</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Workflow Switch</shortDescription>
+        <value>0</value>
+    </labels>
+    <labels>
+        <fullName>emailmessageId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>emailmessageId</shortDescription>
+        <value>02sVE000004Mh7FYAS</value>
+    </labels>
+</CustomLabels>

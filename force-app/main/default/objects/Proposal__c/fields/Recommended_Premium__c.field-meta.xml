@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recommended_Premium__c</fullName>
+    <formula>Carrier_Cost__c + Average_Developed_Losses_Per_Year__c + State_SurchargeAssessment_Fees__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Carrier Cost + Avg Dev Losses Per Year + State Assessment Fees</inlineHelpText>
+    <label>Recommended Premium</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

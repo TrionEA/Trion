@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- ANY PRIOR COVERAGE DECLINED / CANCELLED / NON-RENEWED IN THE LAST THREE (3) YEARS? (Missouri Applicants - Do not answer this question) --></help>
+    <label><!-- COVERAGE DEC/CANC/NON-RENEWED IN LAST 3 --></label>
+    <name>COVERAGE_DEC_CANC_NON_RENEWED_IN_LAST_3__c</name>
+    <picklistValues>
+        <masterLabel>N</masterLabel>
+        <translation><!-- N --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Y</masterLabel>
+        <translation><!-- Y --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

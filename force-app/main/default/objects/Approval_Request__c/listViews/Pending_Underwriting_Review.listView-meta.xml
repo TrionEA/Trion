@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pending_Underwriting_Review</fullName>
+    <columns>NAME</columns>
+    <columns>Proposal__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Quote_Type__c</columns>
+    <columns>Approval_Decision__c</columns>
+    <columns>Approval_Request__c</columns>
+    <columns>Submitted_By__c</columns>
+    <columns>Submitted_On__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>Opportunity_Stage__c</field>
+        <operation>notContain</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>Approval_Request__c</field>
+        <operation>equals</operation>
+        <value>Underwriting Review</value>
+    </filters>
+    <filters>
+        <field>Approval_Decision__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Pending Underwriting Review</label>
+    <queue>Underwriting</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

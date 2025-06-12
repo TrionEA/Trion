@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Employee_Bio__c</fullName>
+    <description>Brief biography of the employee.</description>
+    <inlineHelpText>Enter the employee&apos;s biography.</inlineHelpText>
+    <label>Employee Bio</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Worker_s_Comp_Claims_Fee_Deposit_Waived__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>When not requiring a deposit, check this box.</description>
+    <label>Worker&apos;s Comp Claims Fee Deposit: Waived</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

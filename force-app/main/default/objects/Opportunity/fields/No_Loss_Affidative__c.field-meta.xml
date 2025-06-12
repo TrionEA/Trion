@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Loss_Affidative__c</fullName>
+    <label>No Loss Affidative</label>
+    <summaryFilterItems>
+        <field>Submission_Requirement__c.Requirement_Type__c</field>
+        <operation>equals</operation>
+        <value>No Loss Affidavit</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Submission_Requirement__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Submitted</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Submission_Requirement__c.Opportunity__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

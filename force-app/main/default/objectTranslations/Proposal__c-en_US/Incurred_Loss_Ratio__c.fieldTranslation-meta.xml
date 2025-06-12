@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Average Losses per year / Manual Premium --></help>
+    <label><!-- Incurred Loss Ratio --></label>
+    <name>Incurred_Loss_Ratio__c</name>
+</CustomFieldTranslation>

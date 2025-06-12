@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Mod selected from the &quot;Calculator WC Rate by&quot; field --></help>
+    <label><!-- Mod (Calculator) --></label>
+    <name>Mod_Calculator__c</name>
+</CustomFieldTranslation>

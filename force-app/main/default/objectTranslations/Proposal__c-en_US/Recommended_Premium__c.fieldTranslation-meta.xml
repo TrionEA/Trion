@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Carrier Cost + Avg Dev Losses Per Year + State Assessment Fees --></help>
+    <label><!-- Recommended Premium --></label>
+    <name>Recommended_Premium__c</name>
+</CustomFieldTranslation>

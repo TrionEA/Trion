@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter zero for Quote Type of PEO w/o comp or ASO. --></help>
+    <label><!-- Est. Annu. Client Premium --></label>
+    <name>Estimated_Annual_Client_Preimum__c</name>
+</CustomFieldTranslation>

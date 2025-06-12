@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Weightage_should_be_greater_than_Zero</fullName>
+    <active>true</active>
+    <errorConditionFormula>Weightage__c &lt; 0</errorConditionFormula>
+    <errorMessage>Weightage of the email template should be always greater or equal to 0</errorMessage>
+</ValidationRule>

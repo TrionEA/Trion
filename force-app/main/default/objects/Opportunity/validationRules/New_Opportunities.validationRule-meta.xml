@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Opportunities</fullName>
+    <active>true</active>
+    <description>Requires Prospecting stage upon creating new opportunity.</description>
+    <errorConditionFormula>AND(
+ISNEW(),NOT(ISPICKVAL(StageName, &quot;Prospecting&quot;)))</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>New opportunity stage must start at Prospecting.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>Approval_Decision__c</field>
+        <literalValue>Approved</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Approval_Request__c</field>
+        <literalValue>Sales Review</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Opportunity__c</field>
+        <formula>Proposal__c.Opportunity__r.Id</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Proposal__c</field>
+        <formula>Proposal__c.Id</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Submitted_By__c</field>
+        <formula>$User.FirstName &amp; &quot; &quot; &amp;  $User.LastName</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Submitted_On__c</field>
+        <formula>NOW()</formula>
+    </fieldOverrides>
+    <label>Sales Qualification</label>
+    <optionsCreateFeedItem>true</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Comments__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <targetObject>Approval_Request__c</targetObject>
+    <targetParentField>Proposal__c</targetParentField>
+    <type>Create</type>
+</QuickAction>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- DO YOU LEASE EMPLOYEES TO OR FROM OTHER EMPLOYERS? --></help>
+    <label><!-- LEASE EMPLOYEES TO OR FROM OTHER EMPLOYE --></label>
+    <name>LEASE_EMPLOYEES_TO_OR_FROM_OTHER_EMPLOYE__c</name>
+    <picklistValues>
+        <masterLabel>N</masterLabel>
+        <translation><!-- N --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Y</masterLabel>
+        <translation><!-- Y --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

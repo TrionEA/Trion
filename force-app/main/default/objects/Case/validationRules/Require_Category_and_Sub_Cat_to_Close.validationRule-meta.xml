@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Category_and_Sub_Cat_to_Close</fullName>
+    <active>true</active>
+    <description>Requires population of Category and Sub Category fields upon close if Issue area field = Benefits.</description>
+    <errorConditionFormula>ISPICKVAL(Status, &quot;Closed&quot;) &amp;&amp;
+ISPICKVAL(Type, &quot;Benefits&quot;) &amp;&amp;
+(
+ISPICKVAL(Category__c, &quot;&quot;) ||  
+ISPICKVAL(Sub_Category__c, &quot;&quot;)
+)</errorConditionFormula>
+    <errorMessage>Please populate Category and Sub Category.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingGuestRules>
+        <fullName>Opportunity</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Opportunity</label>
+        <sharedTo>
+            <guestUser>Trion_Forms</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value>!@#$%^&amp;*123456789asdfghjk</value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>true</includeHVUOwnedRecords>
+    </sharingGuestRules>
+    <sharingOwnerRules>
+        <fullName>Opportunity_Edit_access_for_Onboarding</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allows users with a role of onboarding to edit opportunities.</description>
+        <label>Opportunity Edit access for Onboarding</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Onboarding</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Trion_Executive</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

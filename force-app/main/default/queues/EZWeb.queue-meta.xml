@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>EZWeb</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>Customer_Service</publicGroup>
+        </publicGroups>
+        <users>
+            <user>dturowski@trionworks.com</user>
+            <user>jwest@trionworks.com</user>
+            <user>jvaysman@trionworks.com</user>
+            <user>kmcfarlin@trionworks.com</user>
+            <user>sjacobs@trionworks.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

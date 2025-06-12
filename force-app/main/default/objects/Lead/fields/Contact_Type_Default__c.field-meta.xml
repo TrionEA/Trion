@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Type_Default__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <label>Contact Type Default</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Contact_Type__c.Id</field>
+            <operation>equals</operation>
+            <value>a1E8Y00000LrzMiUAJ</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact_Type__c</referenceTo>
+    <relationshipLabel>Leads</relationshipLabel>
+    <relationshipName>Leads</relationshipName>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Documents_Received__c</fullName>
+    <formula>AND(
+Total_Required__c  &gt; 0,
+Requirements_Submitted__c =  Total_Required__c)</formula>
+    <label>Required Documents Received</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

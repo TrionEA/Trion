@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- How long have you been a client --></label>
+    <name>How_long_have_you_been_a_client__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Trion Sales</label>
+    <logo>Images/Trion_Logo_2019.png</logo>
+    <tabs>standard-Chatter</tabs>
+    <tabs>standard-Lead</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>activities__Activities</tabs>
+    <tabs>dsfs__DocuSign_Status__c</tabs>
+    <tabs>Trion_Directory</tabs>
+    <tabs>Client_Portal_Credential_Request__c</tabs>
+    <tabs>Case_Email__c</tabs>
+    <tabs>CaseEm__c</tabs>
+    <tabs>Integration_Log_Error__c</tabs>
+    <tabs>EmailMessageHtml__c</tabs>
+    <tabs>Stagging__c</tabs>
+    <tabs>Purge_Log__c</tabs>
+    <tabs>Pending_Job__c</tabs>
+    <tabs>Purge_Case__c</tabs>
+    <tabs>WC_Rate__c</tabs>
+    <tabs>SUTA_Quote__c</tabs>
+    <tabs>AccountOpprtunity__c</tabs>
+    <tabs>Client_Contact__c</tabs>
+</CustomApplication>

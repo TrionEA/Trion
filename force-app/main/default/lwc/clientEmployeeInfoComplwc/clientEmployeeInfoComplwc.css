@@ -1,0 +1,13 @@
+:host {
+    display: block;
+    background-color: #ffffff; /* Set white background for the whole component */
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+
+
+/* Optional: Space out buttons */
+lightning-button {
+    margin-right: 0.5rem;
+}

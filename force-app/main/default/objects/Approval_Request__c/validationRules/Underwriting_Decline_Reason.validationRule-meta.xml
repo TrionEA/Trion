@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Underwriting_Decline_Reason</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Approval_Decision__c, &quot;Denied&quot;),
+ISBLANK(TEXT(Decline_Reason__c ) ))</errorConditionFormula>
+    <errorDisplayField>Decline_Reason__c</errorDisplayField>
+    <errorMessage>Decline Reason is required</errorMessage>
+</ValidationRule>

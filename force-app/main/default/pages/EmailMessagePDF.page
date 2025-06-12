@@ -1,0 +1,17 @@
+<apex:page controller="EmailMessagePDFController" renderAs="pdf">
+    <apex:repeat value="{!emailMessages}" var="em">
+        <h1>Email Message Details</h1>
+        <p><strong>Id:</strong> {!em.Id}</p>
+        <p><strong>ParentId:</strong> {!em.ParentId}</p>
+        <p><strong>ActivityId:</strong> {!em.ActivityId}</p>
+        <p><strong>CreatedById:</strong> {!em.CreatedById}</p>
+        <p><strong>CreatedDate:</strong> {!em.CreatedDate}</p>
+        <p><strong>LastModifiedDate:</strong> {!em.LastModifiedDate}</p>
+        <p><strong>LastModifiedById:</strong> {!em.LastModifiedById}</p>
+        <p><strong>SystemModstamp:</strong> {!em.SystemModstamp}</p>
+        <p><strong>TextBody:</strong> {!em.TextBody}</p>
+        <p><strong>HtmlBody:</strong> {!em.HtmlBody}</p>
+        <p><strong>Subject:</strong> {!em.Subject}</p>
+        <!-- Add other fields as needed -->
+    </apex:repeat>
+</apex:page>

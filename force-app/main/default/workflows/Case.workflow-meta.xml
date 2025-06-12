@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>AccountEmailAlert</fullName>
+        <description>AccountEmailAlert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/AccountEmailTemplate</template>
+    </alerts>
+    <alerts>
+        <fullName>BenefitEmailAlert</fullName>
+        <description>BenefitEmailAlert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/BenefitsEmailTemplate</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Close_Notificatio</fullName>
+        <description>Case Close Notificatio</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/Case_Closed</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Owner_Notification_of_Case_Response</fullName>
+        <description>Case Owner Notification of Case Response</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/Trion_Customer_Responded_to_Case</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Alert_Accounting_Auto_Response_Template</fullName>
+        <description>Email Alert Accounting Auto Response Template</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/Accounting_Auto_Response_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>EmailalertBenefitsAutoR</fullName>
+        <description>Notify Benefits on new case creation</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/Benefits_Auto_Response_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Enhanced_Notification_for_Priority_Client</fullName>
+        <description>Enhanced Notification for Priority Client</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Account Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Channel Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Executive Sponsor</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Lead Qualifier</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Liaison</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Pre-Sales Consultant</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Sales Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Sales Rep</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Development/Enhanced_Notifications_for_Priority_Clients_1690898441768</template>
+    </alerts>
+    <alerts>
+        <fullName>HRC_Case_Reference_Notice_To_Customer</fullName>
+        <description>HRC Case Reference Notice To Customer</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/Human_Resources_Auto_Response_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Customer_Service_on_New_Case</fullName>
+        <description>Notify Customer Service on New Case</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/Customer_Service_Auto_Response_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Docusign_New_Case</fullName>
+        <description>Notify DocSign Web outlook web on new case</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/Trion_Support_Auto_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Garnishment_On_New_Case</fullName>
+        <description>Notify Garnishment On New Case</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/Garnishments_Auto_Response_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Sales</fullName>
+        <description>Notify Sales On New Case</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/Sales_Auto_Response_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Staffing_On_New_Case</fullName>
+        <description>Notify Staffing On New Case</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/Staffing_Auto_Response_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Unemployment_on_new_case</fullName>
+        <description>Notify Unemployment on new case</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/Unemployment_Auto_Response_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_W2_on_New_Case</fullName>
+        <description>Notify W2 on New Case</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Payroll</recipient>
+            <type>group</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/Trion_new_Email_to_Case_internal_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_W2_on_New_Case_Creation</fullName>
+        <description>Notify W2 on New Case Creation</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/W2_Auto_Response_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_WC_on_New_Case</fullName>
+        <description>Notify WC on New Case</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>WC</recipient>
+            <type>group</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/Trion_new_Email_to_Case_internal_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_WC_on_New_Case_Creation</fullName>
+        <description>Notify WC on New Case Creation</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/WC_Auto_Response_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>PAY_New_Case_Assignment</fullName>
+        <description>PAY - New Case Assignment</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/Trion_new_Email_to_Case_internal_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>PAY_New_Case_Notice_to_Customer</fullName>
+        <description>PAY - New Case Notice to Customer</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/Payroll_Auto_Response_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Sending_email_to_Customer_When_none_case_origin_are_met</fullName>
+        <description>Sending email to Customer(When none case origin are met)</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/When_no_case_origin_met_default_response_to_case</template>
+    </alerts>
+    <alerts>
+        <fullName>sending_email_whencase_is_created_30_days</fullName>
+        <description>sending email whencase is created &gt;30 days</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>EA_testing_folder/Sending_email_when_case_created</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Accounting</fullName>
+        <field>Type</field>
+        <literalValue>Accounting</literalValue>
+        <name>Accounting</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Accounting_Queue</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Accounting</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Accounting Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Benefits</fullName>
+        <field>Type</field>
+        <literalValue>Benefits</literalValue>
+        <name>Benefits</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Benefits_Queue</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Benefits</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Benefits Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Escalated</fullName>
+        <field>Status</field>
+        <literalValue>Escalated</literalValue>
+        <name>Case Escalated</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>HR_Queue</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Human_Resources</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>HR Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>HR_Type</fullName>
+        <field>Type</field>
+        <literalValue>Human Resources</literalValue>
+        <name>HR Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Payroll</fullName>
+        <field>Type</field>
+        <literalValue>Payroll</literalValue>
+        <name>Payroll</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Payroll_Queue</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Payroll</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Payroll Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sales</fullName>
+        <field>Type</field>
+        <literalValue>Sales</literalValue>
+        <name>Sales</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Staffing_Case_Type</fullName>
+        <field>Type</field>
+        <literalValue>Staffing</literalValue>
+        <name>Staffing Case Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Change_Date</fullName>
+        <field>Date_of_Status_Change__c</field>
+        <formula>TODAY()</formula>
+        <name>Status Change Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Case_Type_to_W2</fullName>
+        <field>Type</field>
+        <literalValue>W2</literalValue>
+        <name>Update Case Type to W2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>WC</fullName>
+        <field>Type</field>
+        <literalValue>WC</literalValue>
+        <name>WC</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>GF_Survey_ServiceFollowUp_800e6b65</fullName>
+        <apiVersion>39.0</apiVersion>
+        <endpointUrl>https://www.getfeedback.com/campaigns/7MLJHymw/transactional_send</endpointUrl>
+        <fields>AccountId</fields>
+        <fields>Case_Contact_First_Name__c</fields>
+        <fields>ContactEmail</fields>
+        <fields>ContactId</fields>
+        <fields>Id</fields>
+        <fields>SuppliedEmail</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>csherman@trionworks.com</integrationUser>
+        <name>GF_Survey_ServiceFollowUp_800e6b65</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>Accounting</fullName>
+        <actions>
+            <name>Accounting</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email - Accounting</value>
+        </criteriaItems>
+        <description>Update Case type to Accounting for Email to Case to accounting@trionworks.com</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Benefits</fullName>
+        <actions>
+            <name>Benefits</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email - Benefits</value>
+        </criteriaItems>
+        <description>Update Case type to Benefits for Email to Case to benefits@trionworks.com</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case Close Notification</fullName>
+        <actions>
+            <name>Case_Close_Notificatio</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case Closed - Send Survey to Client</fullName>
+        <active>false</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>trionworks.com</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Type</field>
+            <operation>notEqual</operation>
+            <value>Human Resources</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>hhproponline.com</value>
+        </criteriaItems>
+        <description>Case Closed - Send Survey to Client. Will send a survey each time the other criteria is met and the sequence number equals 1. The sequence number is determined via the flow &quot;Closed Case Sequence Number&quot;.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>GF_Survey_ServiceFollowUp_800e6b65</name>
+                <type>OutboundMessage</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Date of Status Change</fullName>
+        <actions>
+            <name>Status_Change_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(
+ISCHANGED(Status),
+IF(
+NOT(ISPICKVAL(Status, &quot;Closed&quot;)), TRUE, FALSE) 
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>HR</fullName>
+        <actions>
+            <name>HR_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email - HR</value>
+        </criteriaItems>
+        <description>Update Case type to HR for Email to Case to hr@trionworks.com</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Outlook to SF Acct%3A</fullName>
+        <actions>
+            <name>Accounting_Queue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>startsWith</operation>
+            <value>Acct:</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email - Outlook</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Outlook to SF Benefits</fullName>
+        <actions>
+            <name>Benefits_Queue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>startsWith</operation>
+            <value>Benefits:</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email - Outlook</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Outlook to SF HR</fullName>
+        <actions>
+            <name>HR_Queue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>startsWith</operation>
+            <value>HR:</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email - Outlook</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Outlook to SF Payroll</fullName>
+        <actions>
+            <name>Payroll_Queue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>startsWith</operation>
+            <value>Payroll:</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email - Outlook</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Payroll</fullName>
+        <actions>
+            <name>Payroll</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email - Payroll</value>
+        </criteriaItems>
+        <description>Update Case type to Payroll for Email to Case to payroll@trionworks.com</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reply Received Email Notification</fullName>
+        <actions>
+            <name>Case_Owner_Notification_of_Case_Response</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Reply Received,Reopened</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sales</fullName>
+        <actions>
+            <name>Sales</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email - Sales</value>
+        </criteriaItems>
+        <description>Update Case type to Sales for Email to Case to sales@trionworks.com</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Staffing</fullName>
+        <actions>
+            <name>Staffing_Case_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email - Staffing</value>
+        </criteriaItems>
+        <description>Update Case type to Staffing for Email to Case to staffing@trionworks.com</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>W2</fullName>
+        <actions>
+            <name>Update_Case_Type_to_W2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email - W2</value>
+        </criteriaItems>
+        <description>Update Case type to W2 for Email to Case to w2@trionworks.com</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>WC</fullName>
+        <actions>
+            <name>WC</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email - WC</value>
+        </criteriaItems>
+        <description>Update Case type to WC for Email to Case to wc@trionworks.com</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Earliest_Case_Date__c</fullName>
+    <description>Enter the earliest case date to be searched. This field is currently necessary in order to limit the number of cases that are searched and prevent an error due to a non-specific query. If it becomes possible to specify relative dates within a flow query in the future, this field will no longer be necessary.</description>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <label>Earliest Case Date</label>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>

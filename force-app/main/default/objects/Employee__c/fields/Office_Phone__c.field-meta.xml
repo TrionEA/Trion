@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Office_Phone__c</fullName>
+    <description>The office phone number for the employee.</description>
+    <inlineHelpText>Enter the employee&apos;s office phone number.</inlineHelpText>
+    <label>Office Phone</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Phone</type>
+</CustomField>

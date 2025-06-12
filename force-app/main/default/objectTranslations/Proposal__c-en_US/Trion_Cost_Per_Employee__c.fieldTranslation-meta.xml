@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- ( EPLI+ SUTA Cost +Final Recommended Premium +  Commission) / # of EE --></help>
+    <label><!-- Trion Cost Per Employee --></label>
+    <name>Trion_Cost_Per_Employee__c</name>
+</CustomFieldTranslation>

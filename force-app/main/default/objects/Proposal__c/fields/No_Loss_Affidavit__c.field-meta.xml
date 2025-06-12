@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Loss_Affidavit__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+ ISPICKVAL(New_Business_Entity__c, &quot;No&quot;)  &amp;&amp; ISPICKVAL( Quote_Type__c, &quot;PEO&quot;) &amp;&amp;  Opportunity__r.No_Loss_Affidative__c = 0, &quot;No&quot;, &quot;Yes&quot;)</formula>
+    <label>No Loss Affidavit</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

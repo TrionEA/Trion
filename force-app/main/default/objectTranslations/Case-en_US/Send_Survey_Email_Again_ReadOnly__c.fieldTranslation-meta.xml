@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This checkbox determines if the survey is sent. This checkbox automatically unchecks after 5 minutes if the end user wants to trigger the survey again. --></help>
+    <label><!-- Send Survey Email --></label>
+    <name>Send_Survey_Email_Again_ReadOnly__c</name>
+</CustomFieldTranslation>

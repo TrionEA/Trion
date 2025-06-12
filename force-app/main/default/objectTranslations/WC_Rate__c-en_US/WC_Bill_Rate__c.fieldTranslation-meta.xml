@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- Bill Rate (includes the State Assessment Fee and Surcharge if included is selected)
+(Bill Rate * State Assessment Fee and Surcharge) + Bill Rate -->
+    </help>
+    <label><!-- Bill Rate --></label>
+    <name>WC_Bill_Rate__c</name>
+</CustomFieldTranslation>

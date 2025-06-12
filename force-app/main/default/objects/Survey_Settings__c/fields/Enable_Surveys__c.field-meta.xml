@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enable_Surveys__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>The switch which is used to enable/disable the survey</description>
+    <label>Enable Surveys</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

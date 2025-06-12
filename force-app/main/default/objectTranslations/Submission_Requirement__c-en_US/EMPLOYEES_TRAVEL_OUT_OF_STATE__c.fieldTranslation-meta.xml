@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- DO EMPLOYEES TRAVEL OUT OF STATE? (If &quot;YES&quot;, indicate state(s) of travel and frequency) --></help>
+    <label><!-- EMPLOYEES TRAVEL OUT OF STATE --></label>
+    <name>EMPLOYEES_TRAVEL_OUT_OF_STATE__c</name>
+    <picklistValues>
+        <masterLabel>N</masterLabel>
+        <translation><!-- N --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Y</masterLabel>
+        <translation><!-- Y --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

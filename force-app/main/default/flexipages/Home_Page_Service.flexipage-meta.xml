@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Home page for service reps.</description>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>cacheAge</name>
+                    <value>1440</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>reportName</name>
+                    <value>Open_Cases_by_Issue_Area_BRQ</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>showRefreshButton</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:reportChart</componentName>
+                <identifier>flexipage_reportChart</identifier>
+            </componentInstance>
+        </itemInstances>
+        <mode>Replace</mode>
+        <name>top</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>home:eventContainer</componentName>
+                <identifier>home_eventContainer</identifier>
+            </componentInstance>
+        </itemInstances>
+        <mode>Replace</mode>
+        <name>bottomLeft</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>runtime_sales_activities:todayTaskContainer</componentName>
+                <identifier>runtime_sales_activities_todayTaskContainer</identifier>
+            </componentInstance>
+        </itemInstances>
+        <mode>Replace</mode>
+        <name>bottomRight</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;u data-aura-rendered-by=&quot;654:0&quot;&gt;&lt;b&gt;Training Materials - Lightning&lt;/b&gt;&lt;/u&gt;&lt;br /&gt;
+&lt;a href=&quot;https://trion.my.salesforce.com/sfc/p/G0000000kxaZ/a/1M000000Hq5A/vimKvPkvxAWXCr0MFLEvasq.JUiQQHgc38qzxf6Bz0U&quot; target=&quot;_blank&quot;&gt;Salesforce 101 - Lightning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://trion.my.salesforce.com/sfc/p/G0000000kxaZ/a/1M000000Hq4v/arVmVtbjuz6fsvU3t0_QDlUR4cbmgG1SU2ORZIF4ocw&quot; target=&quot;_blank&quot;&gt;Account Management - Lightning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://trion.my.salesforce.com/sfc/p/G0000000kxaZ/a/1M000000Hq51/fMYWMOLc_Afy97oqfzoOBXg0EH_oudhnbGJj.DK8yb8&quot; target=&quot;_blank&quot;&gt;Contact Management - Lightning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://trion.my.salesforce.com/sfc/p/G0000000kxaZ/a/1M000000Hq55/RH65bGKj5xmVlSpQEmAhtmlUdvISFqy_NsuURkuk1IE&quot; target=&quot;_blank&quot;&gt;Case Management - Lightning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://trion.my.salesforce.com/sfc/p/G0000000kxaZ/a/1M000000Hq50/GK6wy6P8D_fNjc8.GiXdYkn4N12eubLfMioflWIllQ0&quot; target=&quot;_blank&quot;&gt;Salesforce Lightning for Classic Users&lt;/a&gt;&lt;br /&gt;
+&lt;br data-aura-rendered-by=&quot;654:0&quot; /&gt;
+&lt;u data-aura-rendered-by=&quot;654:0&quot;&gt;&lt;b&gt;Training Materials - Classic UI&lt;/b&gt;&lt;/u&gt;&lt;br data-aura-rendered-by=&quot;654:0&quot; /&gt;
+&lt;a data-aura-rendered-by=&quot;654:0&quot; href=&quot;https://trion--darwintest.lightning.force.com/servlet/servlet.FileDownload?file=01516000001ke80&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Salesforce 101&lt;/a&gt;&lt;br data-aura-rendered-by=&quot;654:0&quot; /&gt;
+&lt;a data-aura-rendered-by=&quot;654:0&quot; href=&quot;https://trion--darwintest.lightning.force.com/servlet/servlet.FileDownload?file=01516000001ke85&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Account Management&lt;/a&gt;&lt;br data-aura-rendered-by=&quot;654:0&quot; /&gt;
+&lt;a data-aura-rendered-by=&quot;654:0&quot; href=&quot;https://trion--darwintest.lightning.force.com/servlet/servlet.FileDownload?file=01516000001ke8A&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Contact Management&lt;/a&gt;&lt;br data-aura-rendered-by=&quot;654:0&quot; /&gt;
+&lt;a data-aura-rendered-by=&quot;654:0&quot; href=&quot;https://trion--darwintest.lightning.force.com/servlet/servlet.FileDownload?file=01516000001ke8P&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Case Management&lt;/a&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>home:assistant</componentName>
+                <identifier>home_assistant</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>home:recentRecordContainer</componentName>
+                <identifier>home_recentRecordContainer</identifier>
+            </componentInstance>
+        </itemInstances>
+        <mode>Replace</mode>
+        <name>sidebar</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Home Page Service</masterLabel>
+    <parentFlexiPage>home__desktopDefault</parentFlexiPage>
+    <template>
+        <name>home:desktopTemplate</name>
+    </template>
+    <type>HomePage</type>
+</FlexiPage>

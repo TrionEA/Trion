@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllActiveCampaigns</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>Campaign_Stage__c</columns>
+    <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Campaign_Stage__c</field>
+        <operation>equals</operation>
+        <value>Creation,Template Tagging,Interaction Score,Member Identification,Email Template Selection,Activated / In Progress</value>
+    </filters>
+    <label>All Active Campaigns</label>
+</ListView>

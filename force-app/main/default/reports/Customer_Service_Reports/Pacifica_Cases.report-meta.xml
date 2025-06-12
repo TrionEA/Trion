@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATEONLY</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>ACCOUNT.NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,PACIFICA ORANGE COUNTY LLC,PACIFICA OAKLAND LLC,PACIFICA SL SCOTTSDALE LLC,PACIFICA SENIOR LIVING OCALA L,PACIFICA SAN BERNARDINO LLC,HSRE Pacifica Fresno,LP,HSRE Pacifica Menifee Valley,PACIFICA AUGUSTINE ROAD LLC,PACIFICA BAKERSFIELD LP,PACIFICA BELLEAIR LLC,PACIFICA BG MABRY,PACIFICA BONITA LP,PACIFICA BURLINGAME LP,PACIFICA CALAROGA TERRACE LLC,Pacifica Carmichael,LLC,PACIFICA CHESAPEAKE LLC,PACIFICA CHINO HILLS LP,PACIFICA COAST LP,PACIFICA STERLING LLC,PACIFICA HARBORVIEW-KESSLER LL,PACIFICA LAUDERHILL LLC,PACIFICA DEVONSHIRE LLC,PACIFICA SHERMAN LLC,PACIFICA MILLCREEK LLC,PACIFICA WOODMONT LLC,PACIFICA PINEHURST LLC,PACIFICA ROCKWOOD LLC,PACIFICA VICTORIA LP,PACIFICA ROSEMONT LLC,PACIFICA SAGEBRUSH LLC,PACIFICA SOMERFIELD LLC,PACIFICA DALY LLC,PACIFICA SFO LLC,PACIFICA HOLLYWOOD LLC,PACIFICA SLO LLC,PACIFICA TUCSON LLC,PACIFICA KENMORE LLC,PACIFICA NEW F ESTATES LLC,PACIFICA RANCHO PARK LP,PACIFICA SL ENCINITAS LP,PACIFICA DALY 2 LP,PACIFICA SUN CITY LP,PACIFICA SL LANTANA LLC,PACIFICA SYLVAN PARK LLC,PACIFICA SL ELLENSBURG LLC,PACIFICA SL SNOHOMISH LLC,PACIFICA SL MCMINNVILLE LLC,PACIFICA FORT MYERS</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Pacifica Cases</name>
+    <params>
+        <name>units</name>
+        <value>m</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <endDate>2022-11-25</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2020-01-01</startDate>
+    </timeFrameFilter>
+</Report>

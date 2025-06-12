@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pending_UW</fullName>
+    <columns>NAME</columns>
+    <columns>Client__c</columns>
+    <columns>Quote_Type__c</columns>
+    <columns>Total_Gross_Wages__c</columns>
+    <columns>Total_of_Employees__c</columns>
+    <columns>SOC_Status__c</columns>
+    <columns>Sales_Qualified_Date__c</columns>
+    <columns>Opportunity_Stage__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Approval_Request__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Underwriting_Status__c</field>
+        <operation>equals</operation>
+        <value>Pending Review</value>
+    </filters>
+    <filters>
+        <field>Opportunity_Stage__c</field>
+        <operation>notContain</operation>
+        <value>Closed</value>
+    </filters>
+    <label>Pending UW</label>
+    <sharedTo>
+        <group>Sales_Office</group>
+        <group>Underwriting</group>
+    </sharedTo>
+</ListView>

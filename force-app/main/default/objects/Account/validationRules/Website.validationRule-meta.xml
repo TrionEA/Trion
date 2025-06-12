@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Website</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL( Company_website__c , &quot;Yes&quot;),
+ISBLANK( Website ))</errorConditionFormula>
+    <errorDisplayField>Website</errorDisplayField>
+    <errorMessage>Enter the clients website</errorMessage>
+</ValidationRule>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Trion</letterhead>
+    <name>UW Disqualification Reversed</name>
+    <style>freeForm</style>
+    <subject>UW Disqualfication for {!Proposal__c.Client__c} has been reversed</subject>
+    <textOnly>Opportunity Stage:  {!Proposal__c.Opportunity_Stage__c}
+Opportunity Owner: {!User.Name}
+Client:  {!Proposal__c.Client__c}
+Quote Type:   {!Proposal__c.Quote_Type__c}
+Policy Exp. Date: {!Proposal__c.Current_Policy_Expiration_Date__c}
+New Business Entity:  {!Proposal__c.New_Business_Entity__c}
+Health Quote:  {!Proposal__c.Health_Quote__c}
+Staffing Supplement:  {!Proposal__c.Staffing_Supplement__c}
+# of Employees:  {!Proposal__c.Total_of_Employees__c}
+Gross Wages:  {!Proposal__c.Total_Gross_Wages__c}
+
+Click here to review the Proposal.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

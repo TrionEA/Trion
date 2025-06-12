@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Survey_Responses__c.Account__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Responses__c.New_Client_Satifaction__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Responses__c.Areas_where_we_could_be_better__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Responses__c.Follow_Up_Required__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Responses__c.Additional_info_on_improving__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Responses__c.Survey_Start_Time__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Responses__c.Survey_Completion_Time__c</field>
+    </columns>
+    <description>Responses received from first payroll survey.</description>
+    <filter>
+        <criteriaItems>
+            <column>Survey_Responses__c.Survery_Name__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>First Payroll Survey</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>First Payroll Survey</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Survey_Responses__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

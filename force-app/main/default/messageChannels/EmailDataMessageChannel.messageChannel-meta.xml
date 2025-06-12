@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>sends data from case email lwc to emailmessage template</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>This is the field to pass data</description>
+        <fieldName>emailSubject</fieldName>
+    </lightningMessageFields>
+    <masterLabel>EmailDataMessageChannel</masterLabel>
+</LightningMessageChannel>

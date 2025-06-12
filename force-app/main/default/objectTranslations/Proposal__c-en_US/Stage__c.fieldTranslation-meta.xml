@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Proposal Stage --></label>
+    <name>Stage__c</name>
+    <picklistValues>
+        <masterLabel>Client Presentation</masterLabel>
+        <translation><!-- Client Presentation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contract</masterLabel>
+        <translation><!-- Contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Started</masterLabel>
+        <translation><!-- Not Started --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Proposal Accepted</masterLabel>
+        <translation><!-- Proposal Accepted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quoting</masterLabel>
+        <translation><!-- Quoting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Revision</masterLabel>
+        <translation><!-- Revision --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

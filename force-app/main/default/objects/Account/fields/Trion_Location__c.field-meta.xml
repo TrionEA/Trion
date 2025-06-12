@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trion_Location__c</fullName>
+    <label>Trion Location</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Trion South</fullName>
+                <default>false</default>
+                <label>Trion South</label>
+            </value>
+            <value>
+                <fullName>Trion North</fullName>
+                <default>false</default>
+                <label>Trion North</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <label>Approval Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pending SOC Review</fullName>
+                <default>false</default>
+                <label>Pending SOC Review</label>
+            </value>
+            <value>
+                <fullName>Pending UW Review</fullName>
+                <default>false</default>
+                <label>Pending UW Review</label>
+            </value>
+            <value>
+                <fullName>Submitted for Approval</fullName>
+                <default>false</default>
+                <label>Submitted for Approval</label>
+            </value>
+            <value>
+                <fullName>Approved for UW Review</fullName>
+                <default>false</default>
+                <label>Approved for UW Review</label>
+            </value>
+            <value>
+                <fullName>Approved by SOC</fullName>
+                <default>false</default>
+                <label>Approved by SOC</label>
+            </value>
+            <value>
+                <fullName>Disqualified by SOC</fullName>
+                <default>false</default>
+                <label>Disqualified by SOC</label>
+            </value>
+            <value>
+                <fullName>Approved by Underwriting</fullName>
+                <default>false</default>
+                <label>Approved by Underwriting</label>
+            </value>
+            <value>
+                <fullName>UW Additional Requirements Requested</fullName>
+                <default>false</default>
+                <label>UW Additional Requirements Requested</label>
+            </value>
+            <value>
+                <fullName>Disqualified by Underwriting</fullName>
+                <default>false</default>
+                <label>Disqualified by Underwriting</label>
+            </value>
+            <value>
+                <fullName>Additional Info Required</fullName>
+                <default>false</default>
+                <label>Additional Info Required</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

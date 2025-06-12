@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_Started_List</fullName>
+    <columns>NAME</columns>
+    <columns>EmailMessage_Id__c</columns>
+    <columns>Status__c</columns>
+    <columns>Parent_Case_Id__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>equals</operation>
+        <value>Sujatha</value>
+    </filters>
+    <label>Not Started List</label>
+</ListView>

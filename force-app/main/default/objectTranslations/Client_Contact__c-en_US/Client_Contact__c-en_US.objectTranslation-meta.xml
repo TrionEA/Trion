@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Client Contact</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Client Contacts</value>
+    </caseValues>
+    <layouts>
+        <layout>Client Contact Layout</layout>
+        <sections>
+            <label><!-- Comp Info --></label>
+            <section>Comp Info</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Info --></label>
+            <section>Contact Info</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

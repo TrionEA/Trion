@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monopolistic_States</fullName>
+    <columns>NAME</columns>
+    <columns>State_Classification__c</columns>
+    <columns>State_Code__c</columns>
+    <columns>of_Comp_Codes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>State_Classification__c</field>
+        <operation>equals</operation>
+        <value>Monopolistic</value>
+    </filters>
+    <label>Monopolistic States</label>
+</ListView>

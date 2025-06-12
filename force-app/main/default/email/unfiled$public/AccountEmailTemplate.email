@@ -1,0 +1,3 @@
+Hello {!Case.SuppliedName},
+This is to inform you that your case {!Case.CaseNumber} has been closed and it is more than 30 days old. We request that you send your concerns to the following new email: accounting@trionworks.com.
+*Note: Please do not reply to this email..

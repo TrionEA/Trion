@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Proposal__c$Client__c</field>
+    </columns>
+    <columns>
+        <field>Proposal__c$Opportunity__c.Opportunity_Owner__c</field>
+    </columns>
+    <columns>
+        <field>Proposal__c$Opportunity__c.CloseDate</field>
+    </columns>
+    <columns>
+        <field>Proposal__c$Quote_Type__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Proposal__c$Total_Gross_Wages__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Proposal__c$Opportunity__c.Amount</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Proposal__c$Opportunity__c.StageName</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Proposal__c$Opportunity__c.Broker_Agent__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Trion Closed Won FY 2020</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Proposals__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Proposal__c$Opportunity__c.CloseDate</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

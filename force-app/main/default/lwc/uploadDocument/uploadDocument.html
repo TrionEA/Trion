@@ -1,0 +1,773 @@
+<template>
+	<lightning-card class="slds-p-around_medium slds-text-align_center" >
+		<div class="slds-p-around_medium slds-text-align_center" >
+			<h1 style="color: black; font-size: 2vw;">Upload Missing Documents</h1>
+		</div>
+		<template if:true={isLoading}>
+			<lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+		</template>
+		<template if:true={isButtonVisible}>
+			<lightning-button label="Your Button" onclick={handleButtonClick}></lightning-button>
+		</template>
+		<template if:true={data}>
+			<div class="slds-p-around_medium slds-text-align_center">
+				<lightning-datatable 
+                key-field="id"
+                data={data}
+                columns={dataTableColumns}
+                onsort={handleSort}
+                onrowaction={handleRowAction}
+                sorted-by={sortBy}
+                sorted-direction={sortDirection}
+                hide-checkbox-column></lightning-datatable>
+			</div>
+			<div class="slds-p-around_medium slds-size_1-of-1 slds-p-top_small slds-p-bottom_small slds-text-align_left">
+				<button class="slds-button slds-button_neutral" type="button" onclick={handleUploadClick}>Upload Document</button>
+			</div>
+		</template>
+		<template if:false={data}>
+			<div class="slds-p-around_medium">
+                No submission requirements found.
+            </div>
+		</template>
+		<!--Select Requirement Type-->
+		<template if:true={showUploadComponent}>
+			<section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+				<div class="slds-modal__container">
+					<!-- Header -->
+					<header class="slds-modal__header">
+						<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" style="background-color: white;" title="Close" onclick={hideModalBox}>
+							<lightning-icon icon-name="utility:close"                    
+                                                alternative-text="close"                    
+                                                variant="inverse"
+                                                size="small" ></lightning-icon>
+							<span class="slds-assistive-text">Close</span>
+						</button>
+					</header>
+					<!-- Body -->
+					<div class="slds-modal__content slds-p-around_medium slds-text-align_left" >
+						<h1 class="body-style">Select Requirement Type</h1>
+						<!-- Dropdown -->
+						<lightning-combobox
+                        label="Requirement Type"
+                        value={selectedRequirement}
+                        options={requirementOptions}
+                        required
+                        onchange={handleRequirementChange}></lightning-combobox>
+					</div>
+					<!-- Footer -->
+					<footer class="slds-modal__footer">
+						<button class="slds-button slds-button_neutral" onclick={handleCancel}>Cancel</button>
+						<button class="slds-button slds-button_neutral" style="background-color: grey; color: white;" onclick={handleUploadFinish} disabled>Save and Finish</button>
+					</footer>
+				</div>
+			</section>
+			<div class="slds-backdrop slds-backdrop_open"></div>
+		</template>
+		<!-- Modal/Template -->
+		<template if:true={showTemplate}>
+			<section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+				<div class="slds-modal__container">
+					<!-- Header -->
+					<header class="slds-modal__header">
+						<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" style="background-color: white;" title="Close" onclick={handleCloseTemplate}>
+							<lightning-icon icon-name="utility:close"                    
+                                                alternative-text="close"                    
+                                                variant="inverse"                    
+                                                size="small" ></lightning-icon>
+							<span class="slds-assistive-text">Close</span>
+						</button>
+						<h2 class="slds-modal__title">{selectedRequirement}</h2>
+					</header>
+					<!-- Body -->
+					<div class="slds-modal__content slds-p-around_medium slds-text-align_left" >
+						<h1 class="body-style">Notes</h1>
+						<lightning-textarea label="Notes" ></lightning-textarea>
+					</div>
+					<div class="slds-modal__content slds-p-around_medium slds-text-align_left" >
+						<h1 class="body-style">Upload File</h1>
+						<lightning-file-upload
+        label="Upload Document"
+        name="fileUploader"
+        accept={acceptedFormats}
+        record-id={recordId}
+        onuploadfinished={handleUploadFinished}
+        multiple></lightning-file-upload>
+					</div>
+					<!-- Footer -->
+					<footer class="slds-modal__footer">
+						<button class="slds-button slds-button_neutral slds-float_left slds-clearfix" onclick={handleBack}>Back</button>
+						<button class="slds-button slds-button_neutral" onclick={handleCancel}>Cancel</button>
+						<button class="slds-button slds-button_brand" onclick={handleUploadFinish} >Save and Finish</button>
+					</footer>
+				</div>
+			</section>
+			<div class="slds-backdrop slds-backdrop_open"></div>
+		</template>
+
+		<!--acord-section-->
+		<template if:true={isShowACORDTemplet}>
+			<section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+				<!-- Spinner placeholder -->
+				<div id="modalspinner" class="slds-spinner slds-spinner_large slds-spinner_brand slds-hide" role="status">
+					<span class="slds-assistive-text">Loading...</span>
+					<div class="slds-spinner__dot-a"></div>
+					<div class="slds-spinner__dot-b"></div>
+				</div>
+				<div class="slds-modal__container">
+					<header class="slds-modal__header">
+						<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" style="background-color: white;" title="Close" onclick={handleCloseTemplate}>
+							<lightning-icon icon-name="utility:close"                    
+                                                alternative-text="close"                    
+                                                variant="inverse"                    
+                                                size="small" ></lightning-icon>
+							<span class="slds-assistive-text">Close</span>
+						</button>
+                        
+						<h2 class="slds-modal__title">{selectedRequirement}</h2>
+						<div id="acordMessage" >
+                By selecting the Trion ACORD form, you are required to complete all 
+                sections on this page so the ACORD can be autogenerated by the Underwriting Office. 
+                If you choose to upload a completed ACORD form, select the ‘Uploaded ACORD’ option.
+            </div>
+					</header>
+                    <div class="scrollable-modal-content">
+					<div class="slds-modal__content slds-p-around_medium slds-text-align_left" >
+						<h1 class="body-style">ACORD Type</h1>
+
+						<!-- Dropdown -->
+						<lightning-combobox
+                        label="ACORD Type"
+                        value={selectedACORDType}
+                        options={acordTypeOptions}
+                        required
+                        onchange={handleACORDTypeChange}></lightning-combobox>
+					</div>
+
+					<!--Officers-->
+					<div class="slds-modal__content slds-p-around_medium slds-text-align_left" >
+						<h1 class="body-style ">Policy Information</h1>
+						<div class="slds-grid slds-wrap">
+							<div class="slds-col slds-size_1-of-2 slds-p-right_small">
+								<lightning-input type="date"
+                         label="Proposed Effective Date" 
+                         onchange={handleDateChange}></lightning-input>
+							</div>
+							<div class="slds-col slds-size_1-of-2">
+								<lightning-input type="date"
+                         label="Proposed Exp Date" 
+                         onchange={handleDateChange}></lightning-input>
+							</div>
+						</div>
+					</div>
+
+					<!--sub:PART 2 - EMPLOYER'S LIABILITY-->
+					<div class="slds-modal__content slds-p-around_medium slds-text-align_left" >
+						<h1 class="body-style ">PART 2 - EMPLOYER'S LIABILITY</h1>
+						<div class="slds-grid slds-wrap">
+							<div class="slds-col slds-size_1-of-2 slds-p-right_small">
+								<lightning-input type="number"
+                         name="eachAccident"
+                         label="EACH ACCIDENT"
+                         formatter="currency" 
+                         value={eachAccident} 
+                         onchange={handleInputChange}></lightning-input>
+							</div>
+							<div class="slds-col slds-size_1-of-2">
+								<lightning-input type="number"
+                         name="diseasePolicyLimit"
+                         label="DISEASE POLICY LIMIT" 
+                         formatter="currency"
+                         value={diseasePolicyLimit}
+                         onchange={handleInputChange}></lightning-input>
+							</div>
+							<div class="slds-col slds-size_1-of-2">
+								<lightning-input type="number"
+                         name="diseaseEachEmployee"
+                         label="DISEASE EACH EMPLOYEE"
+                         formatter="currency"
+                         value={diseaseEachEmployee}  
+                         onchange={handleInputChange}></lightning-input>
+							</div>
+						</div>
+					</div>
+
+					<!--sub:OTHER COVERAGES-->
+					<div class="slds-modal__content slds-p-around_medium slds-text-align_left" >
+						<h1 class="body-style ">OTHER COVERAGES</h1>
+						<div class="slds-grid slds-wrap">
+							<div class="slds-col slds-size_1-of-2 slds-p-right_small">
+								<lightning-input type="checkbox"
+                         label="U.S.L. & H."
+                         variant="label-stacked"
+                         checked={u_s_l_h}></lightning-input>
+							</div>
+							<div class="slds-col slds-size_1-of-2">
+								<lightning-input type="checkbox"
+                         label="VOLUNTARY COMP"
+                         variant="label-stacked"
+                         checked={voluntaryComp}></lightning-input>
+							</div>
+							<div class="slds-col slds-size_1-of-2">
+								<lightning-input type="checkbox"
+                         label="FOREIGN COV"
+                         variant="label-stacked"
+                         checked={foreignCov}></lightning-input>
+							</div>
+							<div class="slds-col slds-size_1-of-2">
+								<lightning-input type="checkbox"
+                         label="MANAGED CARE OPTION"
+                         variant="label-stacked"
+                         checked={managedCareOption}></lightning-input>
+							</div>
+						</div>
+					</div>
+
+					<!--sub:TOTAL ESTIMATED ANNUAL PREMIUM - ALL STATES-->
+					<div class="slds-modal__content slds-p-around_medium slds-text-align_left" >
+						<h1 class="body-style ">TOTAL ESTIMATED ANNUAL PREMIUM - ALL STATES</h1>
+						<lightning-input type="number"
+                         label="TOTAL ESTIMATED ANNUAL PREMIUM ALL STATE"
+                         formatter="currency"
+                         value={totalEstimatedAnnualPremiumAllState}  
+                         onchange={handlePremiumChange}>
+                         </lightning-input>
+					</div>
+
+                    <!--Officers-->
+                    <div class="slds-modal__content slds-p-around_medium slds-text-align_left" >
+						<h1 class="body-style ">Contact Information</h1>
+                    </div>
+
+                    <div class="slds-modal__content slds-p-around_medium slds-text-align_left" >
+						<h1 class="body-style ">Officers</h1>
+                    </div>
+
+                    <div class="slds-modal__content slds-p-around_medium slds-text-align_left" >
+						<h1 class="body-style ">State Rating</h1>
+						<div>
+                        <lightning-datatable 
+                key-field="id"
+                data={wcratesdata}
+                columns={wcRateDataTableColumns}
+                onsort={handleSort}
+                onrowaction={handleWCRateRowAction}
+                sorted-by={sortBy}
+                sorted-direction={sortDirection}
+                hide-checkbox-column></lightning-datatable>
+						</div>
+           <div>
+                <button class="slds-button slds-button_neutral slds-float_left slds-clearfix" onclick={handelAddWCCodeChange}>Add WC Code</button>
+				</div>
+                </div>
+
+				<div class="slds-modal__content slds-p-around_medium slds-text-align_left" >
+						<h1 class="body-style ">NATURE OF BUSINESS / DESCRIPTION OF OPERATIONS</h1>
+				</div>
+				<div class="slds-grid slds-wrap">
+                                                <div class="slds-size_1-of-1">
+                                                    GIVE COMMENTS AND DESCRIPTIONS OF BUSINESS, OPERATIONS AND PRODUCTS: MANUFACTURING - RAW MATERIALS, PROCESSES, PRODUCT, EQUIPMENT; CONTRACTOR - TYPE OF WORK, SUB-CONTRACTS; MERCANTILE - MERCHANDISE, CUSTOMERS, DELIVERIES; SERVICE - TYPE, LOCATION; FARM - ACREAGE, ANIMALS, MACHINERY, SUB-CONTRACTS.
+                                                </div>
+                                                <div class="slds-size_1-of-1">
+                                                    <lightning-textarea  
+													value={natureofBusinessDescription}></lightning-textarea>
+                                                </div>
+                                            </div>
+
+											<div class="slds-modal__content slds-p-around_medium slds-text-align_left" >
+						<h1 class="body-style ">ACORD General Information</h1>
+				</div>
+
+				 <lightning-record-edit-form
+        object-api-name="Submission_Requirement__c"
+        record-id={selectedRecordId}>
+
+        <div class="slds-grid slds-wrap">
+            <!-- Picklist Field -->
+            <div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label">
+                        1. DOES APPLICANT OWN, OPERATE OR LEASE AIRCRAFT / WATERCRAFT?
+                    </label>
+                    <lightning-input-field
+                        field-name="OWN_OPERATE_LEASE_AIRCRAFT_WATERCRAFT__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+			</div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        2. DO / HAVE PAST, PRESENT OR DISCONTINUED OPERATIONS INVOLVE(D) STORING, TREATING, DISCHARGING, APPLYING, DISPOSING, OR TRANSPORTING OF HAZARDOUS MATERIAL? (e.g. landfills, wastes, fuel tanks, etc)
+                    </label>
+                    <lightning-input-field
+                        field-name="DISCONTINUED_OPERATIONS_HAZARDOUS_MATER__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        3. ANY WORK PERFORMED UNDERGROUND OR ABOVE 15 FEET?
+                    </label>
+                    <lightning-input-field
+                        field-name="WORK_PERFORMED_UNDERGROUND_OR_ABOVE_15_F__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        4. ANY WORK PERFORMED ON BARGES, VESSELS, DOCKS, BRIDGE OVER WATER?
+                    </label>
+                    <lightning-input-field
+                        field-name="WORK_PERFORMED_ON_BARGES_VESSELS_DOCKS__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        5. IS APPLICANT ENGAGED IN ANY OTHER TYPE OF BUSINESS?
+                    </label>
+                    <lightning-input-field
+                        field-name="ENGAGED_IN_ANY_OTHER_TYPE_OF_BUSINESS__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        6. ARE SUB-CONTRACTORS USED? (If "YES", give % of work subcontracted)
+                    </label>
+                    <lightning-input-field
+                        field-name="SUB_CONTRACTORS_USED__c"
+						variant="label-hidden"
+						required
+						onchange={handleChangeSUBCONTRACTORSUSED}
+                    ></lightning-input-field>
+                </div>
+
+				<template if:true={isShowWorkSubContracted}>
+					<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        % of work subcontracted
+                    </label>
+                    <lightning-input-field
+                        field-name="of_work_subcontracted__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				</template>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        7. ANY WORK SUBLET WITHOUT CERTIFICATES OF INSURANCE? (If "YES", payroll for this work must be included in the State Rating Worksheet on Page 2)
+                    </label>
+                    <lightning-input-field
+                        field-name="WORK_SUBLET_W_O_CERTIFICATES_OF_INSURANC__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        8. IS A WRITTEN SAFETY PROGRAM IN OPERATION?
+                    </label>
+                    <lightning-input-field
+                        field-name="WRITTEN_SAFETY_PROGRAM_IN_OPERATION__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        9. ANY GROUP TRANSPORTATION PROVIDED?
+                    </label>
+                    <lightning-input-field
+                        field-name="GROUP_TRANSPORTATION_PROVIDED__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        10. ANY EMPLOYEES UNDER 16 OR OVER 60 YEARS OF AGE?
+                    </label>
+                    <lightning-input-field
+                        field-name="EMPLOYEES_UNDER_16_OR_OVER_60_YEARS_OF_A__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        11. ANY SEASONAL EMPLOYEES?
+                    </label>
+                    <lightning-input-field
+                        field-name="SEASONAL_EMPLOYEES__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        12. IS THERE ANY VOLUNTEER OR DONATED LABOR? (If "YES", please specify)
+                    </label>
+                    <lightning-input-field
+                        field-name="VOLUNTEER_OR_DONATED_LABOR__c"
+						variant="label-hidden"
+						required
+						onchange={handleVOLUNTEERORDONATEDLABOR}
+                    ></lightning-input-field>
+                </div>
+
+				<template if:true={isShowVOLUNTEER_OR_DONATED_LABOR_EXPLANATION}>
+					<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        Specifigy Volunterr or Donated Labor
+                    </label>
+                    <lightning-input-field
+                        field-name="VOLUNTEER_OR_DONATED_LABOR_EXPLANATION__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+				</template>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        13. ANY EMPLOYEES WITH PHYSICAL HANDICAPS?
+                    </label>
+                    <lightning-input-field
+                        field-name="EMPLOYEES_WITH_PHYSICAL_HANDICAPS__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        14. DO EMPLOYEES TRAVEL OUT OF STATE? (If "YES", indicate state(s) of travel and frequency)
+                    </label>
+                    <lightning-input-field
+                        field-name="EMPLOYEES_TRAVEL_OUT_OF_STATE__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        Indicate state's of travel and frequenc
+                    </label>
+                    <lightning-input-field
+                        field-name="Indicate_state_s_of_travel_and_frequenc__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        15. ARE ATHLETIC TEAMS SPONSORED?
+                    </label>
+                    <lightning-input-field
+                        field-name="ATHLETIC_TEAMS_SPONSORED__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        16. ARE PHYSICALS REQUIRED AFTER OFFERS OF EMPLOYMENT ARE MADE?
+                    </label>
+                    <lightning-input-field
+                        field-name="PHYSICALS_REQUIRED_AFTER_OFFERS_OF_EMPLO__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        17. ANY OTHER INSURANCE WITH THIS INSURER?
+                    </label>
+                    <lightning-input-field
+                        field-name="ANY_OTHER_INSURANCE_WITH_THIS_INSURER__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        18. ANY PRIOR COVERAGE DECLINED / CANCELLED / NON-RENEWED IN THE LAST THREE (3) YEARS? (Missouri Applicants - Do not answer this question)
+                    </label>
+                    <lightning-input-field
+                        field-name="COVERAGE_DEC_CANC_NON_RENEWED_IN_LAST_3__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        19. ARE EMPLOYEE HEALTH PLANS PROVIDED?
+                    </label>
+                    <lightning-input-field
+                        field-name="EMPLOYEE_HEALTH_PLANS_PROVIDED__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        20. DO ANY EMPLOYEES PERFORM WORK FOR OTHER BUSINESSES OR SUBSIDIARIES?
+                    </label>
+                    <lightning-input-field
+                        field-name="EMPLOYEES_PERFORM_WORK_FOR_OTHER_BUSINES__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        21. DO YOU LEASE EMPLOYEES TO OR FROM OTHER EMPLOYERS?
+                    </label>
+                    <lightning-input-field
+                        field-name="LEASE_EMPLOYEES_TO_OR_FROM_OTHER_EMPLOYE__c"
+						variant="label-hidden"
+						required
+                    ></lightning-input-field>
+                </div>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        22.  DO ANY EMPLOYEES PREDOMINANTLY WORK AT HOME? If "YES", # of Employees:
+                    </label>
+                    <lightning-input-field
+                        field-name="EMPLOYEES_PREDOMINANTLY_WORK_AT_HOME__c"
+						variant="label-hidden"
+						required
+						onchange={handleEMPLOYEESPREDOMINANTLYWORKATHOME}
+                    ></lightning-input-field>
+                </div>
+
+				<template if:true={isShowEmployeesWorkFromHome}>
+					<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                       # of Employees work from home
+                    </label>
+                    <lightning-input-field
+                        field-name="of_Employees_work_from_home__c"
+						variant="label-hidden"
+                    ></lightning-input-field>
+                </div>
+				</template>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        23. ANY TAX LIENS OR BANKRUPTCY WITHIN THE LAST FIVE (5) YEARS? (If "YES", please specify)
+                    </label>
+                    <lightning-input-field
+                        field-name="TAX_LIENS_BANKRUPTCY_WITHIN_LAST_5_YRS__c"
+						variant="label-hidden"
+						required
+						onchange={handleTAX_LIENS_BANKRUPTCY_WITHIN_LAST_5_YRS}
+                    ></lightning-input-field>
+                </div>
+
+				<template if:true={isShowSPECIFYTAXLIENSBANKRUPTCY}>
+					<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                       Specify Tax Liens/Bankruptcy
+                    </label>
+                    <lightning-input-field
+                        field-name="SPECIFY_TAX_LIENS_BANKRUPTCY__c"
+						variant="label-hidden"
+                    ></lightning-input-field>
+                </div>
+				</template>
+
+				<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                        24. ANY UNDISPUTED AND UNPAID WORKERS COMPENSATION PREMIUM DUE FROM YOU OR ANY COMMONLY MANAGED OR OWNED ENTERPRISES? IF YES, EXPLAIN INCLUDING ENTITY NAME(S) AND POLICY NUMBER(S).
+                    </label>
+                    <lightning-input-field
+                        field-name="UNDISPUTED_UNPAID_WC_PREMIUM_DUE__c"
+						variant="label-hidden"
+						required
+						onchange={handleUNDISPUTEDUNPAIDWCPREMIUMDUE}
+                    ></lightning-input-field>
+                </div>
+
+				<template if:true={isShowEXPLAINUNDISPUTEDANDUNPAIDWCPREMIUM}>
+					<div class="slds-size_1-of-1 slds-p-around_medium slds-text-align_left">
+                    <label class="slds-form-element__label">
+                       Explain including entity name(s) and policy number(s)
+                    </label>
+                    <lightning-input-field
+                        field-name="EXPLAIN_UNDISPUTED_AND_UNPAID_WC_PREMIUM__c"
+						variant="label-hidden"
+                    ></lightning-input-field>
+                </div>
+				</template>
+
+            </div>
+    </lightning-record-edit-form>
+
+				<div class="slds-modal__content slds-p-around_medium slds-text-align_left" >
+						<h1 class="body-style">Notes</h1>
+						<lightning-textarea label="Notes" ></lightning-textarea>
+					</div>
+					<div class="slds-modal__content slds-p-around_medium slds-text-align_left" >
+						<h1 class="body-style">Upload File</h1>
+						<lightning-file-upload
+										label="Upload Document"
+										name="fileUploader"
+										accept={acceptedFormats}
+										record-id={recordId}
+										onuploadfinished={handleUploadFinished}
+										multiple></lightning-file-upload>
+                    
+                </div>
+					</div>
+
+					<!-- Footer -->
+					<footer class="slds-modal__footer">
+						<button class="slds-button slds-button_neutral slds-float_left slds-clearfix" onclick={handleBack}>Back</button>
+						<button class="slds-button slds-button_neutral" onclick={handleCancel}>Cancel</button>
+                        <!-- <button class="slds-button slds-button_brand" onclick={submitSubmissionRequirement} >Accord Signature Request</button> -->
+                        <!-- <button class="slds-button slds-button_brand" onclick={submitSubmissionRequirement} >Generate ACORD</button> -->
+						<button class="slds-button slds-button_brand" onclick={submitSubmissionRequirement} >Save and Finish</button>
+					</footer>
+				</div>
+			</section>
+			<div class="slds-backdrop slds-backdrop_open"></div>
+		</template>
+
+        <!-- State Rating -->
+        <template if:true={isShowStateRatingModal}>
+			<section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+				<!-- Spinner placeholder -->
+				<div id="modalspinner2" class="slds-spinner slds-spinner_large slds-spinner_brand slds-hide" role="status">
+					<span class="slds-assistive-text">Loading...</span>
+					<div class="slds-spinner__dot-a"></div>
+					<div class="slds-spinner__dot-b"></div>
+				</div>
+				<div class="slds-modal__container">
+					<header class="slds-modal__header">
+						<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" style="background-color: white;" title="Close" onclick={handleStateRatingCloseTemplate}>
+							<lightning-icon icon-name="utility:close"                    
+                                                alternative-text="close"                    
+                                                variant="inverse"                    
+                                                size="small" ></lightning-icon>
+							<span class="slds-assistive-text">Close</span>
+						</button>
+                        <h2 class="slds-modal__title">{selectedWcRateName}</h2>
+                    </header>
+
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+        <lightning-record-edit-form
+            record-id={selectedWcRateId}
+            object-api-name="WC_Rate__c"
+            density="comfy">
+        
+            <div class="slds-grid slds-wrap">
+                <!-- Location Select -->
+                <div class="slds-size_1-of-2 slds-p-around_medium slds-text-align_left" >
+                    <lightning-combobox
+                        name="location"
+                        label="Location"
+                        value={selectedClientLocation}
+                        options={clientLocationOptions}
+                        required
+                        onchange={handleLocationChange}
+                    ></lightning-combobox>
+                </div>
+
+                <!-- WC Code Lookup -->
+                <div class="slds-size_1-of-2 slds-p-around_medium slds-text-align_left">
+                    <lightning-combobox
+							name="wcCode"
+							label="WC Code"
+							value={selectedStateCompCode}
+							options={wcCodeOptions}
+							onchange={handleWcCodeChange}
+							required
+						></lightning-combobox>
+
+                </div>
+
+                <!-- Part Time Employees -->
+                <div class="slds-size_1-of-2 slds-p-around_medium slds-text-align_left">
+                    <lightning-input-field field-name="Part_Time_Employees__c" required></lightning-input-field>
+                </div>
+
+                <!-- Number of Employees -->
+                <div class="slds-size_1-of-2 slds-p-around_medium slds-text-align_left">
+                    <lightning-input-field field-name="of_Employees__c" required></lightning-input-field>
+                </div>
+
+                <!-- Gross Wages -->
+                <div class="slds-size_1-of-2 slds-p-around_medium slds-text-align_left">
+                    <lightning-input-field field-name="Gross_Wages__c" required></lightning-input-field>
+                </div>
+
+                <!-- Current Rate -->
+                <div class="slds-size_1-of-2 slds-p-around_medium slds-text-align_left">
+                    <lightning-input-field field-name="Current_Rate__c"></lightning-input-field>
+                </div>
+            </div>
+        </lightning-record-edit-form>
+    </div>
+
+                        <!-- Footer -->
+					<footer class="slds-modal__footer">
+						<button class="slds-button slds-button_brand" onclick={handleStateRatingSave}>Save</button>
+						<button class="slds-button slds-button_neutral" onclick={handleStateRatingCancel} >Close</button>
+					</footer>
+				</div>
+			</section>
+			<div class="slds-backdrop slds-backdrop_open"></div>
+		</template>
+
+		<template if:true={isShowAddWCCodeModal}>
+				<section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+					<div class="slds-modal__container">
+					<header class="slds-modal__header">
+						<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" style="background-color: white;" title="Close" onclick={handleAddWCCodeCloseTemplate}>
+							<lightning-icon icon-name="utility:close"                    
+                                                alternative-text="close"                    
+                                                variant="inverse"                    
+                                                size="small" ></lightning-icon>
+							<span class="slds-assistive-text">Close</span>
+						</button>
+                        <h2 class="slds-modal__title">Add WC Code</h2>
+                    </header>
+<div class="slds-modal__content slds-p-around_medium slds-text-align_left" >
+				<button class="slds-button slds-button_neutral slds-float_left slds-clearfix" onclick={handelAddWCCodeChange}>Add State</button>
+                <button class="slds-button slds-button_neutral slds-float_left slds-clearfix" onclick={handelAddWCCodeChange}>Add Comp</button>
+</div>
+					</div>
+				</section>
+
+		</template>
+	</lightning-card>
+</template>

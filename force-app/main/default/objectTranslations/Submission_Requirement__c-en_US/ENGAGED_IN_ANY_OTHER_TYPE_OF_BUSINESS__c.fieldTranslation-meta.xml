@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- IS APPLICANT ENGAGED IN ANY OTHER TYPE OF BUSINESS? --></help>
+    <label><!-- ENGAGED IN ANY OTHER TYPE OF BUSINESS --></label>
+    <name>ENGAGED_IN_ANY_OTHER_TYPE_OF_BUSINESS__c</name>
+    <picklistValues>
+        <masterLabel>N</masterLabel>
+        <translation><!-- N --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Y</masterLabel>
+        <translation><!-- Y --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

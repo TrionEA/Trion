@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Response Flow --></label>
+    <name>Response_Flow__c</name>
+    <relationshipLabel><!-- Survey Types (Response Flow) --></relationshipLabel>
+</CustomFieldTranslation>

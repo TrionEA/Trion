@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Proposal Termination Fee Per Employee --></label>
+    <name>Conga_Termination_Fee_Per_Employee__c</name>
+</CustomFieldTranslation>

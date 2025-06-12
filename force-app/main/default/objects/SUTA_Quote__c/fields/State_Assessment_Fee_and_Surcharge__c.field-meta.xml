@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State_Assessment_Fee_and_Surcharge__c</fullName>
+    <formula>SUTA__r.State_Assessment_and_Surcharges__c</formula>
+    <inlineHelpText>State Assessment Fee and Surcharge stored on the SUTA record.</inlineHelpText>
+    <label>State Assessment Fee and Surcharge</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

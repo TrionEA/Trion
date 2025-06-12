@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SUTA Quote #</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SUTA Quote #</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- MassUpdate --></label>
+        <name>MassManager_SUTAQuoteMassEditFieldSet</name>
+    </fieldSets>
+    <layouts>
+        <layout>SUTA Quote</layout>
+        <sections>
+            <label><!-- Bill Rates --></label>
+            <section>Bill Rates</section>
+        </sections>
+        <sections>
+            <label><!-- Carrier Info --></label>
+            <section>Carrier Info</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- PEO --></label>
+            <section>PEO</section>
+        </sections>
+        <sections>
+            <label><!-- PEO w/o Comp --></label>
+            <section>PEO w/o Comp</section>
+        </sections>
+        <sections>
+            <label><!-- State Assessment Fees --></label>
+            <section>State Assessment Fees</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Add Carrier/Policy --></label>
+        <name>Add_Carrier_Policy</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Add Comp Code --></label>
+        <name>Add_Comp_Code</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Add WC Rate --></label>
+        <name>Add_WC_Rate</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Client Employee/Gross Wages --></label>
+        <name>Client_Employee_Gross_Wages</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SUTA --></label>
+        <name>SUTA</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

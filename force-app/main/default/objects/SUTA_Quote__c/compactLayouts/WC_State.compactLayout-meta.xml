@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WC_State</fullName>
+    <fields>Proposal__c</fields>
+    <fields>State__c</fields>
+    <fields>Total_of_Employees__c</fields>
+    <fields>Total_Gross_Wages__c</fields>
+    <fields>SUTA__c</fields>
+    <fields>Reporting_Level__c</fields>
+    <fields>SUTA_Rate__c</fields>
+    <label>WC State</label>
+</CompactLayout>

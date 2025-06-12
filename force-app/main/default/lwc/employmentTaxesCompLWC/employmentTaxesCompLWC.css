@@ -1,0 +1,41 @@
+/* Custom styles for Employment Taxes Component */
+
+.slds-modal__container {
+    position: relative;
+}
+
+.slds-modal__container lightning-spinner {
+    z-index: 9999;
+}
+
+/* Ensure proper spacing for buttons */
+.slds-m-left_xx-small {
+    margin-left: 0.125rem;
+}
+
+/* Custom styling for datatable actions */
+lightning-datatable {
+    --slds-c-datatable-cell-buffer: 0.5rem;
+}
+
+/* Modal backdrop styling */
+.slds-backdrop_open {
+    z-index: 9000;
+}
+
+.slds-modal_small {
+    z-index: 9001;
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 768px) {
+    .slds-size_1-of-4 {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .slds-size_1-of-2 {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Areas where we could be better --></label>
+    <name>Areas_where_we_could_be_better__c</name>
+    <picklistValues>
+        <masterLabel>Benefits</masterLabel>
+        <translation><!-- Benefits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Implementation</masterLabel>
+        <translation><!-- Implementation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payroll</masterLabel>
+        <translation><!-- Payroll --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Process</masterLabel>
+        <translation><!-- Sales Process --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Team Members</masterLabel>
+        <translation><!-- Team Members --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

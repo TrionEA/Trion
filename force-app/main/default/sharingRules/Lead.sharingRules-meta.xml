@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Leads_Underwriter_RW_All_Leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allow Underwriter to read and write an Lead.</description>
+        <label>Leads: Underwriter - RW All Leads</label>
+        <sharedTo>
+            <role>Underwriter</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Trion_Executive</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

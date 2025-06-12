@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Rule Criteria --></label>
+    <name>Rule_Criteria__c</name>
+    <picklistValues>
+        <masterLabel>EQUALS</masterLabel>
+        <translation><!-- EQUALS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GREATER THAN</masterLabel>
+        <translation><!-- GREATER THAN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GREATER THAN OR EQUAL</masterLabel>
+        <translation><!-- GREATER THAN OR EQUAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LESS THAN</masterLabel>
+        <translation><!-- LESS THAN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LESS THAN OR EQUAL</masterLabel>
+        <translation><!-- LESS THAN OR EQUAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NOT EQUALS</masterLabel>
+        <translation><!-- NOT EQUALS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proposal</fullName>
+    <active>true</active>
+    <label>Proposal</label>
+    <picklistValues>
+        <picklist>Administrative_Fee_Type__c</picklist>
+        <values>
+            <fullName>Annual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gross Wages</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Per Check</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Carrier_Submission_Status__c</picklist>
+        <values>
+            <fullName>Carried Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carrier Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ready for Carrier Submission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Delivery_Fee_Per_Location__c</picklist>
+        <values>
+            <fullName>Amount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cost</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Health_Quote__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>New_Business_Entity__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Per_Check_Frequency__c</picklist>
+        <values>
+            <fullName>Bi-weekly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Semi Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weekly</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Price_Override_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Quote_Type__c</picklist>
+        <values>
+            <fullName>ASO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEO W%2FO COMP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SOC_Status__c</picklist>
+        <values>
+            <fullName>Additional Info Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disqualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualified</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Decline_Reason__c</picklist>
+        <values>
+            <fullName>Class code is ineligible for the program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client exposure requires FAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Excessive amount of exposure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fraudulent Client Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frequency%2Fseverity of historical losses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inadequate Expected Charge Rates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inadequate Financial Position</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inadequate Preimum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inadequate business experience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requires 24 hr WC coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Volatile State%2FClaims Jurisdiction</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Staffing_Supplement__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stage__c</picklist>
+        <values>
+            <fullName>Client Presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposal Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quoting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revision</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>UW_Decline_Reason__c</picklist>
+        <values>
+            <fullName>Class code is ineligible for the program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client exposure requires FAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Excessive amount of exposure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fraudulent Client Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frequency%2Fseverity of historical losses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inadequate Expected Charge Rates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inadequate Financial Position</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inadequate Preimum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inadequate business experience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requires 24 hr WC coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Volatile State%2FClaims Jurisdiction</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Underwriting_Status__c</picklist>
+        <values>
+            <fullName>Additional Info Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disqualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disqualified Override</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted to Carrier</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

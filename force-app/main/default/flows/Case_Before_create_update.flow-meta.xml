@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Set the sequence number for the current case, based on the previous sequence number.</description>
+        <name>Set_the_sequence_number_for_the_current_case</name>
+        <label>Set the sequence number for the current case</label>
+        <locationX>50</locationX>
+        <locationY>671</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Case_Sequence_Number__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>nextSequenceNumber</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <description>Check for newly closed cases that meet the criteria to have a case sequence number.</description>
+        <name>Case_with_email_closed_and_not_Trion</name>
+        <label>Case with email closed and not Trion</label>
+        <locationX>182</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Sequence_closed_case</name>
+            <conditionLogic>(1 OR 2) AND 3 AND 4 AND NOT(5) AND 6 AND 7 AND 8</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Reason</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Issue Resolved</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.SuppliedEmail</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>trionworks</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.SuppliedEmail</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Case_Sequence_Number__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Human Resources</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Retrieve_case_survey_default_limits</targetReference>
+            </connector>
+            <label>Sequence closed case</label>
+        </rules>
+    </decisions>
+    <description>Starting point for automation triggered before a case is created or updated.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>The next sequence number for assignment.</description>
+        <name>nextSequenceNumber</name>
+        <dataType>Number</dataType>
+        <expression>if(isblank({!Retrieve_Latest_Sequence_Number.Id}) || {!Retrieve_Latest_Sequence_Number.Case_Sequence_Number__c} &gt;= {!Retrieve_case_survey_default_limits.Survey_number_for_sending__c}, 1, {!Retrieve_Latest_Sequence_Number.Case_Sequence_Number__c} + 1)</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>Case: Before create/update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case: Before create/update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Retrieves the custom metadata for case survey defaults.</description>
+        <name>Retrieve_case_survey_default_limits</name>
+        <label>Retrieve case survey default limits</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Retrieve_Latest_Sequence_Number</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Trion_Default_Survey</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Case_Survey_Setting__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Retrieves the most recent sequence number from a closed case. Assumes that the filtering criteria to reach this point prohibits the record itself from being selected.</description>
+        <name>Retrieve_Latest_Sequence_Number</name>
+        <label>Retrieve Latest Sequence Number</label>
+        <locationX>50</locationX>
+        <locationY>551</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Set_the_sequence_number_for_the_current_case</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>CreatedDate</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <elementReference>Retrieve_case_survey_default_limits.Earliest_Case_Date__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Case_Sequence_Number__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>ClosedDate</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Case</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Case_Sequence_Number__c</queriedFields>
+        <sortField>ClosedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Case_with_email_closed_and_not_Trion</targetReference>
+        </connector>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

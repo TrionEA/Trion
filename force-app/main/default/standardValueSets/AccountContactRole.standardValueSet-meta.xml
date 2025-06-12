@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Benefits Contact</fullName>
+        <default>false</default>
+        <label>Benefits Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Controller</fullName>
+        <default>false</default>
+        <label>Controller</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Human Resources</fullName>
+        <default>false</default>
+        <label>Human Resources</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Owner</fullName>
+        <default>false</default>
+        <label>Owner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Payroll</fullName>
+        <default>false</default>
+        <label>Payroll</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales Contact</fullName>
+        <default>false</default>
+        <label>Sales Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+</StandardValueSet>

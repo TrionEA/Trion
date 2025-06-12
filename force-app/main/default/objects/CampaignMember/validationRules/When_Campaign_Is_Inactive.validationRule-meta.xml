@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>When_Campaign_Is_Inactive</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Campaign.IsActive = FALSE, CampaignId &lt;&gt; NULL)</errorConditionFormula>
+    <errorDisplayField>et4ae5__Activity__c</errorDisplayField>
+    <errorMessage>Campaign is inactive</errorMessage>
+</ValidationRule>

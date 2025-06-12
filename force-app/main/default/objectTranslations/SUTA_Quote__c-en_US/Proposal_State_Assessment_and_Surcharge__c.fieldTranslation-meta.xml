@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Displays &quot;Included&quot; if the State Assessment Fee/Surcharge Included field is checked. If the field is not checked and theres a surcharge fee, the fee is displayed on the proposal. --></help>
+    <label><!-- Proposal State Assessment and Surcharge --></label>
+    <name>Proposal_State_Assessment_and_Surcharge__c</name>
+</CustomFieldTranslation>

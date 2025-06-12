@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Conga Sign հասցեատեր</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Conga Sign հասցեատերեր</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value><!-- Conga Sign հասցեատեր --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value><!-- Conga Sign հասցեատերեր --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value><!-- Conga Sign հասցեատեր --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value><!-- Conga Sign հասցեատերեր --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Conga Sign հասցեատեր --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Conga Sign հասցեատերեր --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Ablative</caseType>
+        <plural>false</plural>
+        <value><!-- Conga Sign հասցեատեր --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Ablative</caseType>
+        <plural>true</plural>
+        <value><!-- Conga Sign հասցեատերեր --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value><!-- Conga Sign հասցեատեր --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <value><!-- Conga Sign հասցեատերեր --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Locative</caseType>
+        <plural>false</plural>
+        <value><!-- Conga Sign հասցեատեր --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <caseType>Locative</caseType>
+        <plural>true</plural>
+        <value><!-- Conga Sign հասցեատերեր --></value>
+    </caseValues>
+    <nameFieldLabel>Հասցեատիրոջ անունը</nameFieldLabel>
+</CustomObjectTranslation>

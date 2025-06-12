@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Unions</fullName>
+    <active>false</active>
+    <description>Requires the number of unions if Client has unions</description>
+    <errorConditionFormula>AND(Unions__c  = TRUE,ISBLANK(NumberofUnions__c))</errorConditionFormula>
+    <errorMessage>Enter the number of unions</errorMessage>
+</ValidationRule>

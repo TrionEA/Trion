@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlatformEventSubscriberConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <batchSize>1</batchSize>
+    <masterLabel>GetDataFromSharepoint_V2Trigger</masterLabel>
+    <numPartitions>1</numPartitions>
+    <partitionKey>EventUuid</partitionKey>
+    <platformEventConsumer>GetDataFromSharepoint_V2Trigger</platformEventConsumer>
+    <user>enabledanalytics@trionworks.com.uat</user>
+</PlatformEventSubscriberConfig>

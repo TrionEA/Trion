@@ -1,0 +1,10 @@
+Dear {!Contact.FirstName},
+
+Your inquiry with Trion Solutions has been resolved and your case has been closed. If this is incorrect, please respond back to this email and your case will automatically be re-opened. 
+
+We appreciate your business and thank you for the opportunity to serve you.
+
+Sincerely,
+
+{!Organization.Name}
+{!Case.Thread_Id}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State_Comp_Info__c</fullName>
+    <externalId>false</externalId>
+    <formula>IMAGE(
+IF(  State_Comp_Info_Received__c  = TRUE,
+&quot;/servlet/servlet.FileDownload?file=015m0000001p2AP&quot;,
+&quot;/servlet/servlet.FileDownload?file=015m0000001p2Ae&quot;
+),
+&apos;Enter Some Text Here&apos;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>State/Comp</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

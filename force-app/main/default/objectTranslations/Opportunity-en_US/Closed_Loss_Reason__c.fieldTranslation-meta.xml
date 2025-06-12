@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Closed Loss Reason --></label>
+    <name>Closed_Loss_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Benefits Comparison</masterLabel>
+        <translation><!-- Benefits Comparison --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Benefits Cost</masterLabel>
+        <translation><!-- Benefits Cost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Carrier Declined</masterLabel>
+        <translation><!-- Carrier Declined --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cost/Pricing</masterLabel>
+        <translation><!-- Cost/Pricing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lost to Competitor Pricing</masterLabel>
+        <translation><!-- Lost to Competitor Pricing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lost to Competitor Product Offering</masterLabel>
+        <translation><!-- Lost to Competitor Product Offering --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lost to Competitor Service Model</masterLabel>
+        <translation><!-- Lost to Competitor Service Model --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non-Responsive</masterLabel>
+        <translation><!-- Non-Responsive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stayed with current PEO</masterLabel>
+        <translation><!-- Stayed with current PEO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stayed with current process</masterLabel>
+        <translation><!-- Stayed with current process --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Timing</masterLabel>
+        <translation><!-- Timing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown</masterLabel>
+        <translation><!-- Unknown --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

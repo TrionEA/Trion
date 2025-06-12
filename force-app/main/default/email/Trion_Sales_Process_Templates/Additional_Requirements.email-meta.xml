@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Trion</letterhead>
+    <name>Additional Requirements</name>
+    <style>freeForm</style>
+    <subject>{!Approval_Request__c.Approval_Decision__c} for {!Approval_Request__c.Client__c}</subject>
+    <textOnly>{!Approval_Request__c.Approval_Decision__c} for {!Approval_Request__c.Client__c} Requested by {!Approval_Request__c.Approved_Denied_by__c}
+
+Opportunity Stage: {!Approval_Request__c.Opportunity_Stage__c}
+Opportunity Owner: {!Approval_Request__c.Opportunity_Owner__c}
+Client: {!Approval_Request__c.Client__c}
+Quote Type: {!Approval_Request__c.Quote_Type__c}
+
+
+Note from {!Approval_Request__c.Approved_Denied_by__c}:
+{!Approval_Request__c.Comments__c}
+
+Click here to review the Opportunity.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

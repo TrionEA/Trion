@@ -1,0 +1,130 @@
+<template>
+<lightning-card class="slds-p-around_medium slds-text-align_center" >
+        <!-- Spinner -->
+    <!-- <template if:true={showSpinner}>
+        <lightning-spinner size="large" variant="brand" alternative-text="Loading..."></lightning-spinner>
+    </template> -->
+
+    <!-- Header -->
+    <div class="slds-text-heading_medium slds-text-align_center custom-text-decoration"><b>WC Rates</b></div>
+
+    <!-- Search Filter Section -->
+    <template if:true={isApplyFilter}>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-size_1-of-1" style="height: 250px;">
+                <lightning-datatable
+                    key-field="Id"
+                    data={filteredData}
+                    columns={columns}
+                    sorted-by={sortedBy}
+                    sorted-direction={sortedDirection}
+                    onsort={handleColumnSorting}
+                    errors={errors}
+                    draft-values={draftValues}
+                    onsave={handleSaveEdition}
+                    oncancel={handleCancel}>
+                </lightning-datatable>
+            </div>
+
+            <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                <lightning-button label="Add" onclick={handleAdd}></lightning-button>
+                <lightning-button label="Finish" onclick={handleSearchCancel}></lightning-button>
+            </div>
+        </div>
+        </template>
+
+        <!-- Filters -->
+        <template if:true={isShowSearchFilter}>
+        <template for:each={lstFilters} for:item="filter">
+            <div key={filter.id} class="slds-grid slds-wrap">
+                <div class="slds-size_11-of-12">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-size_1-of-4 slds-p-around_medium">
+                            <!-- Custom Lightning Lookup component -->
+                            <lightning-input
+                                s-object-name="WC_Code__c"
+                                type="search"
+                                value-field-name="Id"
+                                displayed-field-name="Name"
+                                label="Comp Code"
+                                selected-value={filter.selectedCompCode}
+                                required
+                                svg="custom:custom18"
+                                disabled={filter.isDisabledSelectedCompCode}>
+                            </lightning-input>
+                        </div>
+
+                        <div class="slds-size_1-of-4 slds-p-around_medium slds-p-left_small">
+                            <lightning-combobox
+                                label="State"
+                                selected-value={filter.selectedState}
+                                result-list-display={mapStatePicklistValues}
+                                disabled={filter.isDisabledSelectedState}>
+                            </lightning-combobox>
+                        </div>
+
+                        <div class="slds-size_1-of-4 slds-p-around_medium slds-p-left_small slds-p-top_x-small">
+                            <lightning-combobox
+                                label="Carrier"
+                                value={filter.selectedCarrier}
+                                options={carrierOptions}
+                                disabled={filter.isDisabledSelectedCarrier}>
+                            </lightning-combobox>
+                        </div>
+
+                        <div class="slds-size_1-of-4 slds-p-around_medium slds-p-left_small slds-p-top_x-small">
+                            <lightning-combobox
+                                label="Status"
+                                value={filter.selectedStatus}
+                                options={statusOptions}
+                                disabled={filter.isDisabledSelectedStatus}>
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slds-size_1-of-12 slds-p-around_medium slds-p-top_x-large slds-text-align_center">
+                    <lightning-button-icon icon-name="utility:edit" alternative-text="Edit" title="Edit" onclick={handleEditFilter} name={filter.id}
+                                           disabled>
+                    </lightning-button-icon>
+                    <lightning-button-icon icon-name="utility:delete" alternative-text="Delete" title="Delete" onclick={handleDeleteFilter} name={index}>
+                    </lightning-button-icon>
+                </div>
+            </div>
+        </template>
+
+        <!-- Filter Action Buttons -->
+        <div class="slds-p-left_small slds-p-top_small slds-p-around_medium">
+            <lightning-button icon-name="utility:add" label="Add Filter" onclick={handleMoreFilter} class="slds-m-right_small"></lightning-button>
+            <lightning-button label="Apply Filter" onclick={handleApplyFilter} class="slds-m-right_small"></lightning-button>
+            <lightning-button label="Reset Filter" onclick={handleResetFilter}></lightning-button>
+        </div>
+    </template>
+    <!-- </template> -->
+
+    <!-- Modal Section -->
+    <template if:true={isShowModal}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium" aria-modal="true">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <lightning-button-icon icon-name="utility:close" variant="inverse" class="slds-modal__close" alternative-text="Close"
+                                           title="Close" onclick={handleCloseModal}></lightning-button-icon>
+                    <h2 class="slds-modal__title slds-hyphenate">WC Rates Filter</h2>
+                </header>
+
+                <div class="slds-modal__content slds-p-around_medium">
+                    <!-- Reuse the same filters inside the modal -->
+                    <!-- (Omitted here for brevity - same as above filter rendering) -->
+                </div>
+
+                <footer class="slds-modal__footer">
+                    <lightning-button label="Cancel" onclick={handleCloseModal} class="slds-m-right_small"></lightning-button>
+                    <lightning-button label="Apply Filter" onclick={handleApplyFilter} class="slds-m-right_small"></lightning-button>
+                    <lightning-button icon-name="utility:add" label="Add Filter" onclick={handleMoreFilter}></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+    </lightning-card>
+</template>

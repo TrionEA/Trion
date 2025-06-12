@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Email</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>Human_Resources</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - HR</value>
+            </criteriaItems>
+            <template>X2_Trion_Support_Templates/Trion_new_Email_to_Case_internal_notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Benefits</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Benefits</value>
+            </criteriaItems>
+            <template>X2_Trion_Support_Templates/Trion_new_Email_to_Case_internal_notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Payroll</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Payroll</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.Under_Payroll_Support__c</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+            <template>X2_Trion_Support_Templates/Trion_new_Email_to_Case_internal_notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Payroll</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Payroll</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.Under_Payroll_Support__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Payroll</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Payroll</value>
+            </criteriaItems>
+            <template>X2_Trion_Support_Templates/Trion_new_Email_to_Case_internal_notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Accounting</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Accounting</value>
+            </criteriaItems>
+            <template>X2_Trion_Support_Templates/Trion_new_Email_to_Case_internal_notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Sales</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Sales</value>
+            </criteriaItems>
+            <template>X2_Trion_Support_Templates/Trion_new_Email_to_Case_internal_notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>EZWeb</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - EZWeb</value>
+            </criteriaItems>
+            <template>X2_Trion_Support_Templates/Trion_new_Email_to_Case_internal_notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DocuSign</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - DocuSign</value>
+            </criteriaItems>
+            <template>X2_Trion_Support_Templates/Trion_new_Email_to_Case_internal_notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Customer_Service</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Customer Service</value>
+            </criteriaItems>
+            <template>X2_Trion_Support_Templates/Trion_new_Email_to_Case_internal_notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Garnishments</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Garnishments</value>
+            </criteriaItems>
+            <template>X2_Trion_Support_Templates/Trion_new_Email_to_Case_internal_notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>WC</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - WC</value>
+            </criteriaItems>
+            <template>X2_Trion_Support_Templates/Trion_new_Email_to_Case_internal_notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>W2</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - W2</value>
+            </criteriaItems>
+            <template>X2_Trion_Support_Templates/Trion_new_Email_to_Case_internal_notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Unemployment</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Unemployment</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Mission_Point</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Mission Point</value>
+            </criteriaItems>
+            <template>X2_Trion_Support_Templates/Trion_new_Email_to_Case_internal_notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Leave_Requests</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Leave Requests</value>
+            </criteriaItems>
+            <template>X2_Trion_Support_Templates/Trion_new_Email_to_Case_internal_notification</template>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

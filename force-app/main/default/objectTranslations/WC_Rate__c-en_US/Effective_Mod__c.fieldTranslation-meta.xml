@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- WC Charge Rate / Carrier Rate --></help>
+    <label><!-- WC Charge Mod --></label>
+    <name>Effective_Mod__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Employment Status --></label>
+    <name>Employment_Status__c</name>
+    <picklistValues>
+        <masterLabel>Full-Time</masterLabel>
+        <translation><!-- Full-Time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inactive</masterLabel>
+        <translation><!-- Inactive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On-Call</masterLabel>
+        <translation><!-- On-Call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Part-Time</masterLabel>
+        <translation><!-- Part-Time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Temporary</masterLabel>
+        <translation><!-- Temporary --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Transfer_to_IT</fullName>
+    <active>false</active>
+    <description>Prevent users from assigning cases to members of the IT department.</description>
+    <errorConditionFormula>Owner:User.Department = &apos;IT&apos;</errorConditionFormula>
+    <errorMessage>You may not assign a case to a user in the IT department. Please select a different queue or user if you wish to reassign this case, or consult your manager for guidance.</errorMessage>
+</ValidationRule>

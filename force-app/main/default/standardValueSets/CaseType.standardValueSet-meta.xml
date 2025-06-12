@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Accounting</fullName>
+        <default>false</default>
+        <label>Accounting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Benefits</fullName>
+        <default>false</default>
+        <label>Benefits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer Service</fullName>
+        <default>false</default>
+        <label>Customer Service</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Garnishments</fullName>
+        <default>false</default>
+        <label>Garnishments</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Human Resources</fullName>
+        <default>false</default>
+        <label>Human Resources</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Payroll</fullName>
+        <default>false</default>
+        <label>Payroll</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales</fullName>
+        <default>false</default>
+        <label>Sales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Staffing</fullName>
+        <default>false</default>
+        <label>Staffing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>WC</fullName>
+        <default>false</default>
+        <label>WC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>W2</fullName>
+        <default>false</default>
+        <label>W2</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Unemployment</fullName>
+        <default>false</default>
+        <label>Unemployment</label>
+    </standardValue>
+</StandardValueSet>

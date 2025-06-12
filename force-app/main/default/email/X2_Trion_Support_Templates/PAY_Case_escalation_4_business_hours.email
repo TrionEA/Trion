@@ -1,0 +1,11 @@
+The following case is still in a status of new after 4 hours.
+
+Case#: {!Case.CaseNumber} 
+Subject: {!Case.Subject}
+Sender:  {!Case.SuppliedEmail}
+Created: {!Case.CreatedDate}
+
+Click on this link to view the case: {!Case.Link}.
+
+Thank you,
+Trion Operations

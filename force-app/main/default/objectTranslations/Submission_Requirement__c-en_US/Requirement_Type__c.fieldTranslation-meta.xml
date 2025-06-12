@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Requirement Type --></label>
+    <name>Requirement_Type__c</name>
+    <picklistValues>
+        <masterLabel>ACORD</masterLabel>
+        <translation><!-- ACORD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Competitor Quote Attached</masterLabel>
+        <translation><!-- Competitor Quote Attached --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Current Pricing</masterLabel>
+        <translation><!-- Current Pricing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Health Quote Data</masterLabel>
+        <translation><!-- Health Quote Data --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Loss Runs Valued 30 Days</masterLabel>
+        <translation><!-- Loss Runs Valued 30 Days --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOD Rating Worksheet</masterLabel>
+        <translation><!-- MOD Rating Worksheet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Loss Affidavit</masterLabel>
+        <translation><!-- No Loss Affidavit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Owner BIO</masterLabel>
+        <translation><!-- Owner BIO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RFP</masterLabel>
+        <translation><!-- RFP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RFQ</masterLabel>
+        <translation><!-- RFQ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sample Payroll Reports</masterLabel>
+        <translation><!-- Sample Payroll Reports --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Staffing Supplement</masterLabel>
+        <translation><!-- Staffing Supplement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Workers Comp Dec Page</masterLabel>
+        <translation><!-- Workers Comp Dec Page --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

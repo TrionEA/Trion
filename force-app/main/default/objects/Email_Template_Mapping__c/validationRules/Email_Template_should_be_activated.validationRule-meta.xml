@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Template_should_be_activated</fullName>
+    <active>true</active>
+    <description>The email template  for the respective template mapping should be activated.</description>
+    <errorConditionFormula>ISPICKVAL(Status__c, &quot;Activate&quot;) &amp;&amp; NOT(Email_Template__r.Activated__c)</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>This email template is not present in the marketing cloud. Please make sure that the email template is present in the marketing cloud.</errorMessage>
+</ValidationRule>

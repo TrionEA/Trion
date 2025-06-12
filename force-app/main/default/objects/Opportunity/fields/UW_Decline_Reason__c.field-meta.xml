@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UW_Decline_Reason__c</fullName>
+    <label>UW Decline Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Inadequate business experience</fullName>
+                <default>false</default>
+                <label>Inadequate business experience</label>
+            </value>
+            <value>
+                <fullName>Frequency/severity of historical losses</fullName>
+                <default>false</default>
+                <label>Frequency/severity of historical losses</label>
+            </value>
+            <value>
+                <fullName>Inadequate Premium</fullName>
+                <default>false</default>
+                <label>Inadequate Premium</label>
+            </value>
+            <value>
+                <fullName>Class code is ineligible for the program</fullName>
+                <default>false</default>
+                <label>Class code is ineligible for the program</label>
+            </value>
+            <value>
+                <fullName>Volatile State/Claims Jurisdiction</fullName>
+                <default>false</default>
+                <label>Volatile State/Claims Jurisdiction</label>
+            </value>
+            <value>
+                <fullName>Inadequate Expected Charge Rates</fullName>
+                <default>false</default>
+                <label>Inadequate Expected Charge Rates</label>
+            </value>
+            <value>
+                <fullName>Excessive amount of exposure</fullName>
+                <default>false</default>
+                <label>Excessive amount of exposure</label>
+            </value>
+            <value>
+                <fullName>Fraudulent Client Info</fullName>
+                <default>false</default>
+                <label>Fraudulent Client Info</label>
+            </value>
+            <value>
+                <fullName>Client exposure requires FAC</fullName>
+                <default>false</default>
+                <label>Client exposure requires FAC</label>
+            </value>
+            <value>
+                <fullName>Requires 24 hr WC coverage</fullName>
+                <default>false</default>
+                <label>Requires 24 hr WC coverage</label>
+            </value>
+            <value>
+                <fullName>Inadequate Financial Position</fullName>
+                <default>false</default>
+                <label>Inadequate Financial Position</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

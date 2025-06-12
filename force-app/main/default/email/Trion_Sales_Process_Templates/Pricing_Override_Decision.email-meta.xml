@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Trion</letterhead>
+    <name>Pricing Override Decision</name>
+    <style>freeForm</style>
+    <subject>Pricing Override for {!Proposal__c.Client__c} {!Proposal__c.Price_Override_Status__c}</subject>
+    <textOnly>Pricing Override for {!Approval_Request__c.Client__c}
+
+
+To view the Proposal record, click here.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

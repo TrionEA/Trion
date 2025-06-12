@@ -1,0 +1,10 @@
+Hello {!Case.SuppliedName}, 
+
+Thank you for reaching out to the Unemployment department. A member of our team is already working on your request and will follow up shortly.  Our goal is to provide resolution by the end of our next business day.
+
+TRION is proudly built around our customers needs and in pursuit of that we occasionally send out surveys. If you receive one in the future, we’d like to personally ask you the favor of completing it, as your input is important to us.
+
+Thank you, 
+
+{!Organization.Name} 
+{!Case.Thread_Id}

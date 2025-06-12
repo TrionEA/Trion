@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Conga Sign transaction</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Conga Sign transactions</value>
+    </caseValues>
+    <nameFieldLabel>Transaction name</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proposal_SUTA_header__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+ Proposal_SUTA__c = &quot;Client Level&quot;,  SUTA__r.State__r.State_Code__c &amp;&quot; State Unemployment Tax** (Up to wage limit)&quot;,SUTA__r.State__r.State_Code__c &amp; &quot; State Unemployment Tax (Up to wage limit)&quot;)</formula>
+    <label>Proposal SUTA Header</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

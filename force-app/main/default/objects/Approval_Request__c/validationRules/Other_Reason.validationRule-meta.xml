@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Reason</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Approval_Decision__c, &quot;Denied&quot;),
+ISPICKVAL( Decline_Reason__c, &quot;Other&quot;),
+ISBLANK(Comments__c ))</errorConditionFormula>
+    <errorDisplayField>Comments__c</errorDisplayField>
+    <errorMessage>Specify Decline Reason</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pricing_Matrix__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+ ISPICKVAL(Pricing_Type__c,&quot;Cost per EE&quot;), Name &amp; &quot;: $&quot; &amp; text( Price_per_EE__c),
+IF(
+ISPICKVAL(Pricing_Type__c,&quot;Gross Profit Margin&quot;), Name &amp; &quot;: &quot; &amp; text( Gross_Profit_Margin__c )&amp;&quot;%&quot;,NULL))</formula>
+    <label>Pricing Matrix</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

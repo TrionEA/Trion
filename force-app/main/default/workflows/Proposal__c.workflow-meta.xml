@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Approved_by_Underwriting</fullName>
+        <description>Approved by Underwriting</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>dbonet@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jchauret@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mark@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Trion_Sales_Process_Templates/Approved_by_Underwriting</template>
+    </alerts>
+    <alerts>
+        <fullName>Current_Policy_Expiring</fullName>
+        <description>Current Policy Expiring</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Trion_Sales_Process_Templates/Policy_Expiration</template>
+    </alerts>
+    <alerts>
+        <fullName>Opportunity_Submitted_for_UW_Approval</fullName>
+        <description>Opportunity Submitted for UW Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dbonet@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jchauret@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mark@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Trion_Sales_Process_Templates/Proposal_Submitted_to_Underwriting</template>
+    </alerts>
+    <alerts>
+        <fullName>Pricing_Override</fullName>
+        <description>Pricing Override</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>craig@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>david@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>pmody@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Trion_Sales_Process_Templates/Pricing_Override</template>
+    </alerts>
+    <alerts>
+        <fullName>Pricing_Override_Decision</fullName>
+        <description>Pricing Override Decision</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dbonet@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jchauret@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mark@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Trion_Sales_Process_Templates/Pricing_Override_Decision</template>
+    </alerts>
+    <alerts>
+        <fullName>Proposal_Accepted</fullName>
+        <description>Proposal Accepted</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dbonet@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jchauret@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mark@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Trion_Sales_Process_Templates/Proposal_Accepted_by_Client</template>
+    </alerts>
+    <alerts>
+        <fullName>Proposal_Revision_Request</fullName>
+        <description>Proposal Revision Request</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>david@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>dbonet@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jchauret@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mark@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Trion_Sales_Process_Templates/Proposal_Revision_Requested</template>
+    </alerts>
+    <alerts>
+        <fullName>UW_Disqualified_Reversed</fullName>
+        <description>UW Disqualified Reversed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dbonet@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jchauret@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mark@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tjordan@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Trion_Sales_Process_Templates/UW_Disqualification_Reversed</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Contract_Generated_Date</fullName>
+        <field>Contract_Generated_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Contract Generated Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>EPLI</fullName>
+        <field>EPLI__c</field>
+        <formula>EPLI_Cost__c</formula>
+        <name>EPLI</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Gross_Wages_Admin_Fee</fullName>
+        <field>Admin_Fee_Gross_Wages__c</field>
+        <formula>(Total_of_Employees__c * 1000)/ Total_Gross_Wages__c</formula>
+        <name>Gross Wages Admin Fee</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opp_Close_Date_30_days_from_contract</fullName>
+        <field>CloseDate</field>
+        <formula>DATEVALUE( Contract_Generated_Date__c ) + 30</formula>
+        <name>Opp Close Date - 30 days from contract</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>Opportunity__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opp_Stage_Client_Value_Proposition</fullName>
+        <field>StageName</field>
+        <literalValue>Client Value Proposition</literalValue>
+        <name>Opp Stage: Client Value Proposition</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>Opportunity__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PER_CHECK_ANNUAL_ADMIN_FEE</fullName>
+        <field>Admin_Fee_Per_Check_Annual__c</field>
+        <formula>IF(
+ISPICKVAL( Administrative_Fee_Type__c, &quot;Per Check&quot;), Per_Check_Admin_Fee__c ,
+IF(
+ISPICKVAL( Administrative_Fee_Type__c, &quot;Annual&quot;),Admin_Fee_Annual__c, NULL))</formula>
+        <name>PER CHECK/ANNUAL ADMIN FEE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Proposal_Accepted_Date</fullName>
+        <field>Proposal_Accepted_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Proposal Accepted Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Proposal_Generated_Date</fullName>
+        <field>Proposal_Generated_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Proposal Generated Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Proposal_Opp_Close_Date</fullName>
+        <field>CloseDate</field>
+        <formula>DATEVALUE(Proposal_Generated_Date__c) + 30</formula>
+        <name>Proposal: Opp Close Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>Opportunity__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Proposal_Stage_Prospecting</fullName>
+        <field>Stage__c</field>
+        <literalValue>Prospecting</literalValue>
+        <name>Proposal Stage: Prospecting</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Retrieve_Doc_Id</fullName>
+        <field>Retrieve_Pricing_Sheet__c</field>
+        <literalValue>1</literalValue>
+        <name>Retrieve Doc Id</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sales_Qualified_Date</fullName>
+        <field>Sales_Qualified_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Sales Qualified Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Underwriting_Qualified_Date</fullName>
+        <field>Underwriting_Qualified_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Underwriting Qualified Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>ADMIN FEE</fullName>
+        <actions>
+            <name>PER_CHECK_ANNUAL_ADMIN_FEE</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(
+  OR(
+    ISPICKVAL(Administrative_Fee_Type__c, &quot;Per Check&quot;),
+    ISPICKVAL(Administrative_Fee_Type__c, &quot;Annual&quot;)
+  ),
+  VALUE($Label.Workflow_Switch) != 1
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Client Presentation Generated</fullName>
+        <actions>
+            <name>Proposal_Generated_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>ISCHANGED( Version__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contract Generated Date</fullName>
+        <actions>
+            <name>Contract_Generated_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Proposal__c.Contract_Generated_Date__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Proposal__c.Stage__c</field>
+            <operation>equals</operation>
+            <value>Contract</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>EPLI</fullName>
+        <actions>
+            <name>EPLI</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Proposal__c.EPLI_Cost__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Gross Wages Admin Fee</fullName>
+        <actions>
+            <name>Gross_Wages_Admin_Fee</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Proposal__c.Override_Gross_Wages_Admin_Fee__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Proposal__c.Total_of_Employees__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Proposal__c.Total_Gross_Wages__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Pricing Sheet Version</fullName>
+        <actions>
+            <name>Retrieve_Doc_Id</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>ISCHANGED( Version__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity Close Date</fullName>
+        <actions>
+            <name>Opp_Close_Date_30_days_from_contract</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(
+ISCHANGED( Contract_Generated_Date__c ), Opportunity__r.CloseDate - TODAY()  &lt; 30)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>POLICY EXPIRATION</fullName>
+        <actions>
+            <name>Current_Policy_Expiring</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Proposal__c.Current_Policy_Expiration_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.IsClosed</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <offsetFromField>Proposal__c.Current_Policy_Expiration_Date__c</offsetFromField>
+            <timeLength>-14</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>PROPOSAL%3AOpportunity Close Date</fullName>
+        <actions>
+            <name>Proposal_Opp_Close_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(
+ISCHANGED(Proposal_Generated_Date__c ), Opportunity__r.CloseDate - TODAY()  &lt; 30)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Presentation Deck</fullName>
+        <actions>
+            <name>Opp_Stage_Client_Value_Proposition</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Proposal__c.Stage__c</field>
+            <operation>equals</operation>
+            <value>Client Presentation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Qualification,Additional Info Requested</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Proposal Accepted Date</fullName>
+        <actions>
+            <name>Proposal_Accepted_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Proposal__c.Stage__c</field>
+            <operation>equals</operation>
+            <value>Proposal Accepted</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Proposal__c.Proposal_Accepted_Date__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sales Qualified Date</fullName>
+        <actions>
+            <name>Sales_Qualified_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Proposal__c.SOC_Status__c</field>
+            <operation>equals</operation>
+            <value>Qualified</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Proposal__c.Sales_Qualified_Date__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Underwriting Qualified Date</fullName>
+        <actions>
+            <name>Underwriting_Qualified_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Proposal__c.Underwriting_Status__c</field>
+            <operation>equals</operation>
+            <value>Qualified</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Proposal__c.Underwriting_Qualified_Date__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

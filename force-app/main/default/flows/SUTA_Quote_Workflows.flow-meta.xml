@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>EvaluateSUTAConditions</name>
+        <label>Evaluate SUTA Conditions</label>
+        <locationX>446</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>SUTA_Quote_Name_not_equal_to_null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Update_Quote_Name</targetReference>
+            </connector>
+            <label>SUTA Quote Name not equal to null</label>
+        </rules>
+        <rules>
+            <name>Taxable_Wages</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SUTA__r.Wage_Base__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Update_Taxable_Wages</targetReference>
+            </connector>
+            <label>Taxable Wages</label>
+        </rules>
+        <rules>
+            <name>suta</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.SUTA_Bill_Rate__c</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>suta_bill_rate</targetReference>
+            </connector>
+            <label>suta</label>
+        </rules>
+    </decisions>
+    <description>deleted suta and suta quote</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>QuoteName</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.State__r.State_Code__c} &amp; &quot; - &quot; &amp; {!$Record.Proposal__r.Client__c}</expression>
+    </formulas>
+    <formulas>
+        <name>taxablewages</name>
+        <dataType>Currency</dataType>
+        <expression>{!$Record.SUTA__r.Wage_Base__c} * {!$Record.Total_of_Employees__c}</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>SUTA Quote# Workflows {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SUTA Quote# Workflows</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>suta_bill_rate</name>
+        <label>suta bill rate</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>SUTA_Bill_Rate__c</field>
+            <value>
+                <elementReference>$Record.SUTA__r.Rate__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Quote_Name</name>
+        <label>Update Quote Name</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>QuoteName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Taxable_Wages</name>
+        <label>Update Taxable Wages</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Taxable_Wages__c</field>
+            <value>
+                <elementReference>taxablewages</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>EvaluateSUTAConditions</targetReference>
+        </connector>
+        <object>SUTA_Quote__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

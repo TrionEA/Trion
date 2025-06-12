@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VOLUNTEER_OR_DONATED_LABOR__c</fullName>
+    <inlineHelpText>IS THERE ANY VOLUNTEER OR DONATED LABOR? (If &quot;YES&quot;, please specify)</inlineHelpText>
+    <label>VOLUNTEER OR DONATED LABOR?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>N</fullName>
+                <default>true</default>
+                <label>N</label>
+            </value>
+            <value>
+                <fullName>Y</fullName>
+                <default>false</default>
+                <label>Y</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

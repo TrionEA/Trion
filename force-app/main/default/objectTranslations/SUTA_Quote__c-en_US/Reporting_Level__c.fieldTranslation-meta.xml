@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Reporting Level --></label>
+    <name>Reporting_Level__c</name>
+    <picklistValues>
+        <masterLabel>Client</masterLabel>
+        <translation><!-- Client --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PEO</masterLabel>
+        <translation><!-- PEO --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

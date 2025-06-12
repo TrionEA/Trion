@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bill_Premium__c</fullName>
+    <inlineHelpText>Sales Premium + Assessment/Surcharge Fees</inlineHelpText>
+    <label>Bill Premium</label>
+    <summarizedField>WC_Rate__c.Bill_Premium__c</summarizedField>
+    <summaryForeignKey>WC_Rate__c.Proposal__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

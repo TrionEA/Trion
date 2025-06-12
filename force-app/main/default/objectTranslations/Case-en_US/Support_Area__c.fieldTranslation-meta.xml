@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Support Area --></label>
+    <name>Support_Area__c</name>
+    <picklistValues>
+        <masterLabel>Accounting</masterLabel>
+        <translation><!-- Accounting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Benefits</masterLabel>
+        <translation><!-- Benefits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Service</masterLabel>
+        <translation><!-- Customer Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Garnishments</masterLabel>
+        <translation><!-- Garnishments --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Human Resources</masterLabel>
+        <translation><!-- Human Resources --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Implementation</masterLabel>
+        <translation><!-- Implementation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payroll</masterLabel>
+        <translation><!-- Payroll --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales</masterLabel>
+        <translation><!-- Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unemployment</masterLabel>
+        <translation><!-- Unemployment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>W2</masterLabel>
+        <translation><!-- W2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WC</masterLabel>
+        <translation><!-- WC --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

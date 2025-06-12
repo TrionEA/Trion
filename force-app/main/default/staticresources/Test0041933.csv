@@ -1,0 +1,2 @@
+ContactId,AccountId,BusinessHoursId,OwnerId,CreatedById,LastModifiedById,Validation_Test__c,ClosedDate,CreatedDate,Reason,Status,Issue_with__c,Failed_Record__c,Subject,have_more_character__c
+003VE000002sRJpYAM,001VE000002WNF5YAO,01mG000000081eoIAA,005VE000008tW7cYAE,005VE000008tW7cYAE,0058Y00000D18z2QAB,TRUE,2024-09-16T10:39:51.000+0000,2024-09-15T10:39:51.000+0000,Duplicate,Closed,Client,FALSE,Test Case,FALSE

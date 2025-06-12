@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FUTA_SUTA__c</fullName>
+    <label>FUTA/SUTA</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Capped</fullName>
+                <default>false</default>
+                <label>Capped</label>
+            </value>
+            <value>
+                <fullName>No Capps</fullName>
+                <default>false</default>
+                <label>No Capps</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

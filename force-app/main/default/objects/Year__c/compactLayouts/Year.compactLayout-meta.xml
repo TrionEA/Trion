@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Year</fullName>
+    <fields>Name</fields>
+    <fields>FICA__c</fields>
+    <fields>FUTA__c</fields>
+    <fields>Medicare__c</fields>
+    <fields>Start_Date__c</fields>
+    <fields>End_Date__c</fields>
+    <fields>Status__c</fields>
+    <label>Year</label>
+</CompactLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trion_Adjusted_WC_Bill_Rate</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL( Calculate_WC_Rate_by__c , &quot;Trion Adjusted WC Bill Rate&quot;),
+ISBLANK(   Trion_Adjusted_Bill_Rate__c   ))</errorConditionFormula>
+    <errorDisplayField>Trion_Adjusted_Bill_Rate__c</errorDisplayField>
+    <errorMessage>Enter the Trion Bill Rate to calculate the manual rate.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Interaction event mapping</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Interaction event mappings</value>
+    </caseValues>
+    <layouts>
+        <layout>Interaction event mapping Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Update Interaction Event Mapping --></label>
+        <name>Update_Interaction_Event_Mapping</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Update Interaction event mapping --></label>
+        <name>Update_Weightages</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Email template, Action Name, and URL cannot be updated --></errorMessage>
+        <name>Validation_for_ActionName_URl_Tamplate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Weightage of the email template should be always greater or equal to 0 --></errorMessage>
+        <name>Weightage_should_be_greater_than_Zero</name>
+    </validationRules>
+</CustomObjectTranslation>

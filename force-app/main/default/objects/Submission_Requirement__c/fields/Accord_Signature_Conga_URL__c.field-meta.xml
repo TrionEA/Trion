@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accord_Signature_Conga_URL__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(ACORD_Type__c, &apos;Trion ACORD Form&apos;), &quot;/apex/APXTConga4__Conga_Composer?SolMgr=1&amp;serverUrl=&quot;+$Api.Partner_Server_URL_370+&apos;&amp;Id=&apos;+Id+&apos;&amp;QueryId=[accountinfo]a0H1M000014O5Fd%3Fpv0%3D&apos;+Proposal_Id__c+&apos;,[location]a0H1M000011PWl4%3Fpv0%3D&apos;+Proposal_Id__c+&apos;,[Contacts]a0H1M000011PWl9%3Fpv0%3D&apos;+Proposal_Id__c+&apos;,[inspection]a0H1M000011PWku%3Fpv0%3D&apos;+Proposal_Id__c+&apos;,[acctingrecord]a0H1M000011PWkk%3Fpv0%3D&apos;+Proposal_Id__c+&apos;,[claimsinfo]a0H1M000011PWlJ%3Fpv0%3D&apos;+Proposal_Id__c+&apos;,[generalinfo]a0H1M000011PWkp%3Fpv0%3D&apos;+Opportunity__c+&apos;,[comps]a0H1M000011PWkz%3Fpv0%3D&apos;+Proposal_Id__c+&apos;&amp;TemplateId=a0I1M000015HTF8&amp;CSVisible=1&amp;DS7=1141&amp;LiveEditVisible=1&amp;LiveEditEnable=1&amp;businessUnit=Trion_Sales&amp;DefaultPDF=1&amp;cssenderreturnurl=https://trion.lightning.force.com/lightning/r/Proposal__c/&apos;+Proposal_Id__c+&apos;/view&apos;,
+IF(ISPICKVAL(ACORD_Type__c, &apos;Uploaded ACORD&apos;),&quot;/apex/APXT_CongaSign__apxt_sendForSignature?&quot;+&apos;&amp;id=&apos;+Id+&apos;&amp;SelectAttachments=1&amp;cssenderreturnurl=https://trion.lightning.force.com/lightning/r/Proposal__c/&apos;+Proposal_Id__c+&apos;/view&apos;, NULL))</formula>
+    <label>Accord Signature Conga URL</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

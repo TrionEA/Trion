@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <rules>
+        <fullName>Contract Agreement</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>dsfs__DocuSign_Envelope__c.dsfs__Document_Name__c</field>
+            <operation>equals</operation>
+            <value>Trion Solutions Independent Contractor Agreement and W-9.pdf</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>dsfs__DocuSign_Envelope__c.Recipient_Signed_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

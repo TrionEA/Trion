@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailServicesFunction xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apexClass xsi:nil="true"/>
+    <attachmentOption>All</attachmentOption>
+    <authenticationFailureAction>Bounce</authenticationFailureAction>
+    <authorizationFailureAction>Discard</authorizationFailureAction>
+    <emailServicesAddresses>
+        <developerName>aadilshaikmohammad7</developerName>
+        <isActive>true</isActive>
+        <localPart>aadilshaikmohammad7</localPart>
+        <runAsUser>automatedcase@00dve0000001ecv2aa.ext</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <developerName>chalumurisaikiran12</developerName>
+        <isActive>true</isActive>
+        <localPart>chalumurisaikiran12</localPart>
+        <runAsUser>automatedcase@00dve0000001ecv2aa.ext</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <developerName>deepakkumar</developerName>
+        <isActive>true</isActive>
+        <localPart>deepakkumar</localPart>
+        <runAsUser>automatedcase@00dve0000001ecv2aa.ext</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <developerName>ksujatha</developerName>
+        <isActive>true</isActive>
+        <localPart>ksujatha</localPart>
+        <runAsUser>automatedcase@00dve0000001ecv2aa.ext</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <developerName>sweetysuji20017</developerName>
+        <isActive>true</isActive>
+        <localPart>sweetysuji20017</localPart>
+        <runAsUser>automatedcase@00dve0000001ecv2aa.ext</runAsUser>
+    </emailServicesAddresses>
+    <functionInactiveAction>Bounce</functionInactiveAction>
+    <functionName>EmailToCase</functionName>
+    <isActive>true</isActive>
+    <isAuthenticationRequired>false</isAuthenticationRequired>
+    <isErrorRoutingEnabled>false</isErrorRoutingEnabled>
+    <isTextAttachmentsAsBinary>false</isTextAttachmentsAsBinary>
+    <isTlsRequired>false</isTlsRequired>
+    <overLimitAction>Bounce</overLimitAction>
+</EmailServicesFunction>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Employee Layout: Service</layout>
+        <sections>
+            <label><!-- Employment Application --></label>
+            <section>Employment Application</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- New Case --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- External Brokers/Agents --></description>
+        <label><!-- Agent/Broker --></label>
+        <name>Agent_Broker</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Sales Contact --></description>
+        <label><!-- Client Contact --></label>
+        <name>Client_Contact</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Client Employees --></description>
+        <label><!-- Employee --></label>
+        <name>Employee</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Contact Type is mandatory as the survey switch is ON --></errorMessage>
+        <name>Contact_type_is_mandatory_when_survey_ON</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Default Days - Survey field cannot be null as the survey switch is ON --></errorMessage>
+        <name>Default_contact_days_should_not_be_null</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- An Account Name is require in order to save a Contact. --></errorMessage>
+        <name>Require_Account_for_Contact</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter either a home phone number or a cell phone number or an email address. --></errorMessage>
+        <name>Require_home_or_mobile_phone_no_or_email</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Update --></label>
+        <name>Mass_Update</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send --></label>
+        <name>Send</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendGmail --></label>
+        <name>SendGmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooWeather --></label>
+        <name>YahooWeather</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Tasks_Contacts --></label>
+        <name>activities__Create_Tasks_Contacts</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ExactTarget_Resubscribe --></label>
+        <name>et4ae5__ExactTarget_Resubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ExactTarget_Unsubscribe --></label>
+        <name>et4ae5__ExactTarget_Unsubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_ExactTarget_Email --></label>
+        <name>et4ae5__Send_ExactTarget_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_ExactTarget_SMS --></label>
+        <name>et4ae5__Send_ExactTarget_SMS</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_ExactTarget_Analytics --></label>
+        <name>et4ae5__View_ExactTarget_Analytics</name>
+    </webLinks>
+</CustomObjectTranslation>

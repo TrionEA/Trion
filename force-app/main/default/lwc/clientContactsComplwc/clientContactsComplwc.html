@@ -1,0 +1,233 @@
+<template>
+<lightning-card   title="Client Contacts">
+    <!-- Datatable -->
+    <div class="slds-p-around_medium">
+      
+        <lightning-datatable
+            key-field="Id"
+            data={lstClientContacts}
+            columns={columns}
+            draft-values={draftValues}
+            sorted-by={sortedBy}
+            sorted-direction={sortedDirection}
+            hide-checkbox-column={isHideCheckboxColumn}
+            errors={errors}
+            onsort={handleColumnSorting}
+            onrowselection={handleRowSelection}
+            onrowaction={handleRowAction}
+            onsave={handleSaveEdition}
+            oncancel={handleCancel}>
+        </lightning-datatable>
+    </div>
+<!-- Button -->
+    <lightning-button label="New Contact" slot="actions"  onclick={openModal}></lightning-button>
+    <!-- Main model 1-->
+    <template if:true={showMainModal}>
+    <c-modal-component title="Enter Details" is-open={showMainModal} onsave={handleMainModalSave} onclose={closeMainModal}>
+        <div class="slds-grid slds-wrap">           
+            <div class="slds-size_1-of-1">
+                <lightning-combobox name="Client" label="Type" value={contact.selectedValue} options={contactTypeOptions} onchange={handleClientContactTypeChange} required>
+                </lightning-combobox>
+            </div>
+    <!-- Officer/Owner Checkbox -->
+        <div class="slds-size_1-of-2 slds-p-right_small">
+            <lightning-input type="checkbox" label="Officer/Owner" name="isIncluded" checked={contact.isIncluded} onchange={handlePrimaryIncludeChange} variant="label-stacked">
+            </lightning-input>
+        </div>
+
+    <!-- Primary Checkbox -->
+        <div class="slds-size_1-of-2">
+            <lightning-input type="checkbox" label="Primary" name="isPrimary" checked={contact.isPrimary} onchange={handlePrimaryIncludeChange} variant="label-stacked">
+            </lightning-input>
+        </div>
+
+    <!-- First Name -->
+        <div class="slds-size_1-of-2 slds-p-right_small">
+            <lightning-input label="First Name" name="firstName" required  value={contact.firstName}  onchange={handleInputChange} >
+            </lightning-input>
+        </div>
+
+    <!-- Last Name -->
+        <div class="slds-size_1-of-2">
+            <lightning-input label="lastName" name="lastName"
+                    required value={contact.lastName} onchange={handleInputChange}>
+            </lightning-input>
+        </div>
+
+    <!-- Title/Relationship -->
+        <div class="slds-size_1-of-2 slds-p-right_small">
+            <lightning-input label="title/Relationship" required value={contact.titleRelationship} onchange={handleInputChange} name="titleRelationship">
+            </lightning-input>
+        </div>
+
+    <!-- Email -->
+        <div class="slds-size_1-of-2">
+            <lightning-input label="email" type="email" value={contact.email} onchange={handleInputChange} name="email">
+            </lightning-input>
+        </div>
+
+    <!-- Phone -->
+        <div class="slds-size_1-of-2 slds-p-right_small">
+            <lightning-input label="phone" type="tel" value={contact.phone} onchange={handleInputChange} name="phone">
+            </lightning-input>
+        </div>
+
+    <!-- Second model -->
+    <template if:true={isShow}>
+        
+        <!-- <div class="slds-grid slds-wrap"> -->
+            <div class="slds-size_1-of-2">
+                <lightning-input type="date" name="birthdate" label="birthdate" value={contact.birthdate} ></lightning-input>
+            </div>
+            <div class="slds-size_1-of-2 slds-p-right_small">
+                <lightning-input label="Ownership %" name="ownership" required type="number"
+                                 formatter="percent-fixed" step="0.01" value={contact.ownership}  onchange={handleInputChange}></lightning-input>
+            </div>
+            <!-- state -->
+            <div class="slds-size_1-of-2">
+                <lightning-combobox name="selectedState" label="selectedState" value={contact.selectedState}
+                                    placeholder="--None--" options={stateOptions}
+                                    onchange={handleStateChange} required>
+                </lightning-combobox>
+            </div>
+             <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+            </template>
+            <!-- payroll -->
+            <div class="slds-size_1-of-2 slds-p-right_small">
+                <lightning-input label="payroll" name="payroll" required type="number"
+                                 formatter="currency" step="0.01" value={contact.payroll} onchange={handleInputChange}>
+                </lightning-input>
+            </div>
+            <!-- client location -->
+            <div class="slds-size_1-of-2">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-size_6-of-7">
+                        <lightning-combobox name="location" label="Location" value={contact.selectedClientLocation}
+                                            placeholder="--None--" options={locationOptions}
+                                            onchange={handleLocationChange} >
+                        </lightning-combobox>
+                    </div>
+                    <div class="slds-size_1-of-7 slds-text-align_right slds-p-top_large">
+                        <lightning-button-icon icon-name="utility:add" alternative-text="Add"
+                                               title="Add" onclick={handleNewLocation}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+            </div>
+         <div class="slds-size_1-of-2 slds-p-right_small">
+             <lightning-record-picker
+                label="WC Code"
+                placeholder="Search WC Codes..."
+                object-api-name="WC_Code__c"
+                value={selectedStampCode}
+                onchange={handleWcCodeChange}>
+             </lightning-record-picker>
+            
+            </div>
+            <div class="slds-size_1-of-2" style="padding-top: 15px;">
+                <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                    <span class="slds-form-element__label">Client Location</span>
+                    <div class="slds-form-element__control">
+                        <div class="slds-form-element__static">
+                            <lightning-formatted-rich-text value={contact.clientLocation}>
+                            </lightning-formatted-rich-text>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-size_1-of-2 slds-p-right_small">
+                <lightning-textarea name="duties" label="duties" value={contact.duties} placeholder="please write here" onchange={handleInputChange}>
+                </lightning-textarea>
+            </div>
+    </template>
+    
+    </div>
+       <!-- Footer -->
+             <div slot="footer">
+    <lightning-button 
+        class="slds-m-right_x-small" 
+        label="Save" 
+        variant="brand" 
+        onclick={handleMainModalSave}>
+    </lightning-button>
+    <lightning-button 
+        label="Cancel" 
+        variant="neutral" 
+        onclick={handleCancel}>
+    </lightning-button>
+</div>
+
+
+
+</c-modal-component>
+
+</template>
+
+<!-- another model 2 -->
+ <template if:true={isShowsubmodal}>
+    <c-modal-component title="New Client Location" label="submodal" is-open={isShowsubmodal}  onsave={handleSubModalSave} onclose={closeSubModal}>
+    <div class="slds-grid slds-wrap">
+        <!-- Loc # (Read-only) -->
+        <div class="slds-size_1-of-2 slds-p-right_small">
+            <lightning-input type="number"
+                             name="input1"
+                             label="Loc #"
+                             value={submodalData.locNumber}
+                             disabled>
+            </lightning-input>
+        </div>
+
+        <!-- Street -->
+        <div class="slds-size_1-of-2">
+            <lightning-input name="street"
+                             label="Street"
+                             value={}
+                             required
+                             onchange={handleInputChange}
+                            >
+            </lightning-input>
+        </div>
+
+        <!-- City -->
+        <div class="slds-size_1-of-2 slds-p-right_small">
+            <lightning-input name="city"
+                             label="City"
+                             value={}
+                             required
+                             onchange={handleInputChange}
+                            >
+            </lightning-input>
+        </div>
+
+        <!-- Zip Code (Always input field, no lookup) -->
+        <div class="slds-size_1-of-2 slds-p-right_small">
+            <lightning-input name="Zip_Code"
+                             label="Zip Code"
+                             value={}
+                             required
+                             onchange={handleInputChange}
+                             >
+            </lightning-input>
+        </div>
+    </div>
+    <!-- footer -->
+         </div>
+       <!-- Footer -->
+             <div slot="footer">
+    <lightning-button 
+        class="slds-m-right_x-small" 
+        label="Save" 
+        variant="brand" 
+        onclick={handleSave}>
+    </lightning-button>
+    <lightning-button 
+        label="Cancel" 
+        variant="neutral" 
+        onclick={handleCancel}>
+    </lightning-button>
+</div>
+    </c-modal-component>
+</template>
+</lightning-card>
+</template>

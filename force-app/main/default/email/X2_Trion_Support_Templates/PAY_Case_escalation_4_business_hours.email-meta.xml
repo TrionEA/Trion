@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Payroll notification reminder that a case has gone 4 hours without interaction.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>PAY - Case escalation - 4 business hours</name>
+    <style>none</style>
+    <subject>Case#: {!Case.CaseNumber} Is Still in a Status of &quot;New&quot;</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,36 @@
+<template>
+    <lightning-card>
+        <article class="slds-card">
+            <div class="slds-card__body slds-card__body_inner">
+                
+                <lightning-card  icon-name="standard:file" title={cardLabel} class="slds-tabs_default slds-tabs_card">
+                <lightning-button-menu alternative-text="Show menu">
+                <lightning-menu-item value="MenuItemOne" label="Menu Item One"></lightning-menu-item>
+            </lightning-button-menu>
+            
+                    <template if:true={showFiles}>
+                        <template for:each={filesToDisplay} for:item="file">
+                            
+                            <div key={file.value} class="slds-m-bottom_small slds-card__body_inner">
+                                
+                                 <c-file-preview></c-file-preview>
+                               
+                                <lightning-tile label={file.label} onclick={openPreview} data-id={file.value}>
+                                </lightning-tile>
+                            </div>
+                        </template>
+                    </template>
+                    <template if:false={showFiles}>
+                        <p>No Files to display.</p>
+                    </template>
+                    <footer class="slds-card__footer">
+                        <a class="slds-card__footer-action" onclick={showAllFiles}>
+                            View All
+                            <span class="slds-assistive-text">Attachments</span>
+                        </a>
+                    </footer>
+                </lightning-card>
+            </div>
+        </article>
+    </lightning-card>
+</template>

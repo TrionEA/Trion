@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Total Bill Rate - FUTA --></help>
+    <label><!-- Total Bill Rate After UI Wage Limit --></label>
+    <name>Total_Bill_Rate_After_UI_Wage_Limit__c</name>
+</CustomFieldTranslation>

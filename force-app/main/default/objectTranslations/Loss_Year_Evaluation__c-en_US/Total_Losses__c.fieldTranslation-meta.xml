@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Total Reserves + Total Paid --></help>
+    <label><!-- Total Losses --></label>
+    <name>Total_Losses__c</name>
+</CustomFieldTranslation>

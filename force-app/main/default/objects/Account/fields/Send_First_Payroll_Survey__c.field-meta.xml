@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_First_Payroll_Survey__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Checking this box will send the first payroll survey to the payroll contact.</inlineHelpText>
+    <label>Send First Payroll Survey?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

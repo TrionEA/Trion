@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Info_Received__c</fullName>
+    <formula>IF(
+AND(
+NOT(ISBLANK(Account.Business_Type__c)),
+NOT(ISBLANK( Account.Federal_ID_Number__c )),
+NOT(ISBLANK(TEXT(Account.Entity_Type__c))) ,
+NOT(ISBLANK( Account.Business_Establishment_Date__c ))),TRUE, FALSE)</formula>
+    <label>Business Info Received</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

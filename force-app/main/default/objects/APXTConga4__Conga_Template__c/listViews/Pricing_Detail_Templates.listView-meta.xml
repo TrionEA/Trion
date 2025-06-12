@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pricing_Detail_Templates</fullName>
+    <columns>NAME</columns>
+    <columns>APXTConga4__Name__c</columns>
+    <columns>APXTConga4__Template_Group__c</columns>
+    <columns>APXTConga4__Template_Extension__c</columns>
+    <columns>APXTConga4__Template_Type__c</columns>
+    <columns>Quote_Type__c</columns>
+    <columns>CSA__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>APXTConga4__Template_Group__c</field>
+        <operation>equals</operation>
+        <value>Pricing Detail</value>
+    </filters>
+    <label>Pricing Detail Templates</label>
+</ListView>

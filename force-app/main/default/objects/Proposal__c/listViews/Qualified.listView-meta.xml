@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qualified</fullName>
+    <booleanFilter>1 AND (2 OR 3) AND 4</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Opportunity_Owner__c</columns>
+    <columns>Client__c</columns>
+    <columns>Current_Policy_Expiration_Date__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Quote_Type__c</columns>
+    <columns>Administrative_Fee_Type__c</columns>
+    <columns>Opportunity_Stage__c</columns>
+    <columns>SOC_Status__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Underwriting_Status__c</columns>
+    <columns>Approval_Request__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Opportunity_Stage__c</field>
+        <operation>equals</operation>
+        <value>Qualification</value>
+    </filters>
+    <filters>
+        <field>SOC_Status__c</field>
+        <operation>equals</operation>
+        <value>Pending</value>
+    </filters>
+    <filters>
+        <field>SOC_Status__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Opportunity_Stage__c</field>
+        <operation>notContain</operation>
+        <value>Closed</value>
+    </filters>
+    <label>Pending Sales Qualification</label>
+    <sharedTo>
+        <group>SOC</group>
+        <group>Sales_Office</group>
+    </sharedTo>
+</ListView>

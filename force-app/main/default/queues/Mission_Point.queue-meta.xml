@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>Mission Point</name>
+    <queueMembers>
+        <users>
+            <user>afreeman@trionworks.com</user>
+            <user>kmcfarlin@trionworks.com</user>
+            <user>npena@trionworks.com</user>
+            <user>pluli@trionworks.com</user>
+            <user>skielinen@trionworks.com</user>
+            <user>smyers@trionworks.com</user>
+            <user>skurek@trionworks.com</user>
+            <user>sdrellick@trionworks.com</user>
+            <user>ttrousdale@trionworks.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

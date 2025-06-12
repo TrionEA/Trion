@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Send_Survey_Followup_Notification</fullName>
+        <description>Send Survey Followup Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>csherman@trionworks.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>no-reply@trionworks.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>X2_Trion_Support_Templates/New_Survey_Response_Follow_Up_Required</template>
+    </alerts>
+    <rules>
+        <fullName>Survey Follow-Up Required</fullName>
+        <actions>
+            <name>Send_Survey_Followup_Notification</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Survey_Responses__c.Follow_Up_Required__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Sends an email notification when follow-up required is TRUE.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Contract_Agreement_Executed</fullName>
+        <field>Signed_Trion_Broker_Agreement__c</field>
+        <literalValue>Executed</literalValue>
+        <name>Contract Agreement Executed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Employee_Home_Email</fullName>
+        <field>Email</field>
+        <formula>Home_Email__c</formula>
+        <name>Employee Home Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Employment_Status</fullName>
+        <field>Employment_Status__c</field>
+        <literalValue>Inactive</literalValue>
+        <name>Employment Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Contract Agreement Signed Date</fullName>
+        <actions>
+            <name>Contract_Agreement_Executed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Contract_Agreement_Signed_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Employee Home Email</fullName>
+        <actions>
+            <name>Employee_Home_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Email</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Home_Email__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Employment Status</fullName>
+        <actions>
+            <name>Employment_Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Update Employment Status to terminated when docusign form updates termination date on contact</description>
+        <formula>Termination_Date__c  &lt;  TODAY()</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

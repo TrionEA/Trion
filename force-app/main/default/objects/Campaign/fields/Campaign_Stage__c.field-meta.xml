@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Stage__c</fullName>
+    <label>Campaign Stage</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Creation</fullName>
+                <default>true</default>
+                <label>Creation</label>
+            </value>
+            <value>
+                <fullName>Template Tagging</fullName>
+                <default>false</default>
+                <label>Template Tagging</label>
+            </value>
+            <value>
+                <fullName>Interaction Score</fullName>
+                <default>false</default>
+                <label>Interaction Score</label>
+            </value>
+            <value>
+                <fullName>Member Identification</fullName>
+                <default>false</default>
+                <label>Member Identification</label>
+            </value>
+            <value>
+                <fullName>Email Template Selection</fullName>
+                <default>false</default>
+                <label>Email Template Selection</label>
+            </value>
+            <value>
+                <fullName>Activated / In Progress</fullName>
+                <default>false</default>
+                <label>Activated / In Progress</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Activate</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Activate</label>
+            </value>
+            <value>
+                <fullName>Campaign Member Creation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Campaign Member Creation</label>
+            </value>
+            <value>
+                <fullName>Templates Mapping</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Template Administration</label>
+            </value>
+            <value>
+                <fullName>Weightage Stamping</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Weightage Stamping</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

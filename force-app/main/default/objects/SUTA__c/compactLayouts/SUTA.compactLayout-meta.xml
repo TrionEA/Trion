@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SUTA</fullName>
+    <fields>Name</fields>
+    <fields>Status__c</fields>
+    <fields>State__c</fields>
+    <fields>Reporting_Level__c</fields>
+    <fields>Rate__c</fields>
+    <fields>State_Assessment_and_Surcharges__c</fields>
+    <fields>Wage_Base__c</fields>
+    <label>SUTA</label>
+</CompactLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- State Classification --></label>
+    <name>State_Classification__c</name>
+    <picklistValues>
+        <masterLabel>MCP</masterLabel>
+        <translation><!-- MCP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Master</masterLabel>
+        <translation><!-- Master --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Monopolistic</masterLabel>
+        <translation><!-- Monopolistic --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

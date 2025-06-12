@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Question_Sequence_cannot_be_zero</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(VALUE( LEFT(Question_Sequence_new__c, 1) )= 0,
+ISBLANK(Question_Sequence_new__c) )</errorConditionFormula>
+    <errorMessage>Question Sequence value cannot be zero or blank</errorMessage>
+</ValidationRule>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Composer_Generate_ACORD1</fullName>
+    <availability>online</availability>
+    <description>Created by Conga Solution Manager. Record link: https://trion--apxtconga4.na209.visual.force.com/a0d8Y00000vRwZpQAK.</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>false</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>660</height>
+    <isResizable>false</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Generate ACORD</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/apex/APXTConga4__Conga_Composer?SolMgr=1
+&amp;serverUrl={!API.Partner_Server_URL_370}
+&amp;Id={!Submission_Requirement__c.Id}
+
+&amp;QueryId=[accountinfo]a0H1M000014O5Fd,
+[location]a0H1M000011PWl4,
+[Contacts]a0H1M000011PWl9,
+[inspection]a0H1M000011PWku,
+[acctingrecord]a0H1M000011PWkk,
+[claimsinfo]a0H1M000011PWlJ,
+[generalinfo]a0H1M000011PWkp,
+[comps]a0H1M000011PWkz
+
+&amp;TemplateId=a0I1M000015HTF8
+
+&amp;DS7=1
+&amp;UF0=1
+&amp;MFTS0=ACORD_Type__c
+&amp;MFTSValue0=Trion ACORD Form
+&amp;OFN={!Submission_Requirement__c.Conga_Document_Name__c}</url>
+    <width>900</width>
+</WebLink>

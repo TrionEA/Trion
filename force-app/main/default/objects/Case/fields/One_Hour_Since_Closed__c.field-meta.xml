@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>One_Hour_Since_Closed__c</fullName>
+    <description>The field helps to check if the case has been closed and if it more than 60 minutes, it is true.</description>
+    <formula>ABS((NOW() - ClosedDate) * 1440) &gt; 60</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>One Hour Since Closed</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

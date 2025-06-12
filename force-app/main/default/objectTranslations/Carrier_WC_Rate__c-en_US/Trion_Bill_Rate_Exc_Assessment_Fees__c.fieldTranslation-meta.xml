@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Trion Bill Rate Exc. Assessment Fees --></label>
+    <name>Trion_Bill_Rate_Exc_Assessment_Fees__c</name>
+</CustomFieldTranslation>

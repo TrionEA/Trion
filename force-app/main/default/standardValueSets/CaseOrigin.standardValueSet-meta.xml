@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Phone</fullName>
+        <default>true</default>
+        <label>Phone</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Voicemail</fullName>
+        <default>false</default>
+        <label>Voicemail</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - Accounting</fullName>
+        <default>false</default>
+        <label>Email - Accounting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - Benefits</fullName>
+        <default>false</default>
+        <label>Email - Benefits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - Customer Service</fullName>
+        <default>false</default>
+        <label>Email - Customer Service</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - HR</fullName>
+        <default>false</default>
+        <label>Email - HR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - Payroll</fullName>
+        <default>false</default>
+        <label>Email - Payroll</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - Sales</fullName>
+        <default>false</default>
+        <label>Email - Sales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - Staffing</fullName>
+        <default>false</default>
+        <label>Email - Staffing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - Garnishments</fullName>
+        <default>false</default>
+        <label>Email - Garnishments</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - WC</fullName>
+        <default>false</default>
+        <label>Email - WC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - W2</fullName>
+        <default>false</default>
+        <label>Email - W2</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - Unemployment</fullName>
+        <default>false</default>
+        <label>Email - Unemployment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - Leave Requests</fullName>
+        <default>false</default>
+        <label>Email - Leave Requests</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - Implementation</fullName>
+        <default>false</default>
+        <label>Email - Implementation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web</fullName>
+        <default>false</default>
+        <label>Web</label>
+    </standardValue>
+</StandardValueSet>

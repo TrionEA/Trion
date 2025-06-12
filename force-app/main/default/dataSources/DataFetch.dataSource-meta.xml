@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalDataSource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authProvider>file_connect_sharepoint</authProvider>
+    <customConfiguration>{&quot;sharepointConnectorUrl&quot;:&quot;https://trionworks.sharepoint.com&quot;,&quot;singleSiteCollection&quot;:&quot;true&quot;}</customConfiguration>
+    <isWritable>false</isWritable>
+    <label>DataFetch</label>
+    <principalType>PerUser</principalType>
+    <protocol>Oauth</protocol>
+    <type>ContentHubSharepointOffice365</type>
+</ExternalDataSource>

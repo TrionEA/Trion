@@ -1,0 +1,10 @@
+Hello,
+
+New survey response was just received and it requires your attention. Please login to Salesforce to view complete details.
+
+Link to record: {!Survey_Responses__c.Link}
+Respondent Name: {!Survey_Responses__c.Respondents_First_Name__c}  {!Survey_Responses__c.Respondent_s_Last_Name__c}
+Respondent's Company Name: {!Survey_Responses__c.Company_Name__c}
+
+Regards,
+IT Support

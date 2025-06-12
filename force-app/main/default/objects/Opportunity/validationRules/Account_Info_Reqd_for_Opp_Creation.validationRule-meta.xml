@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Info_Reqd_for_Opp_Creation</fullName>
+    <active>false</active>
+    <description>Val. rule to prevent creating an opportunity when account billing street, city, state, zip code, and phone are blank.</description>
+    <errorConditionFormula>ISNEW() &amp;&amp; 
+(ISBLANK(Account.BillingCity) || 
+ISBLANK(Account.BillingStreet) || 
+ISBLANK(Account.BillingPostalCode) || 
+ISBLANK(Account.BillingState) || 
+ISBLANK(Account.Phone))</errorConditionFormula>
+    <errorMessage>You cannot create an opportunity when account billing street, city, state, zip code, and phone are blank. Open the account in another window, enter all the required info, then come back and save this record.</errorMessage>
+</ValidationRule>

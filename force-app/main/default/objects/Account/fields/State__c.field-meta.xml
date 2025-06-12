@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(BillingState = &quot;New Hampshire&quot;, &quot;New_Hampshire&quot;,
+IF(BillingState = &quot;New Jersey&quot;, &quot;New_Jersey&quot;,
+IF(BillingState = &quot;New Mexico&quot;, &quot;New Mexico&quot;,
+IF(BillingState = &quot;New York&quot;, &quot;New_York&quot;,
+IF(BillingState = &quot;North Carolina&quot;, &quot;North_Carolina&quot;,
+IF(BillingState = &quot;North Dakota&quot;, &quot;North_Dakota&quot;,
+IF(BillingState = &quot;Rhode Island&quot;, &quot;Rhode_Island&quot;,
+IF(BillingState = &quot;South Carolina&quot;, &quot;South_Carolina&quot;,
+IF(BillingState = &quot;South Dakota&quot;, &quot;South_Dakota&quot;,
+IF(BillingState = &quot;West Virginia&quot;, &quot;West_Virginia&quot;,  
+BillingState))))))))))</formula>
+    <label>State</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

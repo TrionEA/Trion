@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modified_WC_Rate</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL( Calculate_WC_Rate_by__c , &quot;Modified WC Rate&quot;),
+ISNULL(   Modifier__c   ))</errorConditionFormula>
+    <errorDisplayField>Modifier__c</errorDisplayField>
+    <errorMessage>Enter a mod to calculate the proposals modified rate.</errorMessage>
+</ValidationRule>

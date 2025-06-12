@@ -1,0 +1,117 @@
+<template>
+    <div class="container">
+    <!-- Main Heading -->
+    <div class="slds-text-heading_medium slds-m-bottom_medium" style="border-bottom: 2px solid #d8dde6; padding-bottom: 0.5rem;">
+    <b>Client Employee Info</b>
+</div>
+
+
+    <!-- Spinner -->
+    <template if:true={showSpinner}>
+        <lightning-spinner size="large" variant="brand" alternative-text="Loading..."></lightning-spinner>
+    </template>
+
+    <!-- Grid Wrapper -->
+    <div class="slds-grid slds-wrap">
+        <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+            <b>{proposalClientName} Employee Info by State</b>
+        </div>
+
+        <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small" style="height: 250px">
+            <!-- Data Table -->
+            <lightning-datatable
+                key-field="Id"
+                data={lstSUTAQuotes}
+                columns={columns}
+                draft-values={draftValues}
+                errors={errors}
+                hide-checkbox-column={isShowCheckboxColumn}
+                sorted-by={sortedBy}
+                sorted-direction={sortedDirection}
+                onsort={handleColumnSorting}
+                onrowselection={handleRowSelection}
+                onsave={handleSaveEdition}
+                oncancel={handleCancel}>
+            </lightning-datatable>
+        </div>
+
+        <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+            <template if:true={isButtonVisible}>
+                <template if:false={isDelete}>
+                    <lightning-button variant="neutral" label="Add" onclick={handleAddRecords}></lightning-button>
+                    <lightning-button variant="neutral" class="ml25" label="Delete" onclick={handleDeleteRecords}></lightning-button>
+                </template>
+                <template if:true={isDelete}>
+                    <lightning-button variant="neutral" label="Delete" onclick={handlePerformDeleteRecords}></lightning-button>
+                    <lightning-button variant="neutral" class="ml25" label="Cancel" onclick={handleCancel}></lightning-button>
+                </template>
+            </template>
+        </div>
+    </div>
+
+    <!-- Modal Section -->
+    <template if:true={isAddEmployeeInfoModal}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_large" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+            <div class="slds-modal__container">
+                <template if:true={isModalLoading}>
+                    <lightning-spinner size="large" variant="brand" alternative-text="Loading..."></lightning-spinner>
+                </template>
+
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={handleCancel}>
+                        <lightning-icon icon-name="utility:close" variant="inverse" size="small"></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Add Client Employee Info</h2>
+                </header>
+
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <div class="slds-grid slds-wrap">
+                        <!-- State Lookup -->
+                        <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                            <lightning-combobox
+                                name="state"
+                                label="State"
+                                value={selectedStateId}
+                                options={mapStateOptions}
+                                onchange={handleStateChange}
+                                required>
+                            </lightning-combobox>
+                        </div>
+
+                        <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                            <lightning-input 
+                                type="number" 
+                                name="numberOfEmployees" 
+                                label="# of Employees" 
+                                value={numberOfEmployees} 
+                                onchange={handleNumberOfEmployeesChange}
+                                required>
+                            </lightning-input>
+                        </div>
+
+                        <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                            <lightning-input 
+                                type="number" 
+                                name="grossWages" 
+                                label="Gross Wages" 
+                                value={grossWages} 
+                                formatter="currency" 
+                                step="0.01" 
+                                onchange={handleGrossWagesChange}
+                                required>
+                            </lightning-input>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="slds-modal__footer">
+                    <lightning-button variant="neutral" label="Cancel" onclick={handleCancel}></lightning-button>
+                    <lightning-button variant="brand" label="Save" onclick={handleAddClientEmployeeInfo}></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+    </div>
+</template>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Entity_Type__c</fullName>
+    <description>1 - C Corp 
+2 - S Corp 
+3 - Ltd Liab Corp 
+4 - Partner 
+5 - Prop 
+6 - Joint Venture 
+7 - Non Profit 
+8 - Other</description>
+    <label>Entity Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Entity_Type</valueSetName>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Count Comparison --></label>
+    <name>Count_Comparison__c</name>
+    <picklistValues>
+        <masterLabel>Sharepoint Records not Matched</masterLabel>
+        <translation><!-- Sharepoint Records not Matched --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stagging Records not Matched</masterLabel>
+        <translation><!-- Stagging Records not Matched --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

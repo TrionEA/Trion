@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Case Feed Layout</layout>
+        <layoutType>CaseInteraction</layoutType>
+        <sections>
+            <label><!-- Case Details --></label>
+            <section>Case Details</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Converted: Case Feed Layout</layout>
+        <sections>
+            <label><!-- Case Details --></label>
+            <section>Case Details</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>IT Prototype</layout>
+        <sections>
+            <label><!-- Case Details --></label>
+            <section>Case Details</section>
+        </sections>
+        <sections>
+            <label><!-- Case Header --></label>
+            <section>Case Header</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Trion Case Admin</layout>
+        <sections>
+            <label><!-- Case Details --></label>
+            <section>Case Details</section>
+        </sections>
+        <sections>
+            <label><!-- Case Header --></label>
+            <section>Case Header</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Trion Case Streamlined</layout>
+        <sections>
+            <label><!-- Case Details --></label>
+            <section>Case Details</section>
+        </sections>
+        <sections>
+            <label><!-- Case Header --></label>
+            <section>Case Header</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>Change_Status_LEX</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- CloseCaseLightning --></label>
+        <name>CloseCaseLightning</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Close Case --></label>
+        <name>Close_Case_LEX</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create New Task --></label>
+        <name>Create_Task</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Email --></label>
+        <name>Send_Email_LEX</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Send Survey Email --></label>
+        <name>Send_Survey_Email</name>
+    </quickActions>
+    <validationRules>
+        <errorMessage><!-- Please fill the associated contact when sending the survey --></errorMessage>
+        <name>Contact_Mandatory_When_Sending_Survey</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You may not assign a case to a user in the IT department. Please select a different queue or user if you wish to reassign this case, or consult your manager for guidance. --></errorMessage>
+        <name>No_Transfer_to_IT</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Closing a case requires Account and Close Reason to be completed and the Account Name may not contain &quot;TRION SOLUTIONS&quot; --></errorMessage>
+        <name>Require_Account_Close_Reason_on_Close</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please populate Category and Sub Category. --></errorMessage>
+        <name>Require_Category_and_Sub_Cat_to_Close</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Close_Case --></label>
+        <name>Close_Case</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Get_Next_Case --></label>
+        <name>Get_Next_Case</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Edit --></label>
+        <name>Mass_Edit</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Update --></label>
+        <name>Mass_Update</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Tasks_Cases --></label>
+        <name>activities__Create_Tasks_Cases</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+</CustomObjectTranslation>

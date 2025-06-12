@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Survey_Feedback__c.Account__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Feedback__c.How_long_have_you_been_a_client__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Feedback__c.Trion_service_refer__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>Survey_Feedback__c.Rate_your_last_interaction_with_Trion__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Feedback__c.Comment_explain_your_rating__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>Survey_Feedback__c.Continue_your_relationship_with_Trion__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Feedback__c.Survey_URL__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>CLICKTOOLS - Survey Report Data</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Survey_Feedback__c@Survey_Feedback__c.Contact__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Survey_Feedback__c.Survey_Completed_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Manual Premium + State Surcharge/Assessment Fees --></help>
+    <label><!-- Trion Manual Premium --></label>
+    <name>Trion_Manual_Premium__c</name>
+</CustomFieldTranslation>

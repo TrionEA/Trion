@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tax_Exempt_Organization_Search</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Tax Exempt Organization Search</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>https://apps.irs.gov/app/eos/allSearch.do?ein1={!Account.Federal_ID_Number__c}&amp;names=&amp;resultsPerPage=25&amp;indexOfFirstRow=0&amp;dispatchMethod=searchAll&amp;city=&amp;state=All+States&amp;country=US&amp;postDateFrom=&amp;postDateTo=&amp;exemptTypeCode=al&amp;deductibility=all&amp;sortColumn=orgName&amp;isDescending=false&amp;submitName=Search</url>
+</WebLink>

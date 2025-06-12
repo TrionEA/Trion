@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Details__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+ Business_Info_Received__c  = TRUE,IMAGE(&quot;/img/samples/flag_green.gif&quot;,&quot;green&quot;),
+IMAGE(&quot;/img/samples/flag_red.gif&quot;,&quot;red&quot;))&amp; &quot; &quot; &amp; BR() &amp; &quot; &quot; &amp;
+
+
+&quot;Business Type: &quot; &amp;  Account.Business_Type__c &amp;BR()&amp;
+&quot;Entity Type: &quot;&amp;&quot;  &quot; &amp;   text(Account.Entity_Type__c ) &amp;BR()&amp;
+&quot;FEIN: &quot;&amp;&quot;      &quot; &amp;    Account.Federal_ID_Number__c &amp; BR()&amp;
+&quot;Business Establishment Date: &quot; &amp; text( month(Account.Business_Establishment_Date__c )) &amp; &quot;/&quot; &amp; text(day(Account.Business_Establishment_Date__c ))&amp; &quot;/&quot; &amp; text(year(Account.Business_Establishment_Date__c ))&amp;br()&amp;
+IF(ISPICKVAL(Proposal__r.New_Business_Entity__c, &quot;No&quot;), &quot;Years in Business: &quot; &amp; text(     Account.Yrs_in_Business__c   ),null)</formula>
+    <label>Business Info</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

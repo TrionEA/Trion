@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>SendEmail</name>
+        <label>SendEmail</label>
+        <locationX>572</locationX>
+        <locationY>384</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>recipientsList</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>sub</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>errorMessa</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <formulas>
+        <name>CaseSubject</name>
+        <dataType>String</dataType>
+        <expression>TRIM(
+   SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE({!$Record.Subject}, &quot;RE:&quot;, &quot;&quot;), &quot;Re:&quot;, &quot;&quot;), &quot;Sandbox: &quot;, &quot;&quot;), &quot;Sandbox:&quot;, &quot;&quot;), &quot;FW:&quot;, &quot;&quot;)
+)</expression>
+    </formulas>
+    <formulas>
+        <name>CheckingAllLimits</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+LEN({!$Record.Headers})&lt;32000,
+LEN({!$Record.Subject})&lt;3000)</expression>
+    </formulas>
+    <formulas>
+        <name>HeadersLength</name>
+        <dataType>Number</dataType>
+        <expression>LEN({!$Record.Headers})</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>HtmlBodyLength</name>
+        <dataType>Number</dataType>
+        <expression>LEN({!$Record.HtmlBody})</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>We will be modifying the headers based on the length.</description>
+        <name>ModifiedHeaders</name>
+        <dataType>String</dataType>
+        <expression>IF({!HeadersLength}&gt;32000, LEFT({!$Record.Headers}, 31500)
+&amp;
+BR()
+&amp;
+{!Texttemplateforemailmessage}, {!$Record.Headers})</expression>
+    </formulas>
+    <formulas>
+        <description>We will be modifying the html body based on the length.</description>
+        <name>Modifiedhtmlbody</name>
+        <dataType>String</dataType>
+        <expression>IF({!HtmlBodyLength}&gt;100000, LEFT({!$Record.HtmlBody}, 100000) 
+&amp;
+ BR()
+&amp;
+BR()
+&amp;
+BR()
+ &amp; 
+{!Texttemplateforemailmessage}, {!$Record.HtmlBody})</expression>
+    </formulas>
+    <formulas>
+        <name>ModifiedSubject</name>
+        <dataType>String</dataType>
+        <expression>IF({!SubjectLength}&gt;3000, LEFT({!$Record.Subject}, 2500)
+&amp; 
+BR()
+&amp;
+{!Texttemplateforemailmessage}, {!$Record.Subject})</expression>
+    </formulas>
+    <formulas>
+        <description>We will be modifying the text body length based on the length</description>
+        <name>ModifiedTextBody</name>
+        <dataType>String</dataType>
+        <expression>IF({!TextBodyLength}&gt;100000, LEFT({!$Record.TextBody}, 100000)
+&amp;
+BR()
+&amp;
+{!Texttemplateforemailmessage}, {!$Record.TextBody})</expression>
+    </formulas>
+    <formulas>
+        <name>NoOfDays</name>
+        <dataType>Number</dataType>
+        <expression>TODAY()-DATEVALUE({!$Record.Parent.ClosedDate})</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>RecipientList</name>
+        <dataType>String</dataType>
+        <expression>&apos;ksujatha@enabledanalytics.com&apos;+&apos;,&apos;+&apos;deepakkumar@enabledanalytics.com&apos;+&apos;,&apos;+&apos;uttejcheedalla@enabledanalytics.com&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>recipientsList</name>
+        <dataType>String</dataType>
+        <expression>&apos;ksujatha@enabledanalytics.com&apos;+&apos;,&apos;+&apos;uttejcheedalla@enabledanalytics.com&apos;+&apos;deepakkumar@enabledanalytics.com&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>RemainingHtmlBody</name>
+        <dataType>String</dataType>
+        <expression>RIGHT({!$Record.HtmlBody}, {!HtmlBodyLength}-131071)</expression>
+    </formulas>
+    <formulas>
+        <name>RemainingText</name>
+        <dataType>String</dataType>
+        <expression>RIGHT({!$Record.TextBody},{!HtmlBodyLength-131071} )</expression>
+    </formulas>
+    <formulas>
+        <name>SubjectEmailError</name>
+        <dataType>String</dataType>
+        <expression>&apos;Error Occured While Inserting EmailMessage Record &apos; + {!$Record.Id}</expression>
+    </formulas>
+    <formulas>
+        <name>SubjectLength</name>
+        <dataType>Number</dataType>
+        <expression>LEN({!$Record.Subject})</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>TextBodyLength</name>
+        <dataType>Number</dataType>
+        <expression>LEN({!$Record.TextBody})</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>TrimmedHeaders</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Record.Headers},31999)</expression>
+    </formulas>
+    <formulas>
+        <name>trimmedHtmlBody</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Record.HtmlBody}, 131071)</expression>
+    </formulas>
+    <formulas>
+        <name>TrimmingSubject</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Record.Subject}, 2999)</expression>
+    </formulas>
+    <formulas>
+        <name>Trimmingthetextbody</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Record.TextBody}, 131071)</expression>
+    </formulas>
+    <interviewLabel>ErrorE {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>New Case Creation EmailSEnding Error</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Records_1</name>
+        <label>Create Records 1</label>
+        <locationX>308</locationX>
+        <locationY>276</locationY>
+        <faultConnector>
+            <targetReference>SendEmail</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <elementReference>lName</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <object>Contact</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Create_Records_1</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>InvalidDraft</status>
+    <textTemplates>
+        <name>EmailInsertError</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;{!$Flow.FaultMessage}&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>errorMessa</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;{!$Flow.FaultMessage}&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <description>This text template will be used for email body, html body, subject and headers.</description>
+        <name>Texttemplateforemailmessage</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 25px;&quot;&gt;-----Please refer to the parent case for more information-----&lt;/strong&gt;&lt;/p&gt;&lt;/center&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>CaseRec</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+    <variables>
+        <name>ClosedDateField</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>$Record.null__NotFound.Closed_Date__c</elementReference>
+        </value>
+    </variables>
+    <variables>
+        <name>contentDocumentLinkList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ContentDocumentLink</objectType>
+    </variables>
+    <variables>
+        <name>contentDocumentLinkVar</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ContentDocumentLink</objectType>
+    </variables>
+    <variables>
+        <name>ContentDocumentLinkVarCase</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ContentDocumentLink</objectType>
+    </variables>
+    <variables>
+        <name>ContentDocumentListCase</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ContentDocumentLink</objectType>
+    </variables>
+    <variables>
+        <name>ErrorMessageInsertingEmail</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>$Flow.FaultMessage</elementReference>
+        </value>
+    </variables>
+    <variables>
+        <name>lName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>$Record.LastName</elementReference>
+        </value>
+    </variables>
+    <variables>
+        <name>NewCreatedCaseId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>NewEmailMessageIdLong</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>NewlyCreatedCaseIdLarge</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>NewlyCreatedEmailMessageId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>sub</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>tesrt</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>UserEm</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>deepakkumar@enabledanalytics.com</stringValue>
+        </value>
+    </variables>
+</Flow>

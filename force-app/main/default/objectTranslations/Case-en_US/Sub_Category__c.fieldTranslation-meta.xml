@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sub Category --></label>
+    <name>Sub_Category__c</name>
+    <picklistValues>
+        <masterLabel>401K</masterLabel>
+        <translation><!-- 401K --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACA</masterLabel>
+        <translation><!-- ACA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AFLAC</masterLabel>
+        <translation><!-- AFLAC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Background Checks</masterLabel>
+        <translation><!-- Background Checks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COBRA</masterLabel>
+        <translation><!-- COBRA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cards</masterLabel>
+        <translation><!-- Cards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Claims</masterLabel>
+        <translation><!-- Claims --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Issues</masterLabel>
+        <translation><!-- Client Issues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Communications</masterLabel>
+        <translation><!-- Communications --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DNet</masterLabel>
+        <translation><!-- DNet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deductions</masterLabel>
+        <translation><!-- Deductions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Direct Deposit</masterLabel>
+        <translation><!-- Direct Deposit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EE Tax Withholdings</masterLabel>
+        <translation><!-- EE Tax Withholdings --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ER Tax Notice</masterLabel>
+        <translation><!-- ER Tax Notice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ERTC</masterLabel>
+        <translation><!-- ERTC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enrollments</masterLabel>
+        <translation><!-- Enrollments --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FMLA</masterLabel>
+        <translation><!-- FMLA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FSA</masterLabel>
+        <translation><!-- FSA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HIPAA</masterLabel>
+        <translation><!-- HIPAA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HSA</masterLabel>
+        <translation><!-- HSA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Handbooks</masterLabel>
+        <translation><!-- Handbooks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>I9 Docs</masterLabel>
+        <translation><!-- I9 Docs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Info Update</masterLabel>
+        <translation><!-- Info Update --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Investigations</masterLabel>
+        <translation><!-- Investigations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Leave</masterLabel>
+        <translation><!-- Leave --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Login Credentials</masterLabel>
+        <translation><!-- Login Credentials --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MIA</masterLabel>
+        <translation><!-- MIA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medical Support Orders</masterLabel>
+        <translation><!-- Medical Support Orders --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NSF</masterLabel>
+        <translation><!-- NSF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Hire Enrollment Packet</masterLabel>
+        <translation><!-- New Hire Enrollment Packet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onboarding</masterLabel>
+        <translation><!-- Onboarding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open Enrollment</masterLabel>
+        <translation><!-- Open Enrollment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pay Card</masterLabel>
+        <translation><!-- Pay Card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pay Inquiries</masterLabel>
+        <translation><!-- Pay Inquiries --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pay Stubs</masterLabel>
+        <translation><!-- Pay Stubs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Posters</masterLabel>
+        <translation><!-- Posters --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recapture</masterLabel>
+        <translation><!-- Recapture --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Renewals</masterLabel>
+        <translation><!-- Renewals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reports</masterLabel>
+        <translation><!-- Reports --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resignation</masterLabel>
+        <translation><!-- Resignation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STD</masterLabel>
+        <translation><!-- STD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stop Payments</masterLabel>
+        <translation><!-- Stop Payments --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Subpoena</masterLabel>
+        <translation><!-- Subpoena --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Swipeclock</masterLabel>
+        <translation><!-- Swipeclock --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Termination</masterLabel>
+        <translation><!-- Termination --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UIA</masterLabel>
+        <translation><!-- UIA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VOE</masterLabel>
+        <translation><!-- VOE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>W2</masterLabel>
+        <translation><!-- W2 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

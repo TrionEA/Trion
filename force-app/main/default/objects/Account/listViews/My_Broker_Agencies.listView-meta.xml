@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Broker_Agencies</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Trion_Location__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>ACCOUNT.TYPE</field>
+        <operation>equals</operation>
+        <value>Broker/Agency Firm</value>
+    </filters>
+    <label>My Broker/Agencies</label>
+    <sharedTo></sharedTo>
+</ListView>

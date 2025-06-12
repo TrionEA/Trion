@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Email Publisher">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Email Subject" value={emailSubject} onchange={handleSubjectChange}></lightning-input>
+            <lightning-input label="Email Body" value={emailBody} onchange={handleBodyChange}></lightning-input>
+            <lightning-button variant="brand" label="Publish Email Data" onclick={publishEmailData}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- DO ANY EMPLOYEES PREDOMINANTLY WORK AT HOME? If &quot;YES&quot;, # of Employees: --></help>
+    <label><!-- EMPLOYEES PREDOMINANTLY WORK AT HOME --></label>
+    <name>EMPLOYEES_PREDOMINANTLY_WORK_AT_HOME__c</name>
+    <picklistValues>
+        <masterLabel>N</masterLabel>
+        <translation><!-- N --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Y</masterLabel>
+        <translation><!-- Y --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

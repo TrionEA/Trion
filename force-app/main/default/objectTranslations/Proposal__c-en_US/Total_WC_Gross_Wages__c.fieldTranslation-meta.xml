@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Total Wages w comp --></label>
+    <name>Total_WC_Gross_Wages__c</name>
+</CustomFieldTranslation>

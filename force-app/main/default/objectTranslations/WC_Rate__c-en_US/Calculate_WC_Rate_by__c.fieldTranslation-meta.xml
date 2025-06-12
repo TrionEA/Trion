@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Calculate WC Rate by --></label>
+    <name>Calculate_WC_Rate_by__c</name>
+    <picklistValues>
+        <masterLabel>Modified WC Rate</masterLabel>
+        <translation><!-- Modified WC Rate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trion Adjusted WC Bill Rate</masterLabel>
+        <translation><!-- Trion Adjusted WC Bill Rate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WC Charge Rate</masterLabel>
+        <translation><!-- WC Charge Rate --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

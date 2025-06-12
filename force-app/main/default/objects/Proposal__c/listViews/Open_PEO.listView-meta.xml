@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_PEO</fullName>
+    <columns>NAME</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Opportunity_Stage__c</columns>
+    <columns>Opportunity_Owner__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Proposal_Status__c</columns>
+    <columns>Total_of_Employees__c</columns>
+    <columns>Pricing_Matrix__c</columns>
+    <columns>to_Profit_Target__c</columns>
+    <columns>Pricing_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Quote_Type__c</field>
+        <operation>equals</operation>
+        <value>PEO</value>
+    </filters>
+    <filters>
+        <field>Opportunity_Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Closed Lost</value>
+    </filters>
+    <filters>
+        <field>Opportunity_Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Disqualified</value>
+    </filters>
+    <filters>
+        <field>Opportunity_Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Closed Won</value>
+    </filters>
+    <label>Open PEO</label>
+</ListView>

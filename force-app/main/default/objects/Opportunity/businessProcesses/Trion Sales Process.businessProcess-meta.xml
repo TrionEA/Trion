@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trion Sales Process</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Additional Info Requested</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Client Accepted</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Client Value Proposition</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Won</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Contract</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Disqualified</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Negotiation</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Prospecting</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Qualification</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

@@ -1,0 +1,11 @@
+The customer responded to your email. 
+
+Case#: {!Case.CaseNumber} 
+Subject: {!Case.Subject}
+Sender:  {!Case.SuppliedEmail}
+Created: {!Case.CreatedDate}
+
+Click on this link to view the email: {!Case.Link}
+
+Thank you,
+Trion Operations

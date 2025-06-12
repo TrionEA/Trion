@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Display_State_Assessment_Fee_on_Proposal__c</fullName>
+    <externalId>false</externalId>
+    <formula>SUTA__r.State__r.Name &amp;&quot; WC State Assessment and Surcharge&quot;</formula>
+    <label>Display State Assessment Fee on Proposal</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

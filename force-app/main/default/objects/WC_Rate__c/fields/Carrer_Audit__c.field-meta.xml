@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carrer_Audit__c</fullName>
+    <formula>IF(
+ NOT(ISBLANK(Proposal__r.Policy_Year__c ))  &amp;&amp;  Proposal__r.Policy_Year__r.Account__r.Id  &lt;&gt;  Policy__r.Carrier__r.Id, true, false )</formula>
+    <label>Carrer Audit</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

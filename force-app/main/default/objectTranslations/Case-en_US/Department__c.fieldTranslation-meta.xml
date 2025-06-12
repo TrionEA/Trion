@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Department --></label>
+    <name>Department__c</name>
+    <picklistValues>
+        <masterLabel>ACT</masterLabel>
+        <translation><!-- ACT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BEN</masterLabel>
+        <translation><!-- BEN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CSR</masterLabel>
+        <translation><!-- CSR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EXE</masterLabel>
+        <translation><!-- EXE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GRN</masterLabel>
+        <translation><!-- GRN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HRC</masterLabel>
+        <translation><!-- HRC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HRI</masterLabel>
+        <translation><!-- HRI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IMP</masterLabel>
+        <translation><!-- IMP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ITD</masterLabel>
+        <translation><!-- ITD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LGL</masterLabel>
+        <translation><!-- LGL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MKT</masterLabel>
+        <translation><!-- MKT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PAY</masterLabel>
+        <translation><!-- PAY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SLS</masterLabel>
+        <translation><!-- SLS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TAX</masterLabel>
+        <translation><!-- TAX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WCD</masterLabel>
+        <translation><!-- WCD --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

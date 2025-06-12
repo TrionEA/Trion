@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Bill Per EE - Cost Per EE --></help>
+    <label><!-- Profit Per EE --></label>
+    <name>Profit_Per_EE__c</name>
+</CustomFieldTranslation>

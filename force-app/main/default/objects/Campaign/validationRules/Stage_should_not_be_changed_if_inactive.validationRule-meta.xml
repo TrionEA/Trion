@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_should_not_be_changed_if_inactive</fullName>
+    <active>true</active>
+    <description>Campaign stage should not be changed if the campaign is inactive</description>
+    <errorConditionFormula>ISCHANGED(Campaign_Stage__c) &amp;&amp; NOT(IsActive)</errorConditionFormula>
+    <errorMessage>Campaign stage cannot be changed if the campaign is inactive</errorMessage>
+</ValidationRule>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UserProvisioningConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <connectedApp>Conga_Composer</connectedApp>
+    <enabled>false</enabled>
+    <masterLabel>X0H4G0000000LGVJ</masterLabel>
+</UserProvisioningConfig>

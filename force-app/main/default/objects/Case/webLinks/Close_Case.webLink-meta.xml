@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_Case</fullName>
+    <availability>online</availability>
+    <description>Brings up the close case page and sets the status to closed</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Close Case</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/{!Case.Id}/s?retURL=%2F{!Case.Id}&amp;cas7=Closed</url>
+</WebLink>

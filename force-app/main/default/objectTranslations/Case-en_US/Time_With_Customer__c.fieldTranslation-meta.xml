@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The time in business hours that this case spent in the hands of the customer. --></help>
+    <label><!-- Time With Customer --></label>
+    <name>Time_With_Customer__c</name>
+</CustomFieldTranslation>

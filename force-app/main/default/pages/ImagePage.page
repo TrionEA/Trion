@@ -1,0 +1,6 @@
+<apex:page controller="ImageController">
+    <apex:form >
+        <!-- Display the image -->
+        <apex:image value="data:image;base64,{!imageString}" width="100" height="100"/>
+    </apex:form>
+</apex:page>

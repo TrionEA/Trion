@@ -1,0 +1,490 @@
+<template>
+    <lightning-card>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small slds-text-heading_small">
+                <b><u>Service Charges and Fees</u></b>
+            </div>
+
+            <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small" style="overflow: overlay;">
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th scope="col"><div class="slds-truncate">Type</div></th>
+                            <th scope="col"><div class="slds-truncate">Value</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                Administrative Fee: {proposal.Administrative_Fee_Type__c}
+                            </th>
+                            <td>{adminFeeDisplay}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Delivery Fee Per Location</th>
+                            <td>{deliveryFeeDisplay}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Security Deposit</th>
+                            <td>{securityDepositDisplay}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Client Set-Up Fee</th>
+                            <td>{clientSetupFeeDisplay}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Employee New Hire Fee (Per Employee)</th>
+                            <td>{newHireFeeDisplay}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Replacement Check Fee</th>
+                            <td>
+                                <lightning-formatted-number value={proposal.Replacement_Check_Fee__c} format-style="currency" currency-code="USD"></lightning-formatted-number>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">NSF Check or Reversed ACH Fee</th>
+                            <td>
+                                <lightning-formatted-number value={proposal.NSF_Check_or_Reversed_ACH_Fee__c} format-style="currency" currency-code="USD"></lightning-formatted-number>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Employment Practice Liability Insurance (EPLI)</th>
+                            <td>{epliDisplay}</td>
+                        </tr>
+                        <template if:false={proposal.EPLI_Waived__c}>
+                            <tr>
+                                <th scope="row">EPLI Deductible</th>
+                                <td>{epliDeductibleDisplay}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">EPLI (Maximum Coverage Limit Per Claim)</th>
+                                <td>
+                                    <lightning-formatted-number value={proposal.EPLI_Maximum_Coverage_Limit_Per_Claim__c} format-style="currency" currency-code="USD"></lightning-formatted-number>
+                                </td>
+                            </tr>
+                        </template>
+                        <tr>
+                            <th scope="row">WC Claims Fee: Maximum Per Claim</th>
+                            <td>{wcFeeMaxDisplay}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">WC Claims Fee Deposit</th>
+                            <td>{wcFeeDepositDisplay}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Termination Fee Per Employee</th>
+                            <td>{proposal.Conga_Termination_Fee_Per_Employee__c}</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+        <template if:true={isButtonVisible}>
+            <lightning-button label="Edit Admin Fees" onclick={handleShowEditAdminModal}></lightning-button>
+        </template>
+
+        <template if:true={isShowAdminFeesModal}>
+            <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium"
+                aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+
+                <lightning-spinner if:true={isLoading} size="large" class="slds-hide" variant="brand"
+                    alternative-text="Loading..."></lightning-spinner>
+
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                            title="Close" onclick={handleCloseEditAdminModal}>
+                            <lightning-icon icon-name="utility:close" variant="inverse"></lightning-icon>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Edit Admin Fees</h2>
+                    </header>
+
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <div class="slds-grid slds-wrap">
+
+                            <!-- Admin Fee Type -->
+                            <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                <lightning-combobox
+                                    name="Administrative_Fee_Type__c"
+                                    label="Admin Fee Type"
+                                    value={proposal.Administrative_Fee_Type__c}
+                                    placeholder="--None--"
+                                    options={adminFeeTypeOptions}
+                                    onchange={handleChange}
+                                    required>
+                                </lightning-combobox>
+                            </div>
+
+                            <!-- Gross Wages Section -->
+                            <template if:true={isGrossWages}>
+                                <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                    <lightning-input
+                                        type="checkbox"
+                                        label="Override Admin Fee"
+                                        name="Override_Gross_Wages_Admin_Fee__c"
+                                        checked={proposal.Override_Gross_Wages_Admin_Fee__c}
+                                        onchange={handleChange}>
+                                    </lightning-input>
+                                </div>
+
+                                <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                    <lightning-input
+                                        type="number"
+                                        name="Admin_Fee_Gross_Wages__c"
+                                        label="Admin Fee (% Gross Wages)"
+                                        value={proposal.Admin_Fee_Gross_Wages__c}
+                                        step="0.01"
+                                        required
+                                        onchange={handleChange}>
+                                    </lightning-input>
+                                </div>
+                            </template>
+
+                            <!-- Per Check Section -->
+                            <template if:true={isPerCheck}>
+                                <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                    <lightning-combobox
+                                        name="Per_Check_Frequency__c"
+                                        label="Per Check Frequency"
+                                        value={proposal.Per_Check_Frequency__c}
+                                        placeholder="--None--"
+                                        options={mapPerCheckFrequency}
+                                        onchange={handleChange}
+                                        required>
+                                    </lightning-combobox>
+                                </div>
+
+                                <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                    <lightning-input
+                                        type="number"
+                                        name="Admin_Fee_Per_Check__c"
+                                        label="Admin Fee (Per Check $)"
+                                        value={proposal.Admin_Fee_Per_Check__c}
+                                        step="0.01"
+                                        required
+                                        onchange={handleChange}>
+                                    </lightning-input>
+                                </div>
+                            </template>
+
+                            <!-- Annual Section -->
+                            <template if:true={isAnnual}>
+                                <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                    <lightning-input
+                                        type="number"
+                                        name="Admin_Fee_Annual__c"
+                                        label="Admin Fee (Annual $)"
+                                        value={proposal.Admin_Fee_Annual__c}
+                                        step="0.01"
+                                        required
+                                        onchange={handleChange}>
+                                    </lightning-input>
+                                </div>
+                            </template>
+
+                            <!-- Deliver Fee Per Location -->
+                            <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                <lightning-combobox
+                                    name="Delivery_Fee_Per_Location__c"
+                                    label="Deliver Fee Per Location"
+                                    value={proposal.Delivery_Fee_Per_Location__c}
+                                    placeholder="--None--"
+                                    options={mapDeliveryFeePerLocation}
+                                    onchange={handleChange}
+                                    required>
+                                </lightning-combobox>
+                            </div>
+
+                            <!-- Delivery Fee Amount -->
+                            <template if:true={isDeliveryAmount}>
+                                <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                    <lightning-input
+                                        type="number"
+                                        name="Delivery_Fee__c"
+                                        label="Delivery Fee Amount"
+                                        value={proposal.Delivery_Fee__c}
+                                        step="0.01"
+                                        required
+                                        onchange={handleChange}>
+                                    </lightning-input>
+                                </div>
+                            </template>
+
+                            <!-- Security Deposit Waived -->
+                            <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                <lightning-input
+                                    type="checkbox"
+                                    label="Security Deposit Waived"
+                                    name="Security_Deposit_Waived__c"
+                                    checked={proposal.Security_Deposit_Waived__c}
+                                    onchange={handleChange}>
+                                </lightning-input>
+                            </div>
+
+                            <!-- Security Deposit -->
+                            <template if:false={proposal.Security_Deposit_Waived__c}>
+                                <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                    <lightning-input
+                                        type="number"
+                                        name="Security_Deposit__c"
+                                        label="Security Deposit"
+                                        value={proposal.Security_Deposit__c}
+                                        step="0.01"
+                                        required
+                                        onchange={handleChange}>
+                                    </lightning-input>
+                                </div>
+                            </template>
+
+                            <!-- Client Set-up Fee Waived -->
+                            <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                <lightning-input
+                                    type="checkbox"
+                                    label="Client Set-up Fee Waived"
+                                    name="Client_Set_up_Fee_Waived__c"
+                                    checked={proposal.Client_Set_up_Fee_Waived__c}
+                                    onchange={handleChange}>
+                                </lightning-input>
+                            </div>
+
+                            <!-- Client Set-up Fee -->
+                            <template if:false={proposal.Client_Set_up_Fee_Waived__c}>
+                                <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                    <lightning-input
+                                        type="number"
+                                        name="Client_Set_up_Fee__c"
+                                        label="Client Set-up Fee"
+                                        value={proposal.Client_Set_up_Fee__c}
+                                        step="0.01"
+                                        required
+                                        onchange={handleChange}>
+                                    </lightning-input>
+                                </div>
+                            </template>
+
+                            <!-- Employee New Hire Fee Waived -->
+                            <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                <lightning-input
+                                    type="checkbox"
+                                    label="Employee New Hire Fee Waived"
+                                    name="Employee_New_Hire_Fee_Waived__c"
+                                    checked={proposal.Employee_New_Hire_Fee_Waived__c}
+                                    onchange={handleChange}>
+                                </lightning-input>
+                            </div>
+
+                            <!-- Employee New Hire Fee -->
+                            <template if:false={proposal.Employee_New_Hire_Fee_Waived__c}>
+                                <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                    <lightning-input
+                                        type="number"
+                                        name="Employee_New_Hire_Fee_Per_Employee__c"
+                                        label="Employee New Hire Fee"
+                                        value={proposal.Employee_New_Hire_Fee_Per_Employee__c}
+                                        step="0.01"
+                                        required
+                                        onchange={handleChange}>
+                                    </lightning-input>
+                                </div>
+                            </template>
+
+                            <!-- EPLI Waived -->
+                            <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                <lightning-input
+                                    type="checkbox"
+                                    label="EPLI Waived"
+                                    name="EPLI_Waived__c"
+                                    checked={proposal.EPLI_Waived__c}
+                                    onchange={handleChange}>
+                                </lightning-input>
+                            </div>
+
+                            <!-- EPLI Fields -->
+                            <template if:false={proposal.EPLI_Waived__c}>
+                                <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                    <lightning-input
+                                        type="number"
+                                        name="Employment_Practice_Liability_Insurance__c"
+                                        label="Employment Practice Liability Insurance (%)"
+                                        value={proposal.Employment_Practice_Liability_Insurance__c}
+                                        step="0.01"
+                                        required
+                                        onchange={handleChange}>
+                                    </lightning-input>
+                                </div>
+                                <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                    <lightning-input
+                                        type="number"
+                                        name="EPLI_Maximum_Coverage_Limit_Per_Claim__c"
+                                        label="EPLI (Maximum Coverage Limit Per Claim)"
+                                        value={proposal.EPLI_Maximum_Coverage_Limit_Per_Claim__c}
+                                        step="0.01"
+                                        required
+                                        onchange={handleChange}>
+                                    </lightning-input>
+                                </div>
+
+                                <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                    <lightning-input
+                                        type="checkbox"
+                                        label="EPLI $50,000 Deductible Waived"
+                                        name="EPLI_50_000_Deductible_Waived__c"
+                                        checked={proposal.EPLI_50_000_Deductible_Waived__c}
+                                        onchange={handleChange}>
+                                    </lightning-input>
+                                </div>
+
+                                <template if:false={proposal.EPLI_50_000_Deductible_Waived__c}>
+                                    <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                        <lightning-input
+                                            type="number"
+                                            name="EPLI_50_000_Deductible__c"
+                                            label="EPLI $50,000 Deductible"
+                                            value={proposal.EPLI_50_000_Deductible__c}
+                                            step="0.01"
+                                            required
+                                            onchange={handleChange}>
+                                        </lightning-input>
+                                    </div>
+                                </template>
+                            </template>
+
+                            <!-- Workers Compensation Claims Fee Waived -->
+                            <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                <lightning-input
+                                    type="checkbox"
+                                    label="Worker's Compensation Claims Fee: waived"
+                                    name="Worker_s_Compensation_Claims_Fee_waived__c"
+                                    checked={proposal.Worker_s_Compensation_Claims_Fee_waived__c}
+                                    onchange={handleChange}>
+                                </lightning-input>
+                            </div>
+
+                            <!-- Workers Compensation Claims Fee Max -->
+                            <template if:false={proposal.Worker_s_Compensation_Claims_Fee_waived__c}>
+                                <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                    <lightning-input
+                                        type="number"
+                                        name="Worker_s_Compensation_Claims_Fee_Max__c"
+                                        label="Worker's Compensation Claims Fee: Max"
+                                        value={proposal.Worker_s_Compensation_Claims_Fee_Max__c}
+                                        step="0.01"
+                                        required
+                                        onchange={handleChange}>
+                                    </lightning-input>
+                                </div>
+                            </template>
+
+                            <!-- Worker’s Comp Claims Fee Deposit Waived -->
+                            <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                <lightning-input
+                                    type="checkbox"
+                                    label="Worker's Comp Claims Fee Deposit: Waived"
+                                    name="Worker_s_Comp_Claims_Fee_Deposit_Waived__c"
+                                    checked={proposal.Worker_s_Comp_Claims_Fee_Deposit_Waived__c}
+                                    onchange={handleChange}>
+                                </lightning-input>
+                            </div>
+
+                            <!-- Worker’s Compensation Claims Fee Deposit -->
+                            <template if:false={proposal.Worker_s_Comp_Claims_Fee_Deposit_Waived__c}>
+                                <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                    <lightning-input
+                                        type="number"
+                                        name="Worker_s_Compensation_Claims_Fee_Deposit__c"
+                                        label="Worker's Compensation Claims Fee Deposit"
+                                        value={proposal.Worker_s_Compensation_Claims_Fee_Deposit__c}
+                                        step="0.01"
+                                        required
+                                        onchange={handleChange}>
+                                    </lightning-input>
+                                </div>
+                            </template>
+
+                            <!-- Termination Fee Per Employee Waived -->
+                            <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                <lightning-input
+                                    type="checkbox"
+                                    label="Termination Fee Per Employee: Waived"
+                                    name="Termination_Fee_Per_Employee_Waived__c"
+                                    checked={proposal.Termination_Fee_Per_Employee_Waived__c}
+                                    onchange={handleChange}>
+                                </lightning-input>
+                            </div>
+
+                            <!-- Termination Fee Per Employee -->
+                            <template if:false={proposal.Termination_Fee_Per_Employee_Waived__c}>
+                                <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                    <lightning-input
+                                        type="number"
+                                        name="Termination_Fee_Per_Employee__c"
+                                        label="Termination Fee Per Employee"
+                                        value={proposal.Termination_Fee_Per_Employee__c}
+                                        step="0.01"
+                                        onchange={handleChange}>
+                                    </lightning-input>
+                                </div>
+                                <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                    <lightning-input
+                                        type="number"
+                                        name="Termination_Fee_Per_Employee_Percentage__c"
+                                        label="Termination Fee Per Employee: Percentage"
+                                        value={proposal.Termination_Fee_Per_Employee_Percentage__c}
+                                        step="0.01"
+                                        onchange={handleChange}>
+                                    </lightning-input>
+                                </div>
+                            </template>
+
+                            <!-- Replacement Check Fee -->
+                            <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                <lightning-input
+                                    type="number"
+                                    name="Replacement_Check_Fee__c"
+                                    label="Replacement Check Fee"
+                                    value={proposal.Replacement_Check_Fee__c}
+                                    step="0.01"
+                                    required
+                                    onchange={handleChange}>
+                                </lightning-input>
+                            </div>
+
+                            <!-- NSF Check or Reversed ACH Fee -->
+                            <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+                                <lightning-input
+                                    type="number"
+                                    name="NSF_Check_or_Reversed_ACH_Fee__c"
+                                    label="NSF Check or Reversed ACH Fee"
+                                    value={proposal.NSF_Check_or_Reversed_ACH_Fee__c}
+                                    step="0.01"
+                                    required
+                                    onchange={handleChange}>
+                                </lightning-input>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <footer class="slds-modal__footer">
+                        <button class="slds-button slds-button_brand" type="button" onclick={handleSaveEditAdminModal}>
+                            Save
+                        </button>
+                        <button class="slds-button slds-button_neutral" type="button" onclick={handleCloseEditAdminModal}>
+                            Cancel
+                        </button>
+                    </footer>
+                </div>
+            </section>
+
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+        </template>
+    </lightning-card>
+</template>

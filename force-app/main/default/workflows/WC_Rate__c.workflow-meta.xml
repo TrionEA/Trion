@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Carrier_Rate</fullName>
+        <field>Carrier_Rate__c</field>
+        <formula>Carrier_Comp_Rate__c</formula>
+        <name>Carrier Rate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Carrier_WC_RateUpdate</fullName>
+        <field>Carrier_Rate__c</field>
+        <name>Carrier WC Rate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PER_CAPITA_RATE</fullName>
+        <field>Carrier_Rate__c</field>
+        <formula>ROUND(
+(Carrier_WC_Rate__r.Per_Capita_Rate__c * Total_Employees__c )/ Gross_Wages__c,4)</formula>
+        <name>PER CAPITA RATE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Rate_to_0</fullName>
+        <description>Monopolistic WC Rate to zero to prevent conga syntax error</description>
+        <field>Carrier_Rate__c</field>
+        <formula>0</formula>
+        <name>Set Rate to 0</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Carrier Rate</fullName>
+        <actions>
+            <name>Carrier_Rate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>NOT(ISBLANK(Carrier_WC_Rate__r.Rate__c)) &amp;&amp;  Carrier_WC_Rate__r.Per_Capita_Charge__c = FALSE</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Monopolistic WC Rate</fullName>
+        <actions>
+            <name>Set_Rate_to_0</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>ISPICKVAL(SUTA_Quote__r.State__r.State_Classification__c, &quot;Monopolistic&quot;)  &amp;&amp;  ISNULL(Carrier_Rate__c  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Per Capita Carrier Rate</fullName>
+        <actions>
+            <name>PER_CAPITA_RATE</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>NOT(ISBLANK(Carrier_WC_Rate__r.Rate__c)) &amp;&amp;  Carrier_WC_Rate__r.Per_Capita_Charge__c = TRUE</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>WC Rate</fullName>
+        <actions>
+            <name>Carrier_WC_RateUpdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>AND( ISCHANGED( Policy__c ),  ISBLANK(Carrier_WC_Rate__r.Rate__c ))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

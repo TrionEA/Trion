@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicate state(s) of travel and frequency --></help>
+    <label><!-- Indicate state(s) of travel and frequenc --></label>
+    <name>Indicate_state_s_of_travel_and_frequenc__c</name>
+</CustomFieldTranslation>

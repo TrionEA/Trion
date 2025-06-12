@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Question_Header__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Question Header</label>
+    <referenceTo>Question_Header__c</referenceTo>
+    <relationshipName>Product_Junction</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

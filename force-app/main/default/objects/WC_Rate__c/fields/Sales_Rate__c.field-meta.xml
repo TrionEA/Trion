@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Rate__c</fullName>
+    <formula>ROUND(
+IF( 
+ISPICKVAL( Calculate_WC_Rate_by__c , &quot;Modified WC Rate&quot;), Carrier_Rate__c * Modifier__c, 
+IF( 
+ISPICKVAL( Calculate_WC_Rate_by__c , &quot;Trion Adjusted WC Bill Rate&quot;), Carrier_Rate__c * Trion_Mod__c , 
+IF( 
+ISPICKVAL( Calculate_WC_Rate_by__c , &quot;WC Charge Rate&quot;), Carrier_Rate__c * Effective_Mod__c , 
+null))),4)</formula>
+    <inlineHelpText>Carrier Rate * Mod</inlineHelpText>
+    <label>Sales Rate</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

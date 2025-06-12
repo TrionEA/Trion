@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aged_Months__c</fullName>
+    <externalId>false</externalId>
+    <formula>MONTH(  Valued__c  ) + (( 12 * (YEAR(Valued__c)- YEAR (Policy_Start_Date__c ))) - MONTH(Policy_Start_Date__c))</formula>
+    <inlineHelpText># of months from Policy Start Date to Valued Date</inlineHelpText>
+    <label>Aged Months</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

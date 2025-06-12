@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Survey_Validation_when_switch_is_on</fullName>
+    <active>false</active>
+    <errorConditionFormula>$Setup.Survey_Settings__c.Enable_Surveys__c &amp;&amp; (Send_Survey_Again__c  || Send_First_Payroll_Survey__c) &amp;&amp; (ISBLANK(Payroll_Contact__c) || ISBLANK(First_Payroll_Date__c))</errorConditionFormula>
+    <errorMessage>For sending the first payroll survey, date on which the client&apos;s payroll was run and client payroll contact to which the email will be sent to must be entered.</errorMessage>
+</ValidationRule>

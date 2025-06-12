@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>C Corp</fullName>
+        <default>false</default>
+        <label>C Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>S Corp</fullName>
+        <default>false</default>
+        <label>S Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>Ltd Liab Corp</fullName>
+        <default>false</default>
+        <label>Ltd Liab Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>Partner</fullName>
+        <default>false</default>
+        <label>Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>Prop</fullName>
+        <default>false</default>
+        <label>Prop</label>
+    </customValue>
+    <customValue>
+        <fullName>Joint Venture</fullName>
+        <default>false</default>
+        <label>Joint Venture</label>
+    </customValue>
+    <customValue>
+        <fullName>Non Profit</fullName>
+        <default>false</default>
+        <label>Non Profit</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>1 - C Corp</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1 - C Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>3 - Ltd Liab Corp</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>3 - Ltd Liab Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>2 - S Corp</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>2 - S Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>4 - Partner</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4 - Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>1</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1</label>
+    </customValue>
+    <customValue>
+        <fullName>5 - Prop</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>5 - Prop</label>
+    </customValue>
+    <customValue>
+        <fullName>7 - Non Profit</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>7 - Non Profit</label>
+    </customValue>
+    <customValue>
+        <fullName>Need values</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Need values</label>
+    </customValue>
+    <customValue>
+        <fullName>5</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>5</label>
+    </customValue>
+    <customValue>
+        <fullName>8 - Other</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>8 - Other</label>
+    </customValue>
+    <customValue>
+        <fullName>4</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4</label>
+    </customValue>
+    <customValue>
+        <fullName>2</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>2</label>
+    </customValue>
+    <customValue>
+        <fullName>3</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>3</label>
+    </customValue>
+    <customValue>
+        <fullName>7</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>7</label>
+    </customValue>
+    <customValue>
+        <fullName>8</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>8</label>
+    </customValue>
+    <customValue>
+        <fullName>RETAIL STORES:CELL/PHONE MOBILE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>RETAIL STORES:CELL/PHONE MOBILE</label>
+    </customValue>
+    <customValue>
+        <fullName>PROVIDE COMPUTER NETWORKING</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PROVIDE COMPUTER NETWORKING</label>
+    </customValue>
+    <description>1 - C Corp 
+2 - S Corp 
+3 - Ltd Liab Corp 
+4 - Partner 
+5 - Prop 
+6 - Joint Venture 
+7 - Non Profit 
+8 - Other</description>
+    <masterLabel>Entity Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

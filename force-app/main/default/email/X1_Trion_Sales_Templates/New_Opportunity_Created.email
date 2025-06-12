@@ -1,0 +1,16 @@
+{!Opportunity.OwnerFullName} created a new opportunity named {!Opportunity.Name} in Salesforce.com.
+
+Stage: {!Opportunity.StageName}
+Gross Wages:  {!Opportunity.Amount}
+Close Date:  {!Opportunity.CloseDate}
+
+Submission Attributes:
+
+ACORD Application:  {!Opportunity.00N1600000F4J2w}
+MOD Rating Worksheet:  {!Opportunity.00N1600000F4J2y}
+3Yr. Loss Runs:  {!Opportunity.00NG000000E5KpB}
+
+To view the opportunity, click here:  {!Opportunity.Link}
+
+Thank You,
+Trion Sales Operations

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Submission Requirement</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Submission Requirements</value>
+    </caseValues>
+    <layouts>
+        <layout>Submission Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- GENERAL INFORMATION --></label>
+            <section>GENERAL INFORMATION</section>
+        </sections>
+        <sections>
+            <label><!-- NATURE OF BUSINESS/DESCRIPTION OF OPERATIONS --></label>
+            <section>NATURE OF BUSINESS/DESCRIPTION OF OPERATIONS</section>
+        </sections>
+        <sections>
+            <label><!-- Policy Information --></label>
+            <section>Policy Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- CongaSign_sendForSignature --></label>
+        <name>CongaSign_sendForSignature</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Accord_Signature --></label>
+        <name>Conga_Composer_Accord_Signature</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Accord_Signature_Request --></label>
+        <name>Conga_Composer_Accord_Signature_Request</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Accord_Signature_Request1 --></label>
+        <name>Conga_Composer_Accord_Signature_Request1</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Generate_ACORD --></label>
+        <name>Conga_Composer_Generate_ACORD</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Generate_ACORD1 --></label>
+        <name>Conga_Composer_Generate_ACORD1</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- VIew_Proposal --></label>
+        <name>VIew_Proposal</name>
+    </webLinks>
+</CustomObjectTranslation>

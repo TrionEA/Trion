@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SUTA_ID</fullName>
+    <active>true</active>
+    <description>Requires SUTA ID if SUTA Client Reporting equals TRUE</description>
+    <errorConditionFormula>AND(SUTA_Client_Reporting__c   = TRUE,ISBLANK( SUTA_ID_Number__c ))</errorConditionFormula>
+    <errorDisplayField>Rate__c</errorDisplayField>
+    <errorMessage>Enter the Rate</errorMessage>
+</ValidationRule>

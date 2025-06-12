@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WC_Code__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>WC Code</label>
+    <referenceTo>WC_Code__c</referenceTo>
+    <relationshipName>Included_Excluded_Individuals</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

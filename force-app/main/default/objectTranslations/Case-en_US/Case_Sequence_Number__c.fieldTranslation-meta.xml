@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Case Sequence Number for sending feedback to customer every 15th case. --></help>
+    <label><!-- Case Sequence Number --></label>
+    <name>Case_Sequence_Number__c</name>
+</CustomFieldTranslation>

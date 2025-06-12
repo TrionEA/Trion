@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SPECIFY_TAX_LIENS_BANKRUPTCY__c</fullName>
+    <inlineHelpText>SPECIFY TAX LIENS/BANKRUPTCY WITHIN  LAST 5 YRS</inlineHelpText>
+    <label>SPECIFY TAX LIENS/BANKRUPTCY</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

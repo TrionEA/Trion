@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Accting Record</masterLabel>
+        <translation><!-- Accting Record --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Claims Info</masterLabel>
+        <translation><!-- Claims Info --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Contact</masterLabel>
+        <translation><!-- Client Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inspection</masterLabel>
+        <translation><!-- Inspection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Owner</masterLabel>
+        <translation><!-- Owner --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

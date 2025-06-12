@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Per_Check_Frequency__c</fullName>
+    <label>Per Check Frequency</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Administrative_Fee_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+                <label>Weekly</label>
+            </value>
+            <value>
+                <fullName>Bi-weekly</fullName>
+                <default>false</default>
+                <label>Bi-weekly</label>
+            </value>
+            <value>
+                <fullName>Semi Monthly</fullName>
+                <default>false</default>
+                <label>Semi Monthly</label>
+            </value>
+            <value>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+                <label>Monthly</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Per Check</controllingFieldValue>
+            <valueName>Weekly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Per Check</controllingFieldValue>
+            <valueName>Bi-weekly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Per Check</controllingFieldValue>
+            <valueName>Semi Monthly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Per Check</controllingFieldValue>
+            <valueName>Monthly</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

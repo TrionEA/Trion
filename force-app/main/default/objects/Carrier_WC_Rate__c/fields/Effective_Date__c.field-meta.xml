@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Effective_Date__c</fullName>
+    <formula>IF(
+ISPICKVAL(Policy__r.Type__c , &quot;Master&quot;),  Policy__r.Policy_Year__r.Policy_Start_Date__c ,
+IF(
+ISPICKVAL(Policy__r.Type__c , &quot;MCP&quot;),  Policy__r.Effective_Date__c , NULL))</formula>
+    <label>Effective Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

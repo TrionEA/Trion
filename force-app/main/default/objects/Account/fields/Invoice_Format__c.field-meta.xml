@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Format__c</fullName>
+    <label>Invoice Format</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bundled</fullName>
+                <default>false</default>
+                <label>Bundled</label>
+            </value>
+            <value>
+                <fullName>Detailed</fullName>
+                <default>false</default>
+                <label>Detailed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

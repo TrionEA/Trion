@@ -1,0 +1,17 @@
+{!Opportunity.OwnerFullName} created or updated an opportunity named {!Opportunity.Name} in Salesforce.com to a Stage that contains 'Submitted to Underwriting'.
+
+Stage: {!Opportunity.StageName}
+Gross Wages:  {!Opportunity.Amount}
+Close Date:  {!Opportunity.CloseDate}
+
+Submission Attributes:
+
+New Business Entity?: {!Opportunity.New_Business_Entity__c}
+ACORD Application:  {!Opportunity.ACORD_Application__c}
+MOD Rating Worksheet:  {!Opportunity.MOD_Rating_Worksheet__c}
+3Yr. Loss Runs:  {!Opportunity.X3_Year_Loss_Runs__c}
+
+To view the opportunity, click here:  {!Opportunity.Link}
+
+Thank You,
+Trion Sales Operations

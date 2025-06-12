@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Entity --></label>
+    <name>Entity__c</name>
+    <picklistValues>
+        <masterLabel>Trion 1</masterLabel>
+        <translation><!-- Trion 1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trion 2</masterLabel>
+        <translation><!-- Trion 2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trion 3</masterLabel>
+        <translation><!-- Trion 3 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

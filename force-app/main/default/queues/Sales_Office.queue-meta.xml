@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Sales Office</name>
+    <queueMembers>
+        <users>
+            <user>dbonet@trionworks.com</user>
+            <user>jchauret@trionworks.com</user>
+            <user>mark@trionworks.com</user>
+            <user>tjordan@trionworks.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Approval_Request__c</sobjectType>
+    </queueSobject>
+</Queue>

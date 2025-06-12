@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requirement_Type__c</fullName>
+    <label>Requirement Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Loss Runs Valued 30 Days</fullName>
+                <default>false</default>
+                <label>Loss Runs Valued 30 Days</label>
+            </value>
+            <value>
+                <fullName>ACORD</fullName>
+                <default>false</default>
+                <label>ACORD</label>
+            </value>
+            <value>
+                <fullName>Competitor Quote Attached</fullName>
+                <default>false</default>
+                <label>Competitor Quote Attached</label>
+            </value>
+            <value>
+                <fullName>Current Pricing</fullName>
+                <default>false</default>
+                <label>Current Pricing</label>
+            </value>
+            <value>
+                <fullName>Health Quote Data</fullName>
+                <default>false</default>
+                <label>Health Quote Data</label>
+            </value>
+            <value>
+                <fullName>MOD Rating Worksheet</fullName>
+                <default>false</default>
+                <label>MOD Rating Worksheet</label>
+            </value>
+            <value>
+                <fullName>No Loss Affidavit</fullName>
+                <default>false</default>
+                <label>No Loss Affidavit</label>
+            </value>
+            <value>
+                <fullName>Owner BIO</fullName>
+                <default>false</default>
+                <label>Owner BIO</label>
+            </value>
+            <value>
+                <fullName>RFP</fullName>
+                <default>false</default>
+                <label>RFP</label>
+            </value>
+            <value>
+                <fullName>RFQ</fullName>
+                <default>false</default>
+                <label>RFQ</label>
+            </value>
+            <value>
+                <fullName>Sample Payroll Reports</fullName>
+                <default>false</default>
+                <label>Sample Payroll Reports</label>
+            </value>
+            <value>
+                <fullName>Staffing Supplement</fullName>
+                <default>false</default>
+                <label>Staffing Supplement</label>
+            </value>
+            <value>
+                <fullName>Workers Comp Dec Page</fullName>
+                <default>false</default>
+                <label>Workers Comp Dec Page</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

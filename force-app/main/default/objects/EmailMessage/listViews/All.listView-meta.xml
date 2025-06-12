@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Subject</columns>
+    <columns>HasAttachment</columns>
+    <columns>Status</columns>
+    <columns>Parent.Name</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>IsDeleted</columns>
+    <columns>FromAddress</columns>
+    <columns>FromName</columns>
+    <columns>HtmlBody</columns>
+    <columns>TextBody</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

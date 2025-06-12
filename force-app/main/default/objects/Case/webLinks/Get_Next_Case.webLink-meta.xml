@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Get_Next_Case</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Get Next Case</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/18.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/18.0/apex.js&quot;)}
+
+var id = sforce.apex.execute(&quot;RetrieveNextUtils&quot;,&quot;retrieveNextCase&quot;,{userId:&quot;&quot;});
+if (id!=&apos;&apos;) {
+	var querystringParams = &quot;&quot;;
+	if (window.location.href.indexOf(&quot;isdtp=mn&quot;)!=-1) {
+		querystringParams = &quot;?isdtp=mn&quot;;
+	} else if (window.location.href.indexOf(&quot;isdtp=vw&quot;)!=-1) {
+		querystringParams = &quot;?isdtp=vw&quot;;	
+	}
+	//We have successfully retrieved a case
+	navigateToUrl(&apos;/&apos;+id + querystringParams);
+} else {
+	alert(&apos;No cases are available at this time.&apos;);
+}</url>
+</WebLink>

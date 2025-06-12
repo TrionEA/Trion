@@ -1,0 +1,11 @@
+A new case has been automatically created from an email received from {!Case.SuppliedEmail}.  Please begin working the case and follow up with the customer.
+
+Case#: {!Case.CaseNumber} 
+Subject: {!Case.Subject}
+Sender:  {!Case.SuppliedEmail}
+Created: {!Case.CreatedDate}
+
+Click on this link to view the case: {!Case.Link}.
+
+Thank you,
+Trion Operations

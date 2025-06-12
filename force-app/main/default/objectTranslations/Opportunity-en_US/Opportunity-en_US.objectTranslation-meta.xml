@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Trion Sales</layout>
+        <sections>
+            <label><!-- Sales Commission --></label>
+            <section>Sales Commission</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Add Broker --></label>
+        <name>Add_Broker</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Close Loss --></label>
+        <name>Close_Loss</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Close Opportunity --></label>
+        <name>Close_Opportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Close Won --></label>
+        <name>Close_Won</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Note --></label>
+        <name>Note</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Opportunity Details --></label>
+        <name>Opportunity_Details</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Primary Contact --></label>
+        <name>Primary_Contact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Sales Commission --></label>
+        <name>Sales_Commission</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Sharing --></label>
+        <name>Sharing_LEX</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Signed Contract Received --></label>
+        <name>Signed_Contract_Received</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- View Opportunity --></label>
+        <name>View_Opportunity</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Trion Default --></label>
+        <name>Trion_Default</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- You cannot create an opportunity when account billing street, city, state, zip code, and phone are blank. Open the account in another window, enter all the required info, then come back and save this record. --></errorMessage>
+        <name>Account_Info_Reqd_for_Opp_Creation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- New opportunity stage must start at Prospecting. --></errorMessage>
+        <name>New_Opportunities</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Edit --></label>
+        <name>Mass_Edit</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Update --></label>
+        <name>Mass_Update</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Quote --></label>
+        <name>Quote</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Secretary_of_State_Corporation_Search --></label>
+        <name>Secretary_of_State_Corporation_Search</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Tax_Exempt_Organization_Search --></label>
+        <name>Tax_Exempt_Organization_Search</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_Proposal --></label>
+        <name>View_Proposal</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Tasks_Opp --></label>
+        <name>activities__Create_Tasks_Opp</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Verify_with_DNB --></label>
+        <name>dsfs__Verify_with_DNB</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- UW Decline Reason --></label>
+    <name>UW_Decline_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Class code is ineligible for the program</masterLabel>
+        <translation><!-- Class code is ineligible for the program --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client exposure requires FAC</masterLabel>
+        <translation><!-- Client exposure requires FAC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Excessive amount of exposure</masterLabel>
+        <translation><!-- Excessive amount of exposure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fraudulent Client Info</masterLabel>
+        <translation><!-- Fraudulent Client Info --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Frequency/severity of historical losses</masterLabel>
+        <translation><!-- Frequency/severity of historical losses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inadequate Expected Charge Rates</masterLabel>
+        <translation><!-- Inadequate Expected Charge Rates --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inadequate Financial Position</masterLabel>
+        <translation><!-- Inadequate Financial Position --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inadequate Premium</masterLabel>
+        <translation><!-- Inadequate Premium --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inadequate business experience</masterLabel>
+        <translation><!-- Inadequate business experience --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Requires 24 hr WC coverage</masterLabel>
+        <translation><!-- Requires 24 hr WC coverage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Volatile State/Claims Jurisdiction</masterLabel>
+        <translation><!-- Volatile State/Claims Jurisdiction --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

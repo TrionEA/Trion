@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loss_Year_Text__c</fullName>
+    <externalId>false</externalId>
+    <formula>text(MONTH( Policy_Start_Date__c ))&amp;&quot;-&quot; &amp; text(day(Policy_Start_Date__c ))&amp;&quot;-&quot; &amp; text(year(Policy_Start_Date__c )) &amp; &quot; - &quot; &amp; text(MONTH( Policy_End_Date__c ))&amp;&quot;-&quot; &amp; text(day(Policy_End_Date__c ))&amp;&quot;-&quot; &amp; text(year(Policy_End_Date__c))</formula>
+    <label>Loss Year Text</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

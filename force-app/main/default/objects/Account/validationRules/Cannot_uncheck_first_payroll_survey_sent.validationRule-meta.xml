@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_uncheck_first_payroll_survey_sent</fullName>
+    <active>true</active>
+    <description>You cannot uncheck the send first payroll survey field as it might result in the same survey sent to client more than once.</description>
+    <errorConditionFormula>AND(PRIORVALUE(Send_First_Payroll_Survey__c), TRUE,
+
+ISCHANGED(Send_First_Payroll_Survey__c)) &amp;&amp; $Profile.Name!=&quot;System Administrator&quot;</errorConditionFormula>
+    <errorMessage>You cannot uncheck the send first payroll survey field as it will result in the same survey sent to client more than once.</errorMessage>
+</ValidationRule>

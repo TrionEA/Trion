@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Certified_Payroll_Reporting</fullName>
+    <active>false</active>
+    <description>Requires the number of certified payroll reporting if Certified Payroll Reporting equals TRUE</description>
+    <errorConditionFormula>AND( Certified_Payroll_Reporting__c   = TRUE,ISBLANK( NumberOfCertifedPayrollReporting__c ))</errorConditionFormula>
+    <errorMessage>Enter the number of certified payroll reporting</errorMessage>
+</ValidationRule>

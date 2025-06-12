@@ -1,0 +1,140 @@
+<template>
+    <!-- Spinner -->
+    <lightning-spinner if:true={isLoading} alternative-text="Loading..." size="large"></lightning-spinner>
+    
+    <div class="slds-grid slds-wrap">
+        <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+            <template if:false={isShowSelectYear}>
+                <lightning-record-view-form record-id={recordId} object-api-name="Proposal__c" density="comfy">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-size_1-of-4">
+                            <lightning-output-field field-name="Year__c"></lightning-output-field>
+                        </div>
+                        <div class="slds-size_1-of-4">
+                            <lightning-output-field field-name="FICA__c"></lightning-output-field>
+                        </div>
+                        <div class="slds-size_1-of-4">
+                            <lightning-output-field field-name="Medicare__c"></lightning-output-field>
+                        </div>
+                        <div class="slds-size_1-of-4">
+                            <lightning-output-field field-name="FUTA__c"></lightning-output-field>
+                        </div>
+                    </div>
+                </lightning-record-view-form>
+                
+                <template if:true={isButtonVisible}>
+                    <lightning-button variant="neutral" label="Select Tax Year" onclick={handleTaxYear}></lightning-button>
+                </template>
+            </template>
+            
+            <template if:true={isShowSelectYear}>
+                <lightning-combobox 
+                    name="year" 
+                    label="Year" 
+                    value={selectedYearId} 
+                    placeholder="--None--" 
+                    options={yearOptions}
+                    onchange={handleYearChange}>
+                </lightning-combobox>
+                <div class="slds-p-top_medium">
+                    <lightning-button variant="neutral" label="Save" onclick={handleSelectTaxYear}></lightning-button>
+                    <lightning-button variant="neutral" label="Cancel" class="slds-m-left_xx-small" onclick={handleCancelTaxYear}></lightning-button>
+                </div>
+            </template>
+        </div>
+        
+        <div class="slds-size_1-of-1 slds-p-top_small slds-p-bottom_small">
+            <h1>State Unemployment Taxes</h1>
+        </div>
+        
+        <div class="slds-size_1-of-1">
+            <lightning-datatable
+                key-field="Id"
+                data={lstSUTAQuotes}
+                columns={columns}
+                hide-checkbox-column={isShowCheckboxColumn}
+                sorted-by={sortedBy}
+                sorted-direction={sortedDirection}
+                onsort={handleColumnSorting}
+                errors={errors}
+                draft-values={draftValues}
+                onrowselection={handleRowSelection}
+                onrowaction={handleRowAction}
+                onsave={handleSaveEdition}
+                oncancel={handleCancel}>
+            </lightning-datatable>
+        </div>
+    </div>
+    
+    <!-- Delete Modal -->
+    <template if:true={isShowDeleteModal}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-labelledby="delete-modal-heading" aria-modal="true" aria-describedby="delete-modal-content">
+            <div class="slds-modal__container">
+                <lightning-spinner if:true={isDeleteModalLoading} alternative-text="Loading..." size="large"></lightning-spinner>
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={handleCancelDeleteRecords}>
+                        <lightning-icon icon-name="utility:close" variant="inverse"></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="delete-modal-heading" class="slds-modal__title slds-hyphenate">Confirm Delete SUTA</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="delete-modal-content">
+                    <lightning-formatted-rich-text value={deleteInfoMessage}></lightning-formatted-rich-text>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning-button variant="neutral" label="Cancel" onclick={handleCancelDeleteRecords}></lightning-button>
+                    <lightning-button variant="brand" label="Continue" onclick={handleDeleteRecords}></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+    <!-- Edit Modal -->
+    <template if:true={isShowEditModal}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-labelledby="edit-modal-heading" aria-modal="true" aria-describedby="edit-modal-content">
+            <div class="slds-modal__container">
+                <lightning-spinner if:true={isEditModalLoading} alternative-text="Loading..." size="large"></lightning-spinner>
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={handleRecordEditCancel}>
+                        <lightning-icon icon-name="utility:close" variant="inverse"></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="edit-modal-heading" class="slds-modal__title slds-hyphenate">Edit {selectedRecordName}</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="edit-modal-content">
+                    <lightning-record-edit-form 
+                        record-id={selectedRecordId} 
+                        object-api-name="SUTA_Quote__c"
+                        onsuccess={handleSuccessQuoteRecord}
+                        onerror={handleErrorQuoteRecord}>
+                        <lightning-messages></lightning-messages>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-size_1-of-2">
+                                <lightning-combobox 
+                                    name="suta" 
+                                    label="SUTA" 
+                                    value={selectedSUTA} 
+                                    placeholder="--None--" 
+                                    options={sutaOptions}
+                                    onchange={handleSUTAChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-size_1-of-2">
+                                <lightning-input-field field-name="SUTA_Cost_Rate__c" data-field="SUTA_Cost_Rate" disabled></lightning-input-field>
+                            </div>
+                            <div class="slds-size_1-of-2">
+                                <lightning-input-field field-name="SUTA_Bill_Rate__c" data-field="SUTA_Bill_Rate"></lightning-input-field>
+                            </div>
+                        </div>
+                    </lightning-record-edit-form>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning-button variant="neutral" label="Cancel" onclick={handleRecordEditCancel}></lightning-button>
+                    <lightning-button variant="brand" label="Save" onclick={handleEditQuoteRecord}></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

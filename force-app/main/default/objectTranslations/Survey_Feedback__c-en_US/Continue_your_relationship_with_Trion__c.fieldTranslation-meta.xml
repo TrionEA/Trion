@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Continue your relationship with Trion --></label>
+    <name>Continue_your_relationship_with_Trion__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Not Started</fullName>
+        <default>true</default>
+        <label>Not Started</label>
+    </customValue>
+    <customValue>
+        <fullName>Quoting</fullName>
+        <default>false</default>
+        <label>Quoting</label>
+    </customValue>
+    <customValue>
+        <fullName>Client Presentation</fullName>
+        <default>false</default>
+        <label>Client Presentation</label>
+    </customValue>
+    <customValue>
+        <fullName>Revision</fullName>
+        <default>false</default>
+        <label>Revision</label>
+    </customValue>
+    <customValue>
+        <fullName>Proposal Accepted</fullName>
+        <default>false</default>
+        <label>Proposal Accepted</label>
+    </customValue>
+    <customValue>
+        <fullName>Contract</fullName>
+        <default>false</default>
+        <label>Contract</label>
+    </customValue>
+    <customValue>
+        <fullName>Qualification</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Qualification</label>
+    </customValue>
+    <customValue>
+        <fullName>Underwriting</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Underwriting</label>
+    </customValue>
+    <customValue>
+        <fullName>Proposal</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Proposal</label>
+    </customValue>
+    <customValue>
+        <fullName>Prospecting</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prospecting</label>
+    </customValue>
+    <masterLabel>Proposal Stage</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

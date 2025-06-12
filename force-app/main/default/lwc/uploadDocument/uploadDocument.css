@@ -1,0 +1,25 @@
+.custom-container{
+	color : black;
+}
+
+    .slds-modal__container {
+        margin: 0 auto;
+        width: 70%;
+        max-width: 75rem;
+        min-width: 40rem;
+    }
+
+	.body-style {
+       color: black; 
+       font-size: 1.2vw; 
+       padding-left: inherit; 
+       background-color: #1b5297; 
+       color: white;
+	}
+
+    .scrollable-modal-content {
+    max-height: 60vh; /* or 500px, adjust as needed */
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: white;
+}

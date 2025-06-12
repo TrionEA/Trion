@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Sends an outbound message to GetFeedBack to trigger the sending of a survey.</description>
+        <name>Send_Case_Follow_Up_Survey</name>
+        <label>Send Case Follow-Up Survey</label>
+        <locationX>242</locationX>
+        <locationY>408</locationY>
+        <actionName>Case.GF_Survey_ServiceFollowUp_800e6b65</actionName>
+        <actionType>outboundMessage</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <nameSegment>Case.GF_Survey_ServiceFollowUp_800e6b65</nameSegment>
+    </actionCalls>
+    <apiVersion>54.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>Test to see if the requirements for sending a survey is met. At this time, surveys are sent when the sequence number = 1 (max number is controlled by custom metadata).</description>
+        <name>Send_survey_requirements_met</name>
+        <label>Send survey requirements met?</label>
+        <locationX>374</locationX>
+        <locationY>288</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Send_survey_conditions_satisfied</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.IsClosed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Case_Sequence_Number__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Case_Follow_Up_Survey</targetReference>
+            </connector>
+            <label>Send survey conditions satisfied?</label>
+        </rules>
+    </decisions>
+    <description>Starting point for automation triggered after a case is created or updated.</description>
+    <interviewLabel>Case: After create/update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case: After create/update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>Send_Case_Close_Survey</name>
+            <connector>
+                <targetReference>Send_survey_requirements_met</targetReference>
+            </connector>
+            <label>Send Case Close Survey</label>
+            <offsetNumber>5</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <recordField>ClosedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

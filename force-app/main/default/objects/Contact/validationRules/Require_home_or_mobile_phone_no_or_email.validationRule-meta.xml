@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_home_or_mobile_phone_no_or_email</fullName>
+    <active>false</active>
+    <description>Enforce requirement for either the home phone or cell phone field to be filled out when completing forms through Docusign.</description>
+    <errorConditionFormula>ISBLANK( HomePhone )  &amp;&amp;  ISBLANK( MobilePhone )  &amp;&amp; ISBLANK( Email )
+&amp;&amp; $User.Id != &apos;005G00000049DTx&apos; /*Mark McCarthy, for data loads)*/</errorConditionFormula>
+    <errorMessage>Please enter either a home phone number or a cell phone number or an email address.</errorMessage>
+</ValidationRule>

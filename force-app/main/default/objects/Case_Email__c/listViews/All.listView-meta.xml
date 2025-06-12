@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Case_Email_Number__c</columns>
+    <columns>Case_Number__c</columns>
+    <columns>Email_Message_Created_Date__c</columns>
+    <columns>Email_Message_SharePoint_Id__c</columns>
+    <columns>EmailMessage_Id__c</columns>
+    <columns>Case_Id__c</columns>
+    <columns>Email_Message_Subject__c</columns>
+    <columns>Email_Message_SP_Folder_Id__c</columns>
+    <columns>Files_Share_Point_Id__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

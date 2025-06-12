@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Underwriting Status --></label>
+    <name>Underwriting_Status__c</name>
+    <picklistValues>
+        <masterLabel>Additional Info Requested</masterLabel>
+        <translation><!-- Additional Info Requested --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Disqualified</masterLabel>
+        <translation><!-- Disqualified --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Disqualified Override</masterLabel>
+        <translation><!-- Disqualified Override --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Started</masterLabel>
+        <translation><!-- Not Started --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Review</masterLabel>
+        <translation><!-- Pending Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Qualified</masterLabel>
+        <translation><!-- Qualified --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Submitted to Carrier</masterLabel>
+        <translation><!-- Submitted to Carrier --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

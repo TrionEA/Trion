@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Contact__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+ Primary_Contact_Info__c  = TRUE,IMAGE(&quot;/img/samples/flag_green.gif&quot;,&quot;green&quot;),
+IMAGE(&quot;/img/samples/flag_red.gif&quot;,&quot;red&quot;))&amp; &quot; &quot; &amp; BR() &amp; &quot; &quot; &amp;
+&quot;Primary Contact: &quot;&amp;   Primary_Contact_First_Name__c &amp; &quot; &quot; &amp;  Primary_Contact_Last_Name__c &amp; br()&amp;
+&quot;Title: &quot; &amp;  Primary_Contact_Title__c &amp; br()&amp;
+&quot;Email: &quot;+&quot; &quot;+&quot; &quot; &amp;   Primary_Contact_Email__c  &amp;br()&amp;
+&quot;Phone:  &quot; &amp;   Primary_Contact_Phone__c</formula>
+    <label>Primary Contact</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

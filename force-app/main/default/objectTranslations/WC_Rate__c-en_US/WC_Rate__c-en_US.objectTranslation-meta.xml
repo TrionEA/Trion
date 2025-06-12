@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>WC Rate</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>WC Rates</value>
+    </caseValues>
+    <layouts>
+        <layout>Sales Agent</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Sales Manager</layout>
+        <sections>
+            <label><!-- Bill Rating --></label>
+            <section>Bill Rating</section>
+        </sections>
+        <sections>
+            <label><!-- Client Details --></label>
+            <section>Client Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Manual Rating --></label>
+            <section>Manual Rating</section>
+        </sections>
+        <sections>
+            <label><!-- Rate Calculator --></label>
+            <section>Rate Calculator</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Rating --></label>
+            <section>Sales Rating</section>
+        </sections>
+        <sections>
+            <label><!-- Underwriting Rating --></label>
+            <section>Underwriting Rating</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Add Carrier and Policy --></label>
+        <name>Add_Carrier_and_Policy</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Manual Rate --></label>
+        <name>Manual_Rate</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Set Mod --></label>
+        <name>Set_Mod</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Update Carrier Rate --></label>
+        <name>Update_Carrier_Rate</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Enter a mod to calculate the proposals modified rate. --></errorMessage>
+        <name>Modified_WC_Rate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter the Trion Bill Rate to calculate the manual rate. --></errorMessage>
+        <name>Trion_Adjusted_WC_Bill_Rate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter the Effective rate to calculate the proposals effective rate. --></errorMessage>
+        <name>WC_Charge_Rate</name>
+    </validationRules>
+</CustomObjectTranslation>

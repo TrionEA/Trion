@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Broker_Agreements</fullName>
+    <columns>NAME</columns>
+    <columns>dsfs__Contact__c</columns>
+    <columns>dsfs__Company__c</columns>
+    <columns>dsfs__Sent_Date_Time__c</columns>
+    <columns>dsfs__Completed_Date_Time__c</columns>
+    <columns>dsfs__Envelope_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Document_Name__c</field>
+        <operation>equals</operation>
+        <value>Trion Solutions Independent Contractor Agreement and W-9.pdf</value>
+    </filters>
+    <label>Broker Agreements</label>
+    <sharedTo>
+        <group>Sales</group>
+    </sharedTo>
+</ListView>

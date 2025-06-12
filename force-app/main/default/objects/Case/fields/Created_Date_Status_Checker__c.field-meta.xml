@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Created_Date_Status_Checker__c</fullName>
+    <formula>IF(
+   ISPICKVAL(Status, &apos;Closed&apos;),
+   true,
+   false
+)
+
+
+
+
+/*
+IF(
+   ISPICKVAL(Status, &apos;Closed&apos;) &amp;&amp;  ClosedDate &lt;= DATETIMEVALUE(&quot;2024-05-25 17:00:00&quot;),
+   true,
+   false
+)
+*/
+/*2014-05-15T23:59:59Z*/</formula>
+    <label>Created Date &amp; Status Checker</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

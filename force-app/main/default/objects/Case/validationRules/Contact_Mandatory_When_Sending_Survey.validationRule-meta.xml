@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Mandatory_When_Sending_Survey</fullName>
+    <active>false</active>
+    <description>The contact on the case should be mandatory when sending the survey</description>
+    <errorConditionFormula>( Send_Survey_Email__c ||  Send_Survey_Email_Again__c ) &amp;&amp;  ISBLANK(ContactId)</errorConditionFormula>
+    <errorMessage>Please fill the associated contact when sending the survey</errorMessage>
+</ValidationRule>

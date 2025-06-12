@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Time survey was completed. --></help>
+    <label><!-- Survey Completion Time --></label>
+    <name>Survey_Completion_Time__c</name>
+</CustomFieldTranslation>

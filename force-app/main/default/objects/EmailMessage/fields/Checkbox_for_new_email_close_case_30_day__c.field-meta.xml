@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Checkbox_for_new_email_close_case_30_day__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This check box will check after inserting email if the case is close for more than 30 days and new case will create.</description>
+    <label>Checkbox for new email close case 30 day</label>
+    <type>Checkbox</type>
+</CustomField>

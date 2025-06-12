@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <links>Trion_Salesforce_101</links>
+    <links>Trion_Account_Management</links>
+    <links>Trion_Contact_Management</links>
+    <links>Trion_Case_Management</links>
+    <pageComponentType>links</pageComponentType>
+</HomePageComponent>

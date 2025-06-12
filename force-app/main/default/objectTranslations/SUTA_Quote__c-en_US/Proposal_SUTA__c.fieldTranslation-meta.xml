@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Displays &quot;Client Level&quot; on the Proposal for client level states or the SUTA bill rate for PEO states. --></help>
+    <label><!-- Proposal SUTA --></label>
+    <name>Proposal_SUTA__c</name>
+</CustomFieldTranslation>

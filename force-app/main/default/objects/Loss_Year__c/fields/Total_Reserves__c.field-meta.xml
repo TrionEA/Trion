@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Reserves__c</fullName>
+    <label>Total Reserves</label>
+    <summarizedField>Loss_Year_Evaluation__c.Total_Reserves__c</summarizedField>
+    <summaryForeignKey>Loss_Year_Evaluation__c.Loss_Year__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

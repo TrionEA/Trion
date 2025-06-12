@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Proposal</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Proposals</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Economic Review --></label>
+        <name>Economic_Review</name>
+    </fieldSets>
+    <layouts>
+        <layout>Trion Sales Manager</layout>
+        <sections>
+            <label><!-- Administrative Fees --></label>
+            <section>Administrative Fees</section>
+        </sections>
+        <sections>
+            <label><!-- Approval Status --></label>
+            <section>Approval Status</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Employment Taxes --></label>
+            <section>Employment Taxes</section>
+        </sections>
+        <sections>
+            <label><!-- Pricing Matrix --></label>
+            <section>Pricing Matrix</section>
+        </sections>
+        <sections>
+            <label><!-- Proposal//Contract Info --></label>
+            <section>Proposal//Contract Info</section>
+        </sections>
+        <sections>
+            <label><!-- Quote Information --></label>
+            <section>Quote Information</section>
+        </sections>
+        <sections>
+            <label><!-- Underwriting --></label>
+            <section>Underwriting</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- ACORD General Information --></label>
+        <name>ACORD_General_Information</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Admin Fees --></label>
+        <name>Admin_Fees</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Client Exp Mod --></label>
+        <name>Client_Exp_Mod</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Email Proposal --></label>
+        <name>Email_Proposal</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Override UW Disqualification --></label>
+        <name>Override_UW_Disqualification</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Price Override Approval --></label>
+        <name>Price_Override_Approval</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Proposal --></label>
+        <name>Proposal</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Proposal Overview --></label>
+        <name>Proposal_Overview</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Proposal Pricing Details --></label>
+        <name>Proposal_Pricing_Details</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Proposed Effective Date --></label>
+        <name>Proposed_Effective_Date</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Quote Details --></label>
+        <name>Quote_Details</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Quote Type --></label>
+        <name>Quote_Type</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Quote Type/Economic Review --></label>
+        <name>Quote_Type_Economic_Review</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Sales Qualification --></label>
+        <name>Sales_Qualification</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Secretary of State Corporation Search --></label>
+        <name>Secretary_of_State_Corporation_Search</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- State Assessment Fees --></label>
+        <name>State_Assessment_Fees</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Employment Taxes --></label>
+        <name>Taxes</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Underwriting Summary --></label>
+        <name>Underwriting_Summary</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Update Carrier Policy Year --></label>
+        <name>Update_Carrier_Policy_Year</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Proposal --></label>
+        <name>Proposal</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- CongaSign_sendForSignature --></label>
+        <name>CongaSign_sendForSignature</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_ACORD_Form --></label>
+        <name>Conga_Composer_ACORD_Form</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Client_Presentation_Deck --></label>
+        <name>Conga_Composer_Client_Presentation_Deck</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Client_Presentation_Pricing_Detail --></label>
+        <name>Conga_Composer_Client_Presentation_Pricing_Detail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_CongaTest --></label>
+        <name>Conga_Composer_CongaTest</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Contract --></label>
+        <name>Conga_Composer_Contract</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Generate_Contract --></label>
+        <name>Conga_Composer_Generate_Contract</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_PL_Evaluation --></label>
+        <name>Conga_Composer_PL_Evaluation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Pricing_Detail --></label>
+        <name>Conga_Composer_Pricing_Detail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Proposal_Template_Builder --></label>
+        <name>Conga_Composer_Proposal_Template_Builder</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Submit_to_Carrier --></label>
+        <name>Conga_Composer_Submit_to_Carrier</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Pricing_Matrix --></label>
+        <name>Pricing_Matrix</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Pricing_Override --></label>
+        <name>Pricing_Override</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Secretary_of_State_Corporation_Search --></label>
+        <name>Secretary_of_State_Corporation_Search</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_Opportunity --></label>
+        <name>View_Opportunity</name>
+    </webLinks>
+</CustomObjectTranslation>

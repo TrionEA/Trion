@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>SUTA_Record_Name</fullName>
+        <field>Name</field>
+        <formula>State__r.State_Code__c &amp; &quot; &quot; &amp;  Year__r.Name &amp; &quot; - &quot; &amp;  text(Entity__c )</formula>
+        <name>SUTA Record Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>SUTA Record Name</fullName>
+        <actions>
+            <name>SUTA_Record_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>SUTA__c.Reporting_Level__c</field>
+            <operation>equals</operation>
+            <value>PEO</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

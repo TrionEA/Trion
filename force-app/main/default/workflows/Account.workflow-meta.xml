@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Active_Client_Status</fullName>
+        <field>Status__c</field>
+        <literalValue>Active</literalValue>
+        <name>Active Client Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status</fullName>
+        <field>Status__c</field>
+        <literalValue>Terminated</literalValue>
+        <name>Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>GF_Survey_FirstPayrollSurvey_da5cce0f</fullName>
+        <apiVersion>39.0</apiVersion>
+        <description>Getfeedback outbound message for first payroll survey.</description>
+        <endpointUrl>https://www.getfeedback.com/campaigns/4MZZrpFe/transactional_send</endpointUrl>
+        <fields>Client_Payroll_Contact__c</fields>
+        <fields>Id</fields>
+        <fields>Payroll_Email__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>csherman@trionworks.com</integrationUser>
+        <name>GF_Survey_FirstPayrollSurvey_da5cce0f</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>Active Client</fullName>
+        <actions>
+            <name>Active_Client_Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Client_ID__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Terminated_Date__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Inactive Clients</fullName>
+        <actions>
+            <name>Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>NOT(ISBLANK( Terminated_Date__c ))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Survey to Client</fullName>
+        <actions>
+            <name>GF_Survey_FirstPayrollSurvey_da5cce0f</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Send_First_Payroll_Survey__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Payroll_Email__c</field>
+            <operation>notEqual</operation>
+            <value>null</value>
+        </criteriaItems>
+        <description>If Send First Payroll Survey is checked and client payroll email is filled, GetFeedback survey is sent to Client Payroll email.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

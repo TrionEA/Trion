@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Reporting_Level_Client</fullName>
+        <field>Reporting_Level__c</field>
+        <literalValue>Client</literalValue>
+        <name>Reporting Level: Client</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reporting_Level_PEO</fullName>
+        <field>Reporting_Level__c</field>
+        <literalValue>PEO</literalValue>
+        <name>Reporting Level: PEO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SUTA_Bill_Rate</fullName>
+        <field>SUTA_Bill_Rate__c</field>
+        <formula>SUTA_Rate__c</formula>
+        <name>SUTA Bill Rate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SUTA_Cost_Rate</fullName>
+        <field>SUTA_Cost_Rate__c</field>
+        <formula>SUTA__r.Rate__c</formula>
+        <name>SUTA Cost Rate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SUTA_Quote_Name</fullName>
+        <field>Name</field>
+        <formula>State__r.State_Code__c &amp; &quot; - &quot; &amp;  Proposal__r.Client__c</formula>
+        <name>SUTA Quote Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Taxable_Wages</fullName>
+        <field>Total_Taxable_Wages__c</field>
+        <formula>SUTA__r.Wage_Base__c * Total_of_Employees__c</formula>
+        <name>Taxable Wages</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Reporting Type%3A Client Level</fullName>
+        <actions>
+            <name>Reporting_Level_Client</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>ISPICKVAL(SUTA__r.Reporting_Level__c, &quot;Client&quot;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reporting Type%3A PEO</fullName>
+        <actions>
+            <name>Reporting_Level_PEO</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>ISPICKVAL(SUTA__r.Reporting_Level__c, &quot;PEO&quot;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>SUTA Bill Rate</fullName>
+        <actions>
+            <name>SUTA_Bill_Rate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>SUTA_Quote__c.SUTA_Bill_Rate__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>SUTA Cost Rate</fullName>
+        <actions>
+            <name>SUTA_Cost_Rate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>ISPICKVAL( SUTA__r.Reporting_Level__c , &quot;PEO&quot;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>SUTA Quote Name</fullName>
+        <actions>
+            <name>SUTA_Quote_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>SUTA_Quote__c.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Taxable Wages</fullName>
+        <actions>
+            <name>Taxable_Wages</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>NOT( ISNULL( SUTA__r.Wage_Base__c ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pricing_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+ISBLANK(Pricing_Matrix__c ), &quot;Pricing Not Started&quot;,
+IF(
+ Profit_Per_EE__c    &lt;  Pricing_Matrix__r.Price_per_EE__c, IMAGE(&quot;/img/samples/flag_red.gif&quot;,&quot;red&quot;),
+IMAGE(&quot;/img/samples/flag_green.gif&quot;,&quot;green&quot;)
+))</formula>
+    <label>Pricing Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

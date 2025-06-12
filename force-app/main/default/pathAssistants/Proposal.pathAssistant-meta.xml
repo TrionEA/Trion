@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Proposal__c</entityName>
+    <fieldName>Stage__c</fieldName>
+    <masterLabel>Proposal</masterLabel>
+    <pathAssistantSteps>
+        <picklistValueName>Client Presentation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <picklistValueName>Contract</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <picklistValueName>Not Started</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <picklistValueName>Proposal Accepted</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <picklistValueName>Quoting</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <picklistValueName>Revision</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Proposal</recordTypeName>
+</PathAssistant>

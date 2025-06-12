@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Details__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+  Quote_Requirement_Flow_Executed__c   = TRUE,
+IMAGE(&quot;/img/samples/flag_green.gif&quot;,&quot;green&quot;),
+IMAGE(&quot;/img/samples/flag_red.gif&quot;,&quot;red&quot;))&amp; &quot; &quot; &amp; BR() &amp; &quot; &quot; &amp;
+&quot;Quote Type: &quot; &amp; text( Proposal__r.Quote_Type__c ) &amp;  BR() &amp;
+&quot;Health Quote: &quot; &amp; text( Proposal__r.Health_Quote__c  ) &amp;  BR() &amp;
+&quot;Staffing Supplement: &quot; &amp; text(  Proposal__r.Staffing_Supplement__c   ) &amp;  BR() &amp;
+&quot;New Business Entity: &quot; &amp; text(  Proposal__r.New_Business_Entity__c   )</formula>
+    <label>Quote Details</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
